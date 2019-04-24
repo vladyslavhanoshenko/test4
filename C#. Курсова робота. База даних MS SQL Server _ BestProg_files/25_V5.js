@@ -1,0 +1,2 @@
+// timestamp: Wed, 24 Apr 2019 20:50:13 GMT 
+ var config_PriceStock = {"p1":{"price":149,"outofstock":false},"p2":{"price":55.95,"outofstock":false},"p3":{"price":1299,"outofstock":false},"p4":{"price":888,"outofstock":false},"p5":{"price":99,"outofstock":false},"p6":{"price":339,"outofstock":false},"p7":{"price":599,"outofstock":false},"p8":{"price":129,"outofstock":false},"p9":{"price":1199,"outofstock":false}}

@@ -1,0 +1,295 @@
+/*=============================
+=            Reset            =
+=============================*/
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var,
+b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body {
+    line-height: 1;
+    color: #FFF;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-user-select: none; /* Chrome all / Safari all */
+    -moz-user-select: none; /* Firefox all */
+    -ms-user-select: none; /* IE 10+ */
+    user-select: none; /* Likely future */
+}
+
+img.contain {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+
+/*=====================================================
+=  Position everything absolutly an don't
+=  user left: 50%; transform: translateX(-50%)
+=  because this will break. we neet trnaformations
+=  exclusiv fo the banne editor.
+======================================================*/
+
+/*==============================
+=            Basics            =
+==============================*/
+
+.hp_be {
+    position: absolute;
+    display: block;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+}
+
+.hp_ad_dimension {
+    width: 728px;
+    height: 90px;
+}
+
+.hp_ad_container {
+    border: 1px solid #8a8a8a;
+    background-color: #FFF;
+}
+
+.hp_wrapper {
+    left: -1px;
+    top: -1px;
+}
+
+.arrow-left, .arrow-right {
+    width: 20px;
+    height: 40px;
+    top: 20px;
+    left: 218px;
+    background-image: url(arrows.svg);background-size: 40px 40px;
+    background-position: -20px 0;
+    z-index: 3;
+}
+
+.arrow-right {
+    left: auto;
+    right: 0;
+    background-position: 0 0;
+}
+
+/*=============================
+=            Fonts            =
+=============================*/
+
+.hp_opensans {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*================================
+=            CONTENTS            =
+================================*/
+.content-container {
+    width: 10000px;
+    height: 90px;
+    z-index: 1;
+}
+
+.content-slide {
+    width: 728px;
+    height: 90px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.content-slide * {
+    pointer-events: none;
+}
+
+.hp_start_container {
+    background: #00e56d;
+    width: 728px;
+    height: 90px;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.hp_start_logo {
+    top: 22px;
+    left: 300px;
+    background: url(hp_logo_microspot.png) no-repeat;
+    background-size: 136px 24px;
+    width: 136px;
+    height: 24px;
+}
+
+.hp_start_logo_text {
+    top: 52px;
+    left: 10px;
+    width: calc(100% - 20px);
+    text-align: center;
+    font-size: 16px;
+    color: #000000;
+    line-height: 18px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+}
+
+.fr .hp_start_logo_text {
+    font-size: 16px;
+    line-height: 18px;
+}
+
+.it .hp_start_logo_text {
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.stopper-container {
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 34px;
+    z-index: 100;
+}
+
+.product-image-container {
+    top: -30px;
+    left: 225px;
+    width: 150px;
+    height: 150px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.product-image-container img {
+    position: relative;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+}
+/*
+.brand-image-container {
+    top: 349px;
+    left: 20px;
+    width: calc(160px - 40px);
+    height: 32px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.brand-image-container img {
+    position: relative;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+}
+*/
+
+.product-price-container {
+    top: 9px;
+    width: 130px;
+    height: 32px;
+    border: 2px solid #ff0b00;
+    border-radius: 5px;
+    left:570px;
+}
+
+.product-price {
+    font-weight: 800;
+    color: #ff0b00;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 0.7px;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.product-title-container {
+    top: 5px;
+    width: 173px;
+    height: 80px; /* maximum height for title + legal */
+    margin: 0 auto;
+    left: 388px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.product-title {
+    font-family: Arial;
+    font-weight: bold;
+    text-align: center;
+    font-size: 13px;
+    line-height: 20px;
+    max-height: 80px; /* lineheight * 4 */
+    overflow: hidden;
+    color: #000000;
+    position: relative;
+}
+
+.legal {
+    font-size: 9px;
+    line-height: 12px;
+    max-height: 12px;
+    letter-spacing: -0.5px;
+    color: #000000;
+    text-align: center;
+    position: relative;
+    margin-top: 3px;
+}
+
+.cta-container {
+    top: 52px;
+    left: 570px;
+    width: 130px;
+    height: 28px;
+    background: #00e66e;
+    border-radius: 5px;
+}
+
+.cta {
+    line-height: 27px;
+    vertical-align: middle;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    font-weight: 800;
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: 1px;
+    overflow: hidden;
+}

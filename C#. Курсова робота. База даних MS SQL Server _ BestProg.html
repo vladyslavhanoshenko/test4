@@ -1,0 +1,1469 @@
+<!DOCTYPE html>
+<!-- saved from url=(0114)https://www.bestprog.net/uk/2017/08/28/term-paper-development-of-an-environmental-pollution-monitoring-program_ua/ -->
+<html lang="uk" prefix="og: http://ogp.me/ns#"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta name="viewport" content="width=device-width">
+	<title>C#. Курсова робота. База даних MS SQL Server | BestProg</title>
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="https://www.bestprog.net/xmlrpc.php">
+	<!--[if lt IE 9]>
+	<script src="https://www.bestprog.net/wp-content/themes/twentyfourteen/js/html5.js"></script>
+	<![endif]-->
+	
+<!-- All in One SEO Pack 2.12 by Michael Torbert of Semper Fi Web Design[400,500] -->
+<link rel="author" href="https://plus.google.com/u/0/104820057734789398497">
+<meta name="description" content="Курсова робота на C#. База даних MS SQL Server. Рядок ConnectionString. Класи SqlDataAdapter, DataSet. SQL-запит. Компоненти DataGridView, Label, Button, Form.">
+
+<meta property="og:title" content="C#. Курсова робота. База даних MS SQL Server | BestProg">
+<meta property="og:type" content="activity">
+<meta property="og:url" content="https://www.bestprog.net/uk/2017/08/28/term-paper-development-of-an-environmental-pollution-monitoring-program_ua/">
+<meta property="og:image" content="https://www.bestprog.net/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png">
+<meta property="og:site_name" content="BestProg">
+<meta property="og:description" content="Курсова робота на C#. База даних MS SQL Server. Рядок ConnectionString. Класи SqlDataAdapter, DataSet. SQL-запит. Компоненти DataGridView, Label, Button, Form.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="C#. Курсова робота. База даних MS SQL Server | BestProg">
+<meta name="twitter:description" content="Курсова робота на C#. База даних MS SQL Server. Рядок ConnectionString. Класи SqlDataAdapter, DataSet. SQL-запит. Компоненти DataGridView, Label, Button, Form.">
+<meta name="twitter:image" content="https://www.bestprog.net/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png">
+<meta itemprop="image" content="https://www.bestprog.net/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png">
+<!-- /all in one seo pack -->
+<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+<link rel="dns-prefetch" href="https://s.w.org/">
+<link rel="alternate" type="application/rss+xml" title="BestProg » стрічка" href="https://www.bestprog.net/uk/feed/">
+<link rel="alternate" type="application/rss+xml" title="BestProg » Канал коментарів" href="https://www.bestprog.net/uk/comments/feed/">
+		<script src="./C#. Курсова робота. База даних MS SQL Server _ BestProg_files/osd.js"></script><script src="./C#. Курсова робота. База даних MS SQL Server _ BestProg_files/ca-pub-9065892916791387.js"></script><script async="" src="./C#. Курсова робота. База даних MS SQL Server _ BestProg_files/analytics.js"></script><script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.bestprog.net\/wp-includes\/js\/wp-emoji-release.min.js?ver=3c9143aa9b381ebcae741d816935a9ae"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="./C#. Курсова робота. База даних MS SQL Server _ BestProg_files/wp-emoji-release.min.js" type="text/javascript" defer=""></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="./C#. Курсова робота. База даних MS SQL Server _ BestProg_files/style.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="twentyfourteen-lato-css" href="./C#. Курсова робота. База даних MS SQL Server _ BestProg_files/css(1)" type="text/css" media="all">
+<link rel="stylesheet" id="genericons-css" href="./C#. Курсова робота. База даних MS SQL Server _ BestProg_files/genericons.css" type="text/css" media="all">
+<link rel="stylesheet" id="twentyfourteen-style-css" href="./C#. Курсова робота. База даних MS SQL Server _ BestProg_files/style.css" type="text/css" media="all">
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentyfourteen-ie-css'  href='https://www.bestprog.net/wp-content/themes/twentyfourteen/css/ie.css?ver=20131205' type='text/css' media='all' />
+<![endif]-->
+<script type="text/javascript" src="./C#. Курсова робота. База даних MS SQL Server _ BestProg_files/jquery.js"></script>
+<script type="text/javascript" src="./C#. Курсова робота. База даних MS SQL Server _ BestProg_files/jquery-migrate.min.js"></script>
+<link rel="https://api.w.org/" href="https://www.bestprog.net/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.bestprog.net/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.bestprog.net/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="Оператор вибору switch" href="https://www.bestprog.net/uk/2017/08/21/the-switch-operator-cpp-ua/">
+<link rel="next" title="Цикли. Оператори циклу for, while, do…while" href="https://www.bestprog.net/uk/2017/09/04/cycles-operators-of-the-cycle-for-while-do-while_ua/">
+
+<link rel="canonical" href="https://www.bestprog.net/uk/2017/08/28/term-paper-development-of-an-environmental-pollution-monitoring-program_ua/">
+<link rel="shortlink" href="https://www.bestprog.net/?p=6327">
+<link rel="alternate" type="application/json+oembed" href="https://www.bestprog.net/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.bestprog.net%2Fuk%2F2017%2F08%2F28%2Fterm-paper-development-of-an-environmental-pollution-monitoring-program_ua%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://www.bestprog.net/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.bestprog.net%2Fuk%2F2017%2F08%2F28%2Fterm-paper-development-of-an-environmental-pollution-monitoring-program_ua%2F&amp;format=xml">
+<script type="text/javascript">
+(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		if (window.wfLogHumanRan) { return; }
+		window.wfLogHumanRan = true;
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('//www.bestprog.net/?wordfence_lh=1&hid=E21DFBF6768D9B808DDF68BFB7605461');
+</script><link rel="alternate" href="https://www.bestprog.net/ru/2017/08/28/term-paper-development-of-an-environmental-pollution-monitoring-program_ru/" hreflang="ru">
+<link rel="alternate" href="https://www.bestprog.net/uk/2017/08/28/term-paper-development-of-an-environmental-pollution-monitoring-program_ua/" hreflang="uk">
+<link rel="alternate" href="https://www.bestprog.net/en/2017/08/28/term-paper-development-of-an-environmental-pollution-monitoring-program/" hreflang="en">
+	<style type="text/css" id="twentyfourteen-header-css">
+			.site-title a {
+			color: #81d742;
+		}
+		</style>
+	<style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #b5b5b5; }
+</style>
+	<meta name="yandex-verification" content="53bcdf191ed8ea93">
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-71533200-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+<script async="" src="./C#. Курсова робота. База даних MS SQL Server _ BestProg_files/f(4).txt"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-9065892916791387",
+          enable_page_level_ads: true
+     });
+</script>
+
+
+<script type="text/javascript"> //<![CDATA[ 
+var tlJsHost = ((window.location.protocol == "https:") ? "https://secure.comodo.com/" : "http://www.trustlogo.com/");
+document.write(unescape("%3Cscript src='" + tlJsHost + "trustlogo/javascript/trustlogo.js' type='text/javascript'%3E%3C/script%3E"));
+//]]>
+</script><script src="./C#. Курсова робота. База даних MS SQL Server _ BestProg_files/trustlogo.js" type="text/javascript"></script><link rel="preload" href="./C#. Курсова робота. База даних MS SQL Server _ BestProg_files/f(5).txt" as="script"><script type="text/javascript" src="./C#. Курсова робота. База даних MS SQL Server _ BestProg_files/f(5).txt"></script><link rel="preload" href="./C#. Курсова робота. База даних MS SQL Server _ BestProg_files/f(6).txt" as="script"><script type="text/javascript" src="./C#. Курсова робота. База даних MS SQL Server _ BestProg_files/f(6).txt"></script><link rel="preload" href="https://pagead2.googlesyndication.com/pagead/js/r20190422/r20190131/show_ads_impl.js" as="script"><style type="text/css" media="screen">#comodoTL {display:block;font-size:8px;padding-left:18px;}</style>	
+	
+<script async="" src="./C#. Курсова робота. База даних MS SQL Server _ BestProg_files/f(4).txt"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-9065892916791387",
+    enable_page_level_ads: true
+  });
+</script>	
+	
+<script type="text/javascript" async="" src="./C#. Курсова робота. База даних MS SQL Server _ BestProg_files/saved_resource"></script></head><iframe id="google_shimpl" style="display: none;" src="./C#. Курсова робота. База даних MS SQL Server _ BestProg_files/saved_resource(1).html"></iframe>
+
+<body class="post-template-default single single-post postid-6327 single-format-standard custom-background masthead-fixed full-width footer-widgets singular">
+<div id="page" class="hfeed site">
+	
+	<header id="masthead" class="site-header" role="banner">
+		<div class="header-main">
+			<h1 class="site-title"><a href="https://www.bestprog.net/uk/sitemap_ua/" rel="home">BestProg</a></h1>
+
+			<div class="search-toggle">
+				<a href="https://www.bestprog.net/uk/2017/08/28/term-paper-development-of-an-environmental-pollution-monitoring-program_ua/#search-container" class="screen-reader-text" aria-expanded="false" aria-controls="search-container">Пошук</a>
+			</div>
+
+			<nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
+				<button class="menu-toggle">Головне меню</button>
+				<a class="screen-reader-text skip-link" href="https://www.bestprog.net/uk/2017/08/28/term-paper-development-of-an-environmental-pollution-monitoring-program_ua/#content">Переміститись до тексту</a>
+				<div class="menu-menu_ua-container"><ul id="primary-menu" class="nav-menu"><li id="menu-item-2913" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-2913"><a href="https://www.bestprog.net/uk/sitemap_ua/">Карта сайту</a></li>
+<li id="menu-item-4558" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4558"><a href="https://www.bestprog.net/uk/sitemap_ua/4547-2/">Java</a></li>
+<li id="menu-item-3483" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3483"><a href="https://www.bestprog.net/uk/sitemap_ua/c-3/">C#</a></li>
+<li id="menu-item-3481" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3481"><a href="https://www.bestprog.net/uk/sitemap_ua/c/">C++</a></li>
+<li id="menu-item-3482" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3482"><a href="https://www.bestprog.net/uk/sitemap_ua/delphi/">Delphi</a></li>
+<li id="menu-item-3480" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3480"><a href="https://www.bestprog.net/uk/sitemap_ua/%d0%b1%d0%b0%d0%b7%d0%b8-%d0%b4%d0%b0%d0%bd%d0%b8%d1%85/">Бази даних</a></li>
+<li id="menu-item-15147" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15147"><a href="https://www.bestprog.net/uk/sitemap_ua/python-ua/">Python</a></li>
+<li id="menu-item-10-ru" class="lang-item lang-item-5 lang-item-ru lang-item-first menu-item menu-item-type-custom menu-item-object-custom menu-item-10-ru"><a href="https://www.bestprog.net/ru/2017/08/28/term-paper-development-of-an-environmental-pollution-monitoring-program_ru/" hreflang="ru-RU" lang="ru-RU"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAE2SURBVHjaYvz69T8DAvz79w9CQVj/0MCffwwAAcQClObiAin6/x+okxHMgPCAbOb//5n+I4EXL74ABBALxGSwagTjPzbAyMgItAQggBg9Pf9nZPx//x7kjL9////9C2QAyf9//qCQQCQkxFhY+BEggFi2b/+nq8v46BEDSPQ3w+8//3//BqFfv9BJeXmQEwACCOSkP38YgHy4Bog0RN0vIOMXVOTPH6Cv/gEEEEgDxFKgHEgDXCmGDUAE1AAQQCybGZg1f/d8//XsH0jTn3+///z79RtE/v4NZfz68xfI/vOX+4/0ZoZFAAHE4gYMvD+3/v2+h91wCANo9Z+/jH9VxBkYAAKIBRg9TL//MEhKAuWAogxgZzGC2CCfgUggAoYdGAEVAwQQ41egu5AQAyoXTQoIAAIMAD+JZR7YOGEWAAAAAElFTkSuQmCC" title="Русский" alt="Русский"></a></li>
+<li id="menu-item-10-uk" class="lang-item lang-item-2 lang-item-uk current-lang menu-item menu-item-type-custom menu-item-object-custom menu-item-10-uk"><a href="https://www.bestprog.net/uk/2017/08/28/term-paper-development-of-an-environmental-pollution-monitoring-program_ua/" hreflang="uk" lang="uk"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAFQSURBVHjaYmRo/c8AB//+MfwBkgwg8s8/KPoFI4GIgQEgAIdycgMACAMxUAF6oygqoQ1q45dkzSH5N26XR/8zCEuepggsVEPFkxB+S9bcRwCxMDCBVD/5+h+o9O8/BqDE378Mv/+DpCGKfgERmCHLw8jw4x9AAIFs+AdUBLQWZDZI9a/////8BSuFawBzf/8FuQMggFiALvsLsh2k+g/cbCTVUBLkKgaGDwwAAcTCIHJKhFPh19+fIHf/+/cbpBNI/gO75x+I/RfKluFiY5A6AhBAjH8fMjDI5P///+A/wy8GoFf/A+34hZVkYlJ6f/wUQACxAEOSESwEDEhURSiqwbJ/gKENEEAgDcwgDlAIrgiLNgaGvyD0hwEggEAamP4DdUrCREE6GRl/gyMPQv6BqgYG+z8GgABi/HoTFL///kBJBjgbwmBAcEEcBgaAAAMASIdu6OFHDhsAAAAASUVORK5CYII=" title="Українська" alt="Українська"></a></li>
+<li id="menu-item-10-en" class="lang-item lang-item-9 lang-item-en menu-item menu-item-type-custom menu-item-object-custom menu-item-10-en"><a href="https://www.bestprog.net/en/2017/08/28/term-paper-development-of-an-environmental-pollution-monitoring-program/" hreflang="en-GB" lang="en-GB"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAflJREFUeNpinDRzn5qN3uFDt16+YWBg+Pv339+KGN0rbVP+//2rW5tf0Hfy/2+mr99+yKpyOl3Ydt8njEWIn8f9zj639NC7j78eP//8739GVUUhNUNuhl8//ysKeZrJ/v7z10Zb2PTQTIY1XZO2Xmfad+f7XgkXxuUrVB6cjPVXef78JyMjA8PFuwyX7gAZj97+T2e9o3d4BWNp84K1NzubTjAB3fH0+fv6N3qP/ir9bW6ozNQCijB8/8zw/TuQ7r4/ndvN5mZgkpPXiis3Pv34+ZPh5t23//79Rwehof/9/NDEgMrOXHvJcrllgpoRN8PFOwy/fzP8+gUlgZI/f/5xcPj/69e/37//AUX+/mXRkN555gsOG2xt/5hZQMwF4r9///75++f3nz8nr75gSms82jfvQnT6zqvXPjC8e/srJQHo9P9fvwNtAHmG4f8zZ6dDc3bIyM2LTNlsbtfM9OPHH3FhtqUz3eXX9H+cOy9ZMB2o6t/Pn0DHMPz/b+2wXGTvPlPGFxdcD+mZyjP8+8MUE6sa7a/xo6Pykn1s4zdzIZ6///8zMGpKM2pKAB0jqy4UE7/msKat6Jw5mafrsxNtWZ6/fjvNLW29qv25pQd///n+5+/fxDDVbcc//P/zx/36m5Ub9zL8+7t66yEROcHK7q5bldMBAgwADcRBCuVLfoEAAAAASUVORK5CYII=" title="English" alt="English"></a></li>
+</ul></div>			</nav>
+		</div>
+
+		<div id="search-container" class="search-box-wrapper hide">
+			<div class="search-box">
+				<form role="search" method="get" class="search-form" action="https://www.bestprog.net/uk/">
+				<label>
+					<span class="screen-reader-text">Пошук:</span>
+					<input type="search" class="search-field" placeholder="Пошук …" value="" name="s">
+				</label>
+				<input type="submit" class="search-submit" value="Шукати">
+			</form>			</div>
+		</div>
+	</header><!-- #masthead -->
+
+	<div id="main" class="site-main">
+
+	<div id="primary" class="content-area">
+		<div id="content" class="site-content" role="main">
+			
+<article id="post-6327" class="post-6327 post type-post status-publish format-standard hentry category-c_sharp_ua category-ms-visual-studio-2010-ua category-591 category-616 category--uk-c_sharp_ua tag-button-uk tag-c-uk tag-datagridview-uk tag-form tag-label-uk tag-ms-sql-server-uk tag-ms-visual-studio-uk tag-sql-uk tag-627">
+	
+	<header class="entry-header">
+				<div class="entry-meta">
+			<span class="cat-links"><a href="https://www.bestprog.net/uk/category/c_sharp_ua/" rel="category tag">C#</a>,<a href="https://www.bestprog.net/uk/category/c_sharp_ua/%d0%bf%d1%80%d0%b0%d0%ba%d1%82%d0%b8%d0%ba%d0%b0-uk-c_sharp_ua/ms-visual-studio-2010-ua/" rel="category tag">MS Visual Studio 2010</a>,<a href="https://www.bestprog.net/uk/category/%d0%b1%d0%b0%d0%b7%d0%b8-%d0%b4%d0%b0%d0%bd%d0%b8%d1%85/" rel="category tag">Бази даних</a>,<a href="https://www.bestprog.net/uk/category/%d0%ba%d1%83%d1%80%d1%81%d0%be%d0%b2%d1%96-%d1%80%d0%be%d0%b1%d0%be%d1%82%d0%b8/" rel="category tag">Курсові роботи</a>,<a href="https://www.bestprog.net/uk/category/c_sharp_ua/%d0%bf%d1%80%d0%b0%d0%ba%d1%82%d0%b8%d0%ba%d0%b0-uk-c_sharp_ua/" rel="category tag">Практика</a></span>
+		</div>
+		<h1 class="entry-title">Курсова робота. Розробка програми моніторингу забруднення навколишнього середовища</h1>
+		<div class="entry-meta">
+			<span class="entry-date"><a href="https://www.bestprog.net/uk/2017/08/28/term-paper-development-of-an-environmental-pollution-monitoring-program_ua/" rel="bookmark"><time class="entry-date" datetime="2017-08-28T23:43:25+04:00">Серпень 28, 2017</time></a></span> <span class="byline"><span class="author vcard"><a class="url fn n" href="https://www.bestprog.net/uk/author/bestprogisch/" rel="author">BestProgISch</a></span></span>		</div><!-- .entry-meta -->
+	</header><!-- .entry-header -->
+
+		<div class="entry-content">
+		
+<!-- Quick Adsense WordPress Plugin: http://quickadsense.com/ -->
+<div style="float: none; margin:10px 0 10px 0; text-align:center;">
+<script async="" src="./C#. Курсова робота. База даних MS SQL Server _ BestProg_files/f(4).txt"></script>
+<!-- Ad1_Begin_Adaptive -->
+<ins class="adsbygoogle" style="display: block; height: 90px;" data-ad-client="ca-pub-9065892916791387" data-ad-slot="2827500953" data-ad-format="auto" data-adsbygoogle-status="done"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:800px;background-color:transparent;"><ins id="aswift_0_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:800px;background-color:transparent;"><iframe width="800" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0px;width:800px;height:90px;" src="./C#. Курсова робота. База даних MS SQL Server _ BestProg_files/saved_resource(2).html"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<p><span id="more-6327"></span></p>
+<h2 style="text-align: center;">Курсова робота. Розробка програми моніторингу забруднення навколишнього середовища</h2>
+<p>У даній темі описується детальний покроковий процес розробки програми, що керує локальною базою даних <span style="color: #0000ff;">Microsoft SQL Server</span>, яка розміщується в <span style="color: #0000ff;">“*.mdf”</span>-файлі .</p>
+<p>Програма реалізована на мові програмування C# в системі візуальної розробки додатків Microsoft Visual Studio 2010.</p>
+<p>Пройшовши всі етапи виконання курсової роботи Ви отримаєте досвід розробки додатків, що взаємодіють з базами даних типу <span style="color: #0000ff;">Microsoft SQL Server</span>.</p>
+<hr>
+<h3 style="text-align: center;">Зміст</h3>
+<ul>
+<li><a href="https://www.bestprog.net/uk/2017/08/28/term-paper-development-of-an-environmental-pollution-monitoring-program_ua/#cond"><span style="color: #333300;">Умова задачі</span></a></li>
+<li><a href="https://www.bestprog.net/uk/2017/08/28/term-paper-development-of-an-environmental-pollution-monitoring-program_ua/#instr"><span style="color: #333300;">Виконання</span></a>
+<ul>
+<li><a href="https://www.bestprog.net/uk/2017/08/28/term-paper-development-of-an-environmental-pollution-monitoring-program_ua/#p01"><span style="color: #333300;">1. Вибір моделі бази даних</span></a></li>
+<li><a href="https://www.bestprog.net/uk/2017/08/28/term-paper-development-of-an-environmental-pollution-monitoring-program_ua/#p02"><span style="color: #333300;">2. Проектування (підключення) бази даних <span style="color: #0000ff;">“MyDataBase.mdf”</span>. Створення нового проекту в <span style="color: #0000ff;">Microsoft Visual Studio</span></span></a>
+<ul>
+<li><a href="https://www.bestprog.net/uk/2017/08/28/term-paper-development-of-an-environmental-pollution-monitoring-program_ua/#p02_01"><span style="color: #333300;">2.1. Підготовка папки для файлів проекту та бази даних</span></a></li>
+<li><a href="https://www.bestprog.net/uk/2017/08/28/term-paper-development-of-an-environmental-pollution-monitoring-program_ua/#p02_02"><span style="color: #333300;">2.2. Завантаження <span style="color: #0000ff;">Microsoft Visual Studio</span>. Створення додатку типу <span style="color: #0000ff;">Windows Forms Application</span>. Збереження файлів проекту</span></a></li>
+<li><a href="https://www.bestprog.net/uk/2017/08/28/term-paper-development-of-an-environmental-pollution-monitoring-program_ua/#p02_03"><span style="color: #333300;">2.3. Створення нової або підключення раніше створеної бази даних <span style="color: #0000ff;">“MyDataBase.mdf”</span></span></a></li>
+<li><a href="https://www.bestprog.net/uk/2017/08/28/term-paper-development-of-an-environmental-pollution-monitoring-program_ua/#p02_04"><span style="color: #333300;">2.4. Інформація про базу даних <span style="color: #0000ff;">“MyDataBase.mdf”</span></span></a></li>
+<li><a href="https://www.bestprog.net/uk/2017/08/28/term-paper-development-of-an-environmental-pollution-monitoring-program_ua/#p02_05"><span style="color: #333300;">2.5. Підключення рядка з’єднання з базою даних <span style="color: #0000ff;">Connection String</span></span></a></li>
+</ul>
+</li>
+<li><a href="https://www.bestprog.net/uk/2017/08/28/term-paper-development-of-an-environmental-pollution-monitoring-program_ua/#p03"><span style="color: #333300;">3. Проектування головної форми програми. Розміщення елементів управління на формі</span></a></li>
+<li><a href="https://www.bestprog.net/uk/2017/08/28/term-paper-development-of-an-environmental-pollution-monitoring-program_ua/#p04"><span style="color: #333300;">4. Розробка другорядних форм (діалогових вікон)</span></a>
+<ul>
+<li><a href="https://www.bestprog.net/uk/2017/08/28/term-paper-development-of-an-environmental-pollution-monitoring-program_ua/#p04_01"><span style="color: #333300;">4.1. Проектування форми вікна <span style="color: #0000ff;">“Додати джерело”</span></span></a></li>
+<li><a href="https://www.bestprog.net/uk/2017/08/28/term-paper-development-of-an-environmental-pollution-monitoring-program_ua/#p04_02"><span style="color: #333300;">4.2. Проектування форми вікна<span style="color: #0000ff;"> “Редагувати джерело …”</span></span></a></li>
+<li><a href="https://www.bestprog.net/uk/2017/08/28/term-paper-development-of-an-environmental-pollution-monitoring-program_ua/#p04_03"><span style="color: #333300;">4.3. Проектування форми вікна <span style="color: #0000ff;">“Додати викиди…”</span></span></a></li>
+<li><a href="https://www.bestprog.net/uk/2017/08/28/term-paper-development-of-an-environmental-pollution-monitoring-program_ua/#p04_04"><span style="color: #333300;">4.4. Проектування форми вікна підтвердження <span style="color: #0000ff;">“Видалити джерело”</span></span></a></li>
+<li><a href="https://www.bestprog.net/uk/2017/08/28/term-paper-development-of-an-environmental-pollution-monitoring-program_ua/#p04_05"><span style="color: #333300;">4.5. Проектування форми вікна підтвердження <span style="color: #0000ff;">“Видалити викиди”</span></span></a></li>
+<li><a href="https://www.bestprog.net/uk/2017/08/28/term-paper-development-of-an-environmental-pollution-monitoring-program_ua/#p04_06"><span style="color: #333300;">4.6. Проектування форми вікна <span style="color: #0000ff;">“Редагувати викиди…”</span></span></a></li>
+<li><a href="https://www.bestprog.net/uk/2017/08/28/term-paper-development-of-an-environmental-pollution-monitoring-program_ua/#p04_07"><span style="color: #333300;">4.7. Проектування форми <span style="color: #0000ff;">“Мінімальні викиди”</span></span></a></li>
+<li><a href="https://www.bestprog.net/uk/2017/08/28/term-paper-development-of-an-environmental-pollution-monitoring-program_ua/#p04_08"><span style="color: #333300;">4.8. Проектування форми <span style="color: #0000ff;">“Максимальні викиди”</span></span></a></li>
+<li><a href="https://www.bestprog.net/uk/2017/08/28/term-paper-development-of-an-environmental-pollution-monitoring-program_ua/#p04_09"><span style="color: #333300;">4.9. Проектування форми <span style="color: #0000ff;">“Середні викиди”</span></span></a></li>
+</ul>
+</li>
+<li><a href="https://www.bestprog.net/uk/2017/08/28/term-paper-development-of-an-environmental-pollution-monitoring-program_ua/#p05"><span style="color: #333300;">5. Написання програмного коду</span></a>
+<ul>
+<li><a href="https://www.bestprog.net/uk/2017/08/28/term-paper-development-of-an-environmental-pollution-monitoring-program_ua/#p05_01"><span style="color: #333300;">5.1. Додавання простору імен <span style="color: #0000ff;">System.Data.SqlClient</span></span></a></li>
+<li><a href="https://www.bestprog.net/uk/2017/08/28/term-paper-development-of-an-environmental-pollution-monitoring-program_ua/#p05_02"><span style="color: #333300;">5.2. Розробка методу заповнення методу <span style="color: #0000ff;">dataGridView1</span> з таблиці <span style="color: #0000ff;">Source</span></span></a></li>
+<li><a href="https://www.bestprog.net/uk/2017/08/28/term-paper-development-of-an-environmental-pollution-monitoring-program_ua/#p05_03"><span style="color: #333300;">5.3. Розробка методу заповнення елементу управління <span style="color: #0000ff;">dataGridView2</span> з таблиці <span style="color: #0000ff;">Emission</span></span></a></li>
+<li><a href="https://www.bestprog.net/uk/2017/08/28/term-paper-development-of-an-environmental-pollution-monitoring-program_ua/#p05_04"><span style="color: #333300;">5.4. Модифікація методу <span style="color: #0000ff;">Form_Load()</span> основної форми <span style="color: #0000ff;">Form1</span></span></a></li>
+<li><a href="https://www.bestprog.net/uk/2017/08/28/term-paper-development-of-an-environmental-pollution-monitoring-program_ua/#p05_05"><span style="color: #333300;">5.5. Розробка методу <span style="color: #0000ff;">MyExecuteNonQuery()</span> зміни даних в таблицях</span></a></li>
+<li><a href="https://www.bestprog.net/uk/2017/08/28/term-paper-development-of-an-environmental-pollution-monitoring-program_ua/#p05_06"><span style="color: #333300;">5.6. Програмування події кліку на кнопці <span style="color: #0000ff;">button1</span> (<span style="color: #0000ff;">“Додати джерело…”</span>)</span></a></li>
+<li><a href="https://www.bestprog.net/uk/2017/08/28/term-paper-development-of-an-environmental-pollution-monitoring-program_ua/#p05_07"><span style="color: #333300;">5.7. Програмування події кліку на кнопці <span style="color: #0000ff;">button3</span> (<span style="color: #0000ff;">“Редагувати джерело…”</span>)</span></a></li>
+<li><a href="https://www.bestprog.net/uk/2017/08/28/term-paper-development-of-an-environmental-pollution-monitoring-program_ua/#p05_08"><span style="color: #333300;">5.8. Налаштування властивості <span style="color: #0000ff;">DeleteRule</span> в об’єкті <span style="color: #0000ff;">FK_Emission_Source</span> (зв’язок між діаграмами) для коректного видалення джерела</span></a></li>
+<li><a href="https://www.bestprog.net/uk/2017/08/28/term-paper-development-of-an-environmental-pollution-monitoring-program_ua/#p05_09"><span style="color: #333300;">5.9. Програмування події кліку на кнопці <span style="color: #0000ff;">button2</span> (<span style="color: #0000ff;">“Видалити джерело”</span>)</span></a></li>
+<li><a href="https://www.bestprog.net/uk/2017/08/28/term-paper-development-of-an-environmental-pollution-monitoring-program_ua/#p05_10"><span style="color: #333300;">5.10. Програмування події кліку на кнопці <span style="color: #0000ff;">button4</span> (<span style="color: #0000ff;">“Додати викиди…”</span>)</span></a></li>
+<li><a href="https://www.bestprog.net/uk/2017/08/28/term-paper-development-of-an-environmental-pollution-monitoring-program_ua/#p05_11"><span style="color: #333300;">5.11. Програмування події кліку на кнопці <span style="color: #0000ff;">button6</span> (<span style="color: #0000ff;">“Редагувати викиди…”</span>)</span></a></li>
+<li><a href="https://www.bestprog.net/uk/2017/08/28/term-paper-development-of-an-environmental-pollution-monitoring-program_ua/#p05_12"><span style="color: #333300;">5.12. Програмування події кліку на кнопці <span style="color: #0000ff;">button5</span> (<span style="color: #0000ff;">“Видалити викиди”</span>)</span></a></li>
+<li><a href="https://www.bestprog.net/uk/2017/08/28/term-paper-development-of-an-environmental-pollution-monitoring-program_ua/#p05_13"><span style="color: #333300;">5.13. Програмування події кліку на кнопці <span style="color: #0000ff;">button7</span> (<span style="color: #0000ff;">“Мінімальні викиди”</span>)</span></a></li>
+<li><a href="https://www.bestprog.net/uk/2017/08/28/term-paper-development-of-an-environmental-pollution-monitoring-program_ua/#p05_14"><span style="color: #333300;">5.14. Програмування події кліку на кнопці <span style="color: #0000ff;">button8</span> (<span style="color: #0000ff;">“Максимальні викиди”</span>)</span></a></li>
+<li><a href="https://www.bestprog.net/uk/2017/08/28/term-paper-development-of-an-environmental-pollution-monitoring-program_ua/#p05_15"><span style="color: #333300;">5.15. Програмування події кліку на кнопці <span style="color: #0000ff;">button9</span> (<span style="color: #0000ff;">“Середні викиди”</span>)</span></a></li>
+<li><a href="https://www.bestprog.net/uk/2017/08/28/term-paper-development-of-an-environmental-pollution-monitoring-program_ua/#p05_16"><span style="color: #333300;">5.16. Програмування події вибору рядка в <span style="color: #0000ff;">dataGridView1</span> (таблиця <span style="color: #0000ff;">Source)</span></span></a></li>
+<li><a href="https://www.bestprog.net/uk/2017/08/28/term-paper-development-of-an-environmental-pollution-monitoring-program_ua/#p05_17"><span style="color: #333300;">5.17. Програмування події зміни активної комірки в <span style="color: #0000ff;">dataGridView1</span> (таблиця <span style="color: #0000ff;">Source)</span></span></a></li>
+</ul>
+</li>
+<li><a href="https://www.bestprog.net/uk/2017/08/28/term-paper-development-of-an-environmental-pollution-monitoring-program_ua/#p06"><span style="color: #333300;">6. Налаштування команд меню <span style="color: #0000ff;">menuStrip1</span></span></a></li>
+<li><a href="https://www.bestprog.net/uk/2017/08/28/term-paper-development-of-an-environmental-pollution-monitoring-program_ua/#p07"><span style="color: #333300;">7. Запуск програми на виконання</span></a></li>
+</ul>
+</li>
+<li><span style="color: #333300;"><a href="https://www.bestprog.net/uk/2017/08/28/term-paper-development-of-an-environmental-pollution-monitoring-program_ua/#topics"><span style="color: #333300;">Зв’язані теми</span></a></span></li>
+</ul>
+<hr>
+<h4 id="cond" style="text-align: center;">Умова задачі</h4>
+<p>Розробити програму, що оперує базою даних типу <span style="color: #0000ff;">Microsoft SQL Server</span>. База даних розміщується в <span style="color: #0000ff;">*.mdf-файлі</span>. Програму реалізувати в системі візуальної розробки додатків <span style="color: #0000ff;">Microsoft Visual Studio</span>.</p>
+<p>У роботі потрібно виконати такі завдання:</p>
+<ul>
+<li>спроектувати та реалізувати локальну базу даних типу <span style="color: #0000ff;">Microsoft SQL Server</span>, яка розміщується в окремому файлі. Ім’я бази даних <span style="color: #0000ff;">“MyDataBase.mdf”</span>;</li>
+<li>створити в базі даних 2 таблиці з іменами <span style="color: #0000ff;">“Source”</span> (Джерело) та <span style="color: #0000ff;">“Emission”</span> (Викиди). Кожна з таблиць повинна мати задані поля, які описуються нижче. Таблиці бази даних мають бути зв’язані між собою за деяким полем;</li>
+<li>розробити додаток, що оперує базою даних <span style="color: #0000ff;">“MyDataBase.mdf”</span>. Додаток реалізувати на мові C# за шаблоном<span style="color: #0000ff;"> Windows Forms Application</span>;</li>
+<li>у додатку реалізувати основні команди оперування записами (даними) в базі даних: додавання, редагування, видалення, перегляд;</li>
+<li>реалізувати наступні обчислення: знаходження мінімальних, максимальних, середніх викидів для кожного джерела.</li>
+</ul>
+<p>База даних містить 2 таблиці, які мають таку структуру.</p>
+<p>Таблиця <span style="color: #0000ff;">Source</span> (джерело викидів).</p>
+<p><a href="https://www.bestprog.net/wp-content/uploads/2017/08/table_source_u.jpg"><img class="size-medium wp-image-6330 aligncenter" src="./C#. Курсова робота. База даних MS SQL Server _ BestProg_files/table_source_u-300x62.jpg" alt="" width="300" height="62" srcset="https://www.bestprog.net/wp-content/uploads/2017/08/table_source_u-300x62.jpg 300w, https://www.bestprog.net/wp-content/uploads/2017/08/table_source_u-768x159.jpg 768w, https://www.bestprog.net/wp-content/uploads/2017/08/table_source_u-1024x211.jpg 1024w, https://www.bestprog.net/wp-content/uploads/2017/08/table_source_u-1038x216.jpg 1038w, https://www.bestprog.net/wp-content/uploads/2017/08/table_source_u.jpg 1046w" sizes="(max-width: 300px) 100vw, 300px"></a></p>
+<p>Таблиця <span style="color: #0000ff;">Emission</span> (викиди для заданого джерела).</p>
+<p><a href="https://www.bestprog.net/wp-content/uploads/2017/08/table_emission_u.jpg"><img class="size-medium wp-image-6331 aligncenter" src="./C#. Курсова робота. База даних MS SQL Server _ BestProg_files/table_emission_u-300x102.jpg" alt="" width="300" height="102" srcset="https://www.bestprog.net/wp-content/uploads/2017/08/table_emission_u-300x102.jpg 300w, https://www.bestprog.net/wp-content/uploads/2017/08/table_emission_u-768x261.jpg 768w, https://www.bestprog.net/wp-content/uploads/2017/08/table_emission_u-1024x348.jpg 1024w, https://www.bestprog.net/wp-content/uploads/2017/08/table_emission_u-1038x358.jpg 1038w, https://www.bestprog.net/wp-content/uploads/2017/08/table_emission_u.jpg 1052w" sizes="(max-width: 300px) 100vw, 300px"></a></p>
+<p>Таблиці зв’язані між собою за полем <span style="color: #0000ff;">ID_Source</span>.</p>
+<p>&nbsp;</p>
+<h3 id="instr" style="text-align: center;">Виконання</h3>
+<h5 id="p01">1. Вибір моделі бази даних</h5>
+<p>Для організації роботи з даними при створенні проектів (програм) система <span style="color: #0000ff;">Microsoft Visual Studio</span> пропонує різні види джерел даних.</p>
+<p>Наприклад:</p>
+<ul>
+<li>локальна база даних <span style="color: #0000ff;">Microsoft SQL Server</span>, що розміщується в окремому <span style="color: #0000ff;">“*.mdf”</span> – файлі. Приклад роботи з такою базою даних детально описується <a href="https://www.bestprog.net/uk/2016/07/19/002-%d0%bf%d1%80%d0%b8%d0%ba%d0%bb%d0%b0%d0%b4-%d1%81%d1%82%d0%b2%d0%be%d1%80%d0%b5%d0%bd%d0%bd%d1%8f-mdf-%d1%84%d0%b0%d0%b9%d0%bb%d1%83-%d0%bb%d0%be%d0%ba%d0%b0%d0%bb%d1%8c/" target="_blank" rel="noopener"><span style="text-decoration: underline;"><strong><span style="color: #333300; text-decoration: underline;">тут</span></strong></span></a>;</li>
+<li>локальна база даних <span style="color: #0000ff;">Microsoft SQL Server</span>. У цьому випадку має бути встановлений локальний сервер, наприклад <span style="color: #0000ff;">SQLEXPRESS</span>. Приклад роботи з такою базою даних детально описується <a href="https://www.bestprog.net/uk/2016/07/10/001-%D0%BF%D1%80%D0%B8%D0%BA%D0%BB%D0%B0%D0%B4-%D1%81%D1%82%D0%B2%D0%BE%D1%80%D0%B5%D0%BD%D0%BD%D1%8F-%D0%BB%D0%BE%D0%BA%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D1%97-%D0%B1%D0%B0%D0%B7%D0%B8-%D0%B4%D0%B0/" target="_blank" rel="noopener"><strong><span style="color: #333300;">тут</span></strong></a>;</li>
+<li>локальна база даних <span style="color: #0000ff;">Microsoft Access</span>. У цьому випадку створюється <span style="color: #0000ff;">“*.mdb”</span> файл бази даних;</li>
+<li>база даних, побудована на використанні <span style="color: #0000ff;">ODBC</span>-драйвера;</li>
+<li><span style="color: #0000ff;">Oracle</span> база даних.</li>
+</ul>
+<p>Можна також створити власну базу даних у вигляді структур чи класів. Потім, для цієї бази даних можна створити програмний функціонал, що буде обробляти записи бази даних, здійснювати зручний вивід, конвертувати у відомі формати тощо.</p>
+<p>Для роботи програми використаємо локальну базу даних, яка розміщена в окремому <span style="color: #0000ff;">“*.mdb”</span>– файлі і призначена для роботи під управлінням системи керування реляційними базами даних <span style="color: #0000ff;">Microsoft SQL Server</span>.</p>
+<p>&nbsp;</p>
+<h5 id="p02">2. Проектування (підключення) бази даних <span style="color: #0000ff;">“MyDataBase.mdf”</span>. Створення нового проекту в <span style="color: #0000ff;">Microsoft Visual Studio</span></h5>
+<h5 id="p02_01">2.1. Підготовка папки для файлів проекту та бази даних</h5>
+<p>Підготувати папку для програми. У даному випадку встановлюємо папку проекту і файлів бази даних:</p>
+<pre> D:\Programs\C_SHARP\TermPaper01</pre>
+<p>&nbsp;</p>
+<h5 id="p02_02">2.2. Завантаження <span style="color: #0000ff;">Microsoft Visual Studio</span>. Створення додатку типу <span style="color: #0000ff;">Windows Forms Application</span>. Збереження файлів проекту</h5>
+<p>Завантажити систему візуальної розробки додатків <span style="color: #0000ff;">Microsoft Visual Studio</span>. Створити новий проект на мові C# за шаблоном <span style="color: #0000ff;">Windows Forms Application</span>.</p>
+<p>Новий проект створюється командою</p>
+<pre><strong>File-&gt;New Project</strong></pre>
+<p>У нашому випадку проект створюється в папці</p>
+<pre><strong>D:\Programs\C_SHARP\TermPaper01</strong></pre>
+<p>Більш детально, приклад створення нового проекту описується в статті:</p>
+<ul>
+<li><a href="https://www.bestprog.net/uk/2015/12/17/001-%d1%81%d1%82%d0%b2%d0%be%d1%80%d0%b5%d0%bd%d0%bd%d1%8f-%d0%b4%d0%be%d0%b4%d0%b0%d1%82%d0%ba%d1%83-%d1%82%d0%b8%d0%bf%d1%83-windows-forms-application-%d1%83-microsoft-visual-studio-2010/" target="_blank" rel="noopener"><span style="color: #333300;"><strong><span style="text-decoration: underline;">Створення додатку типу <span style="color: #0000ff; text-decoration: underline;">Windows Forms Application</span> у <span style="color: #0000ff; text-decoration: underline;">Microsoft Visual Studio</span></span></strong></span></a></li>
+</ul>
+<p>У вікні New Project задаємо такі налаштування:</p>
+<ul>
+<li>ім’я проекту (поле <span style="color: #0000ff;">Name</span>) <span style="color: #0000ff;">TermPaper</span>;</li>
+<li>папка (<span style="color: #0000ff;">Location</span>) “D:\Programs\C_SHARP\TermPaper1\”;</li>
+<li>ім’я рішення (<span style="color: #0000ff;">Solution name</span>) <span style="color: #0000ff;">TermPaper</span>.</li>
+</ul>
+<p>Після створення нового проекту, головна форма програми має вигляд, як показано на рисунку 2.1.</p>
+<p><a href="https://www.bestprog.net/wp-content/uploads/2017/08/02_02_00_020_02_01_.jpg"><img class="size-medium wp-image-6334 aligncenter" src="./C#. Курсова робота. База даних MS SQL Server _ BestProg_files/02_02_00_020_02_01_-300x199.jpg" alt="" width="300" height="199" srcset="https://www.bestprog.net/wp-content/uploads/2017/08/02_02_00_020_02_01_-300x199.jpg 300w, https://www.bestprog.net/wp-content/uploads/2017/08/02_02_00_020_02_01_-768x510.jpg 768w, https://www.bestprog.net/wp-content/uploads/2017/08/02_02_00_020_02_01_-1024x680.jpg 1024w, https://www.bestprog.net/wp-content/uploads/2017/08/02_02_00_020_02_01_.jpg 1032w" sizes="(max-width: 300px) 100vw, 300px"></a></p>
+<p style="text-align: center;">Рис. 2.1. Головна форма програми</p>
+<p>&nbsp;</p>
+<h5 id="p02_03">2.3. Створення нової або підключення раніше створеної бази даних <span style="color: #0000ff;">“MyDataBase.mdf”</span></h5>
+<p>Після задавання папки для бази даних можна створювати нову базу даних або підключити вже існуючу. Детальний приклад створення/підключення бази даних, що розміщується в окремому <span style="color: #0000ff;">“*.mdf”</span>-файлі, описується в статтях:</p>
+<ul>
+<li><a href="https://www.bestprog.net/uk/2017/06/16/an-example-of-creating-connecting-a-local-microsoft-sql-server-database-located-in-the-mdf-file_ua/" target="_blank" rel="noopener"><span style="text-decoration: underline; color: #333300;"><strong>“001 – Приклад створення/підключення локальної бази даних <span style="color: #0000ff; text-decoration: underline;">Microsoft SQL Server</span>, яка розміщується в <span style="color: #0000ff; text-decoration: underline;">*.mdf</span>-файлі;</strong></span></a></li>
+<li><a href="https://www.bestprog.net/uk/2017/06/24/creating-a-new-table-in-the-local-ms-sql-server-database-located-in-the-mdf-file_ua/" target="_blank" rel="noopener"><span style="text-decoration: underline;"><strong><span style="color: #333300; text-decoration: underline;">“002 – Створення таблиці в базі даних <span style="color: #0000ff; text-decoration: underline;">MS SQL Server</span>“;</span></strong></span></a></li>
+<li><a href="https://www.bestprog.net/uk/2017/06/28/creating-an-autoincrement-field-counter-in-the-ms-sql-server-database-table-which-is-located-in-the-mdf-file_ua/" target="_blank" rel="noopener"><span style="text-decoration: underline;"><strong><span style="color: #333300; text-decoration: underline;">“003 – Приклад створення поля автоінкременту (лічильника) в таблиці бази даних <span style="color: #0000ff; text-decoration: underline;">Microsoft SQL Server</span>, яка розміщується в <span style="color: #0000ff; text-decoration: underline;">*.mdf</span>-файлі;</span></strong></span></a></li>
+<li><span style="text-decoration: underline;"><strong><span style="color: #333300; text-decoration: underline;"><a href="https://www.bestprog.net/uk/2017/07/04/creating-a-one-to-many-relationship-between-tables-in-a-microsoft-sql-server-database_ua/" target="_blank" rel="noopener"><span style="color: #333300; text-decoration: underline;">“004 – Приклад встановлення зв’язку між таблицями бази даних <span style="color: #0000ff; text-decoration: underline;">MS SQL Server</span>“</span></a></span></strong></span>.</li>
+</ul>
+<p>Щоб не витрачати часу на створення нової бази даних, можна завантажити <a href="https://www.bestprog.net/wp-content/uploads/2017/12/MyDatabase.zip" target="_blank" rel="noopener"><span style="text-decoration: underline; color: #333300;"><strong>архів з готовою базою даних</strong></span></a>, яка була створена раніше.</p>
+<p>База даних розміщується у двох файлах:</p>
+<ul>
+<li>файл <span style="color: #0000ff;">“MyDataBase.mdf”</span>;</li>
+<li>файл <span style="color: #0000ff;">“MyDataBase.ldf”</span>.</li>
+</ul>
+<p>Після розпакування <a href="https://www.bestprog.net/wp-content/uploads/2017/12/MyDatabase.zip" target="_blank" rel="noopener"><span style="text-decoration: underline; color: #333300;"><strong><span style="color: #333300; text-decoration: underline;">архіву</span></strong></span></a> копіюємо базу даних у папку з майбутньою програмою:</p>
+<pre><strong>D:\Programs\C_SHARP\TermPaper01</strong></pre>
+<p>Підключення готової, раніше створеної, бази даних до проекту здійснюється однією з команд:</p>
+<ul>
+<li>в меню <span style="color: #0000ff;">Tools</span> вибрати команду <span style="color: #0000ff;">“Connect to Database”</span>;</li>
+<li>в утиліті <span style="color: #0000ff;">Server Explorer</span> вибрати кнопку <span style="color: #0000ff;">“Connect to Database”</span>.</li>
+</ul>
+<p>У результаті відкриється вікно <span style="color: #0000ff;">Add Connection</span>, в якому потрібно вибрати такі налаштування:</p>
+<ul>
+<li>поле <span style="color: #0000ff;">“Data Source”</span> = <span style="color: #0000ff;">“Microsoft SQL Server Database File”</span>;</li>
+<li>поле <span style="color: #0000ff;">“Database File name (new of existing)”</span> = <span style="color: #0000ff;">“D:\Programs\C_SHARP\TermPaper1\MyDataBase.mdf”</span>. Тут з допомогою кнопки <span style="color: #0000ff;">“Browse”</span> вибирається шлях до нашої бази даних <span style="color: #0000ff;">MyDataBase.mdf</span>;</li>
+<li>опція <span style="color: #0000ff;">“Log on to the server”</span> = <span style="color: #0000ff;">“Use Windows Autentification</span></li>
+</ul>
+<p>Детальний приклад підключення готової бази даних до проекту описується в темі:</p>
+<p><span style="color: #333300;"><a href="https://www.bestprog.net/uk/2017/06/16/an-example-of-creating-connecting-a-local-microsoft-sql-server-database-located-in-the-mdf-file_ua/" target="_blank" rel="noopener"><span style="text-decoration: underline; color: #333300;"><strong>– 001 – Приклад створення/підключення локальної бази даних <span style="color: #0000ff; text-decoration: underline;">Microsoft SQL Server</span>, яка розміщується в <span style="color: #0000ff; text-decoration: underline;">“*.mdf”</span>-файлі.</strong></span></a></span></p>
+<p>Після підключення (або створення) бази даних у вікні <span style="color: #0000ff;">“Server Explorer”</span> відобразиться база даних <span style="color: #0000ff;">“MyDataBase.mdf”</span> (рисунок 2.2).</p>
+<p><a href="https://www.bestprog.net/wp-content/uploads/2017/08/02_02_00_020_02_02_.jpg"><img class="size-medium wp-image-6335 aligncenter" src="./C#. Курсова робота. База даних MS SQL Server _ BestProg_files/02_02_00_020_02_02_-300x247.jpg" alt="" width="300" height="247" srcset="https://www.bestprog.net/wp-content/uploads/2017/08/02_02_00_020_02_02_-300x247.jpg 300w, https://www.bestprog.net/wp-content/uploads/2017/08/02_02_00_020_02_02_.jpg 636w" sizes="(max-width: 300px) 100vw, 300px"></a></p>
+<p style="text-align: center;">Рис. 2.2. База даних <span style="color: #0000ff;">MyDataBase.mdb</span> у вікні <span style="color: #0000ff;">“Server Explorer”</span></p>
+<p>&nbsp;</p>
+<h5 id="p02_04">2.4. Інформація про базу даних <span style="color: #0000ff;">“MyDataBase.mdf”</span></h5>
+<p>База даних <span style="color: #0000ff;">“MyDataBase.mdf”</span> містить:</p>
+<ul>
+<li>таблицю <span style="color: #0000ff;">Source</span> (рис. 2.3);</li>
+<li>таблицю <span style="color: #0000ff;">Emission</span> (рис. 2.4);</li>
+<li>діаграму <span style="color: #0000ff;">Diagram1,</span> що містить інформацію зв’язки між таблицями <span style="color: #0000ff;">Source</span> та <span style="color: #0000ff;">Emission</span> (рис. 2.5).</li>
+</ul>
+<p><a href="https://www.bestprog.net/wp-content/uploads/2017/08/02_02_00_020_02_03u.jpg"><img class="size-medium wp-image-6336 aligncenter" src="./C#. Курсова робота. База даних MS SQL Server _ BestProg_files/02_02_00_020_02_03u-257x300.jpg" alt="" width="257" height="300" srcset="https://www.bestprog.net/wp-content/uploads/2017/08/02_02_00_020_02_03u-257x300.jpg 257w, https://www.bestprog.net/wp-content/uploads/2017/08/02_02_00_020_02_03u.jpg 493w" sizes="(max-width: 257px) 100vw, 257px"></a></p>
+<p style="text-align: center;">Рис. 2.3. Таблиці <span style="color: #0000ff;">Source, Emission</span> та діаграма зв’язків</p>
+<p>Якщо розкрити діаграму зв’язків, то відобразиться зв’язок між таблицями <span style="color: #0000ff;">Source</span> та <span style="color: #0000ff;">Emission</span> за полем <span style="color: #0000ff;">ID_Source</span> (рис. 2.5).</p>
+<p>Щоб відобразити діаграму зв’язків використовується команда <span style="color: #0000ff;">Design Database Diagram</span>, з контекстного меню діаграми (рис. 2.4).</p>
+<p>Також відображення діаграми зв’язків викликається подвійним кліком мишкою на <span style="color: #0000ff;">Diagram1.</span></p>
+<p style="text-align: center;"><a href="https://www.bestprog.net/wp-content/uploads/2017/08/02_02_00_020_02_04_.jpg"><img class="alignnone size-medium wp-image-6337" src="./C#. Курсова робота. База даних MS SQL Server _ BestProg_files/02_02_00_020_02_04_-235x300.jpg" alt="" width="235" height="300" srcset="https://www.bestprog.net/wp-content/uploads/2017/08/02_02_00_020_02_04_-235x300.jpg 235w, https://www.bestprog.net/wp-content/uploads/2017/08/02_02_00_020_02_04_.jpg 441w" sizes="(max-width: 235px) 100vw, 235px"></a></p>
+<p style="text-align: center;">Рис. 2.4. Виклик команди відображення діаграми зв’язків між таблицями</p>
+<p style="text-align: center;"><a href="https://www.bestprog.net/wp-content/uploads/2017/08/02_02_00_020_02_05_.jpg"><img class="alignnone size-medium wp-image-6338" src="./C#. Курсова робота. База даних MS SQL Server _ BestProg_files/02_02_00_020_02_05_-300x174.jpg" alt="" width="300" height="174" srcset="https://www.bestprog.net/wp-content/uploads/2017/08/02_02_00_020_02_05_-300x174.jpg 300w, https://www.bestprog.net/wp-content/uploads/2017/08/02_02_00_020_02_05_.jpg 592w" sizes="(max-width: 300px) 100vw, 300px"></a></p>
+<p style="text-align: center;">Рис. 2.5. Діаграма зв’язків між таблицями</p>
+<p>&nbsp;</p>
+<h5 id="p02_05">2.5. Підключення рядка з’єднання з базою даних <span style="color: #0000ff;">Connection String</span></h5>
+<p>У програмі, для доступу до бази даних, буде використовуватись рядок з’єднання з базою даних <span style="color: #0000ff;">Connection String</span>. Цей рядок містить усю необхідну інформацію про базу даних.</p>
+<p>Детальний опис підключення рядка <span style="color: #0000ff;">Connection String</span> до програми реалізовано в темі:</p>
+<ul>
+<li><a href="https://www.bestprog.net/uk/2017/07/08/the-connection-string-string-of-connection-with-database-an-example-of-using-in-applications_ua/" target="_blank" rel="noopener"><span style="color: #333300;"><span style="text-decoration: underline;"><strong>006 – “Рядок з’єднання з базою даних. Приклад використання у програмі”</strong></span></span></a><span style="color: #333300;">.</span></li>
+</ul>
+<p>Щоб підключити рядок з’єднання з базою даних, потрібно виконати таку послідовність кроків:</p>
+<ol>
+<li>Перейти в утиліту <span style="color: #0000ff;">Server Explorer</span> (рис. 2.6).</li>
+<li>Виділити файл <span style="color: #0000ff;">“MyDataBase.mdf”</span> (рис. 2.6).</li>
+<li>У вікні <span style="color: #0000ff;">“Properties”</span> виділити рядок (властивість) <span style="color: #0000ff;">“Connection Strings”</span> (контекстне меню – команда <span style="color: #0000ff;">“Выделить все”</span> і скопіювати його в буфер обміну <span style="color: #0000ff;">Clipboard</span> (контекстне меню – команда <span style="color: #0000ff;">“Копировать”</span>) (рис. 2.6).</li>
+<li>Перейти у текстову частину файлу <span style="color: #0000ff;">“Form1.cs”</span></li>
+</ol>
+<p>Створити змінну в класі форми <span style="color: #0000ff;">Form1</span> типу <span style="color: #0000ff;">string</span>.</p>
+<p>Нехай назва змінної <span style="color: #0000ff;">ConnStr</span>. Вставити рядок <span style="color: #0000ff;">“Connection String”</span> в рядку ініціалізації значення змінної <span style="color: #0000ff;">ConnStr</span> як показано нижче:</p>
+<pre><span style="color: #008000;">// рядок з'єднання з базою даних</span>
+<span style="color: #0000ff;">string</span> ConnStr = <span style="color: #800000;">@"Data Source=.\SQLEXPRESS;AttachDbFilename=D:\Programs\C_SHARP\TermPaper1\TermPaper1\MyDataBase.mdf;Integrated Security=True;User Instance=True"</span>;</pre>
+<p style="text-align: center;"><a href="https://www.bestprog.net/wp-content/uploads/2017/08/02_02_00_020_02_06u.jpg"><img class="alignnone size-medium wp-image-6339" src="./C#. Курсова робота. База даних MS SQL Server _ BestProg_files/02_02_00_020_02_06u-300x150.jpg" alt="" width="300" height="150" srcset="https://www.bestprog.net/wp-content/uploads/2017/08/02_02_00_020_02_06u-300x150.jpg 300w, https://www.bestprog.net/wp-content/uploads/2017/08/02_02_00_020_02_06u-768x383.jpg 768w, https://www.bestprog.net/wp-content/uploads/2017/08/02_02_00_020_02_06u-1024x511.jpg 1024w, https://www.bestprog.net/wp-content/uploads/2017/08/02_02_00_020_02_06u.jpg 1268w" sizes="(max-width: 300px) 100vw, 300px"></a></p>
+<p style="text-align: center;">Рис. 2.6. Копіювання рядка (<span style="color: #0000ff;">Connection String</span>) з’єднання з базою даних в програму</p>
+<p>На даний момент приблизний вигляд файлу <span style="color: #0000ff;">“Form1.cs”</span> наступний:</p>
+<pre><span style="color: #0000ff;">using</span> System;
+<span style="color: #0000ff;">using</span> System.Collections.Generic;
+<span style="color: #0000ff;">using</span> System.ComponentModel;
+<span style="color: #0000ff;">using</span> System.Data;
+<span style="color: #0000ff;">using</span> System.Drawing;
+<span style="color: #0000ff;">using</span> System.Linq;
+<span style="color: #0000ff;">using</span> System.Text;
+<span style="color: #0000ff;">using</span> System.Windows.Forms;
+
+<span style="color: #0000ff;">namespace</span> TermPaper1
+{
+    <span style="color: #0000ff;">public partial class</span> <span style="color: #008080;">Form1</span> : <span style="color: #008080;">Form</span>
+    {
+        <span style="color: #008000;">// рядок з'єднання з базою даних</span>
+        <span style="color: #0000ff;">string</span> ConnStr = <span style="color: #800000;">@"Data Source=.\SQLEXPRESS;AttachDbFilename=D:\Programs\C_SHARP\TermPaper1\TermPaper1\MyDataBase.mdf;Integrated Security=True;User Instance=True"</span>;
+
+        <span style="color: #0000ff;">public</span> Form1()
+        {
+            InitializeComponent();
+        }
+
+        <span style="color: #0000ff;">private void</span> Form1_Load(<span style="color: #0000ff;">object</span> sender, <span style="color: #008080;">EventArgs</span> e)
+        {
+
+        }
+    }
+}</pre>
+<p>Після цього можна проектувати інтерфейс програми та програмувати методи обробки бази даних.</p>
+<p>&nbsp;</p>
+<h5 id="p03">3. Проектування головної форми програми. Розміщення елементів управління на формі</h5>
+<p>З допомогою інструментів на панелі <span style="color: #0000ff;">ToolBox</span> на головній формі програми необхідно розмістити такі елементи управління (рис. 3.1):</p>
+<ul>
+<li><span style="color: #0000ff;">label1</span> типу <span style="color: #0000ff;">Label.</span> Містить текст <span style="color: #0000ff;">“Джерело викидів”</span>;</li>
+<li><span style="color: #0000ff;">label2</span> типу <span style="color: #0000ff;">Label.</span> Містить текст <span style="color: #0000ff;">“Викиди”</span>;</li>
+<li><span style="color: #0000ff;">dataGridView1</span> типу <span style="color: #0000ff;">dataGridView.</span> Цей елемент управління відображає таблицю бази даних “Джерело викидів”;</li>
+<li><span style="color: #0000ff;">dataGridView2</span> типу <span style="color: #0000ff;">dataGridView</span> – відображає таблицю бази даних “Викиди”;</li>
+<li><span style="color: #0000ff;">button1</span> – кнопка, що містить текст <span style="color: #0000ff;">“Додати джерело…”</span> (властивість <span style="color: #0000ff;">Text);</span></li>
+<li><span style="color: #0000ff;">button2</span> – кнопка, що містить текст <span style="color: #0000ff;">“Видалити джерело”</span>(властивість <span style="color: #0000ff;">Text);</span></li>
+<li><span style="color: #0000ff;">button3</span> – кнопка, що містить текст <span style="color: #0000ff;">“Редагувати джерело…”</span>;</li>
+<li><span style="color: #0000ff;">button4</span> – кнопка, що містить текст<span style="color: #0000ff;"> “Додати викиди…”</span>;</li>
+<li><span style="color: #0000ff;">button5</span> – кнопка, що містить текст <span style="color: #0000ff;">“Видалити викиди…”</span>;</li>
+<li><span style="color: #0000ff;">button6</span> – кнопка з текстом<span style="color: #0000ff;"> “Редагувати викиди …”</span>;</li>
+<li><span style="color: #0000ff;">button7</span> – кнопка з текстом <span style="color: #0000ff;">“Мінімальні викиди”</span>;</li>
+<li><span style="color: #0000ff;">button8</span> – кнопка з текстом <span style="color: #0000ff;">“Максимальні викиди”</span>;</li>
+<li><span style="color: #0000ff;">button9</span> – кнопка з текстом <span style="color: #0000ff;">“Середні викиди”</span>;</li>
+<li>елемент управління <span style="color: #0000ff;">menuStrip1</span> типу <span style="color: #0000ff;">MenuStrip.</span></li>
+</ul>
+<p>Для елементів управління <span style="color: #0000ff;">label1, label2, button1, button2, button3, button4, button5, button6, button7, button8, button9</span> налаштовується властивість <span style="color: #0000ff;">Text</span> у відповідне значення. Робота з цими елементами управління більш детально описується в практичному прикладі:</p>
+<p><span style="text-decoration: underline; color: #333300;"><strong><a href="https://www.bestprog.net/uk/2016/01/08/005-%d0%bf%d1%80%d0%b8%d0%ba%d0%bb%d0%b0%d0%b4-%d0%bf%d1%80%d0%be%d0%b3%d1%80%d0%b0%d0%bc%d1%83%d0%b2%d0%b0%d0%bd%d0%bd%d1%8f-%d0%bf%d0%be%d0%b4%d1%96%d1%97-%d0%b2-c/" target="_blank" rel="noopener"><span style="color: #333300; text-decoration: underline;"> – 005 – Приклад програмування події в C#. Розробка програми визначення площі поверхні кулі</span></a></strong></span>.</p>
+<p>В елементах управління <span style="color: #0000ff;">dataGridView1, dataGridView2</span> налаштовується властивість</p>
+<pre>EditMode = EditProgrammatically</pre>
+<p>Це означає, що комірки з відображуваними даними не матимуть можливості редагуватись з допомогою клавіатури. Редагування комірок буде здійснюватись програмним шляхом.</p>
+<p>Елемент управління <span style="color: #0000ff;">menuStrip1</span> призначений для створення меню в програмі. У даній роботі створюємо меню, як показано на рисунку 3.2. Робота з елементом управління <span style="color: #0000ff;">menuStrip1</span> детально описується в статті:</p>
+<ul>
+<li><a href="https://www.bestprog.net/uk/2016/01/28/008-%d0%bf%d1%80%d0%b8%d0%ba%d0%bb%d0%b0%d0%b4-%d1%81%d1%82%d0%b2%d0%be%d1%80%d0%b5%d0%bd%d0%bd%d1%8f-%d0%bc%d0%b5%d0%bd%d1%8e-%d0%b2-c-%d0%b5%d0%bb%d0%b5%d0%bc%d0%b5%d0%bd%d1%82-%d1%83%d0%bf/" target="_blank" rel="noopener"><span style="text-decoration: underline; color: #333300;"><strong>008 – Приклад створення меню в C#. Елемент управління MenuStip</strong></span></a>.</li>
+</ul>
+<p>Також потрібно налаштувати такі властивості форми (елемент управління <span style="color: #0000ff;">Form1):</span></p>
+<ul>
+<li>властивість <span style="color: #0000ff;">Text</span> = <span style="color: #0000ff;">“Програма моніторингу забруднення навколишнього середовища”</span>;</li>
+<li>властивість <span style="color: #0000ff;">MaximizeBox</span> = <span style="color: #0000ff;">False.</span></li>
+</ul>
+<p style="text-align: center;"><a href="https://www.bestprog.net/wp-content/uploads/2017/08/02_02_00_020_03_01u.jpg"><img class="alignnone size-medium wp-image-6340" src="./C#. Курсова робота. База даних MS SQL Server _ BestProg_files/02_02_00_020_03_01u-300x191.jpg" alt="" width="300" height="191" srcset="https://www.bestprog.net/wp-content/uploads/2017/08/02_02_00_020_03_01u-300x191.jpg 300w, https://www.bestprog.net/wp-content/uploads/2017/08/02_02_00_020_03_01u-768x489.jpg 768w, https://www.bestprog.net/wp-content/uploads/2017/08/02_02_00_020_03_01u.jpg 774w" sizes="(max-width: 300px) 100vw, 300px"></a></p>
+<p style="text-align: center;">Рис. 3.1. Головна форма програми після проектування</p>
+<p style="text-align: center;"><a href="https://www.bestprog.net/wp-content/uploads/2017/08/02_02_00_020_03_02u.jpg"><img class="alignnone size-medium wp-image-6341" src="./C#. Курсова робота. База даних MS SQL Server _ BestProg_files/02_02_00_020_03_02u-300x48.jpg" alt="" width="300" height="48" srcset="https://www.bestprog.net/wp-content/uploads/2017/08/02_02_00_020_03_02u-300x48.jpg 300w, https://www.bestprog.net/wp-content/uploads/2017/08/02_02_00_020_03_02u-768x122.jpg 768w, https://www.bestprog.net/wp-content/uploads/2017/08/02_02_00_020_03_02u.jpg 936w" sizes="(max-width: 300px) 100vw, 300px"></a></p>
+<p style="text-align: center;">Рис. 3.2. Головне меню програми. Підменю <span style="color: #0000ff;">“Джерело”</span>, <span style="color: #0000ff;">“Викиди”</span>, <span style="color: #0000ff;">“Розрахунок”</span></p>
+<p>&nbsp;</p>
+<h5 id="p04">4. Розробка другорядних форм (діалогових вікон)</h5>
+<h5 id="p04_01">4.1. Проектування форми вікна <span style="color: #0000ff;">“Додати джерело”</span></h5>
+<p>Додавання в базу даних нового джерела викидів здійснюється після натиску на кнопці <span style="color: #0000ff;">“Додати джерело…”</span>. Набір нової інформації про джерело має здійснюватись у окремій формі.</p>
+<p>Для створення нової форми потрібно викликати команду</p>
+<pre><strong>Project -&gt; Add Windows Form... </strong></pre>
+<p>У вікні, що відкриється, потрібно вибрати шаблон <span style="color: #0000ff;">Windows Form</span>.</p>
+<p>Більш детальний приклад створення нової форми та виклику форми описується у статті:</p>
+<ul>
+<li><a href="https://www.bestprog.net/uk/2016/01/09/006-%d0%bf%d1%80%d0%b8%d0%ba%d0%bb%d0%b0%d0%b4-%d1%81%d1%82%d0%b2%d0%be%d1%80%d0%b5%d0%bd%d0%bd%d1%8f-%d1%82%d0%b0-%d0%b2%d0%b8%d0%ba%d0%bb%d0%b8%d0%ba%d1%83-%d0%bd%d0%be%d0%b2%d0%be%d1%97-%d1%84/" target="_blank" rel="noopener"><span style="text-decoration: underline;"><strong><span style="color: #333300; text-decoration: underline;">006 – Приклад створення та виклику нової форми в C#</span></strong></span></a>.</li>
+</ul>
+<p>Використовуючи засоби панелі інструментів <span style="color: #0000ff;">Toolbox</span> створюємо нову форму, як показано на рисунку 4.1.</p>
+<p>Форма має ім’я <span style="color: #0000ff;">Form2.</span> Назва файлу форми <span style="color: #0000ff;">“Form2.cs”</span>.</p>
+<p style="text-align: center;"><a href="https://www.bestprog.net/wp-content/uploads/2017/08/02_02_00_020_04_01u.jpg"><img class="alignnone size-medium wp-image-6342" src="./C#. Курсова робота. База даних MS SQL Server _ BestProg_files/02_02_00_020_04_01u-300x219.jpg" alt="" width="300" height="219" srcset="https://www.bestprog.net/wp-content/uploads/2017/08/02_02_00_020_04_01u-300x219.jpg 300w, https://www.bestprog.net/wp-content/uploads/2017/08/02_02_00_020_04_01u.jpg 305w" sizes="(max-width: 300px) 100vw, 300px"></a></p>
+<p style="text-align: center;">Рис. 4.1. Форма додавання нового джерела даних</p>
+<p>У формі <span style="color: #0000ff;">Form2</span> розміщуються такі елементи управління:</p>
+<ul>
+<li>два елементи управління типу <span style="color: #0000ff;">Label</span> з іменами <span style="color: #0000ff;">label1, label2. </span>Призначені для виведення інформаційних повідомлень;</li>
+<li>два елементи управління типу <span style="color: #0000ff;">Button</span> з іменами <span style="color: #0000ff;">button1, button2;</span></li>
+<li>два елементи управління типу <span style="color: #0000ff;">TextBox</span> з іменами <span style="color: #0000ff;">textBox1, textBox2.</span></li>
+</ul>
+<p>Налаштовуємо такі властивості:</p>
+<ul>
+<li>в формі <span style="color: #0000ff;">Form2</span> властивість <span style="color: #0000ff;">Text</span> = <span style="color: #0000ff;">“Додати джерело”</span>;</li>
+<li>у формі <span style="color: #0000ff;">Form2</span> властивість <span style="color: #0000ff;">StartPosition</span> = <span style="color: #0000ff;">CenterScreen.</span> Це означає, що форма буде відкриватись по центру екрану;</li>
+<li>в елементі управління <span style="color: #0000ff;">label1</span> властивість <span style="color: #0000ff;">Text</span> = <span style="color: #0000ff;">“Назва джерела”</span>;</li>
+<li>в елементі управління <span style="color: #0000ff;">label2</span> властивість <span style="color: #0000ff;">Text</span> = <span style="color: #0000ff;">“Адреса”</span>;</li>
+<li>в <span style="color: #0000ff;">button1</span> властивість <span style="color: #0000ff;">Text</span> = <span style="color: #0000ff;">“Додати”</span>;</li>
+<li>в <span style="color: #0000ff;">button1</span> властивість <span style="color: #0000ff;">DialogResult</span> = <span style="color: #0000ff;">“OK”</span>. Це означає, що при натиску на кнопці <span style="color: #0000ff;">button1</span> форма буде закриватись з кодом повернення <span style="color: #0000ff;">OK</span>;</li>
+<li>в <span style="color: #0000ff;">button2</span> властивість <span style="color: #0000ff;">Text</span> = <span style="color: #0000ff;">“Відмінити”</span>;</li>
+<li>в <span style="color: #0000ff;">button2</span> властивість <span style="color: #0000ff;">DialogResult</span> = <span style="color: #0000ff;">“No”</span>.</li>
+<li>в елементі управління <span style="color: #0000ff;">textBox1</span> властивість <span style="color: #0000ff;">Modifiers</span> = <span style="color: #0000ff;">Public. </span>Це означає, що елемент має модифікатор доступу <span style="color: #0000ff;">Public.</span> Після цього можна мати доступ до <span style="color: #0000ff;">textBox1</span> з інших форм (модулів, файлів);</li>
+<li>в елементі управління <span style="color: #0000ff;">textBox2</span> властивість <span style="color: #0000ff;">Modifiers</span> = <span style="color: #0000ff;">Public</span> (видимий ззовні).</li>
+</ul>
+<h5 id="p04_02" style="text-align: left;">4.2. Проектування форми вікна <span style="color: #0000ff;">“Редагувати джерело …”</span></h5>
+<p>За зразком попереднього пункту (п. 4.1) створюється нова форма <span style="color: #0000ff;">“Редагувати джерело …”</span>. Форма має ім’я <span style="color: #0000ff;">Form3.</span> Файл форми має ім’я <span style="color: #0000ff;">“Form3.cs”</span>.</p>
+<p>Після розміщення та налаштування елементів управління, вигляд вікна форми буде таким як показано на рисунку 4.2.</p>
+<p style="text-align: center;"><a href="https://www.bestprog.net/wp-content/uploads/2017/08/02_02_00_020_04_02u.jpg"><img class="alignnone size-medium wp-image-6343" src="./C#. Курсова робота. База даних MS SQL Server _ BestProg_files/02_02_00_020_04_02u-300x204.jpg" alt="" width="300" height="204" srcset="https://www.bestprog.net/wp-content/uploads/2017/08/02_02_00_020_04_02u-300x204.jpg 300w, https://www.bestprog.net/wp-content/uploads/2017/08/02_02_00_020_04_02u.jpg 313w" sizes="(max-width: 300px) 100vw, 300px"></a></p>
+<p style="text-align: center;">Рис. 4.2. Форма <span style="color: #0000ff;">“Редагувати джерело”</span></p>
+<p>На формі розміщуються такі елементи управління:</p>
+<ul>
+<li>два елементи управління типу <span style="color: #0000ff;">Label</span> з іменами <span style="color: #0000ff;">label1, label2;</span></li>
+<li>два елементи управління типу <span style="color: #0000ff;">Button</span> з іменами <span style="color: #0000ff;">button1, button2;</span></li>
+<li>два елементи управління типу <span style="color: #0000ff;">TextBox</span> з іменами <span style="color: #0000ff;">textBox1, textBox2.</span></li>
+</ul>
+<p>Налаштувати такі властивості елементів управління:</p>
+<ul>
+<li>у <span style="color: #0000ff;">Form3</span> властивість <span style="color: #0000ff;">Text</span> = <span style="color: #0000ff;">“Редагувати джерело”</span>;</li>
+<li>у <span style="color: #0000ff;">Form3</span> властивість <span style="color: #0000ff;">StartPosition</span> = <span style="color: #0000ff;">CenterScreen;</span></li>
+<li>в елементі управління <span style="color: #0000ff;">button1</span> властивість <span style="color: #0000ff;">Text</span> =<span style="color: #0000ff;"> “Змінити”</span>;</li>
+<li>у <span style="color: #0000ff;">button1</span> властивість <span style="color: #0000ff;">DialogResult</span> = <span style="color: #0000ff;">OK;</span></li>
+<li>у <span style="color: #0000ff;">button2</span> властивість <span style="color: #0000ff;">Text</span> = <span style="color: #0000ff;">“Відмінити”</span>;</li>
+<li>у <span style="color: #0000ff;">button2</span> властивість <span style="color: #0000ff;">DialogResult</span> = <span style="color: #0000ff;">No;</span></li>
+<li>в <span style="color: #0000ff;">label1</span> властивість <span style="color: #0000ff;">Text</span> = <span style="color: #0000ff;">“Назва джерела”</span>;</li>
+<li>в <span style="color: #0000ff;">label2</span> властивість <span style="color: #0000ff;">Text</span> = <span style="color: #0000ff;">“Адреса”</span>;</li>
+<li>в <span style="color: #0000ff;">textBox1</span> властивість <span style="color: #0000ff;">Modifiers</span> = <span style="color: #0000ff;">public;</span></li>
+<li>в <span style="color: #0000ff;">textBox2</span> властивість <span style="color: #0000ff;">Modifiers</span> = <span style="color: #0000ff;">public.</span></li>
+</ul>
+<p>&nbsp;</p>
+<h5 id="p04_03">4.3. Проектування форми вікна <span style="color: #0000ff;">“Додати викиди…”</span></h5>
+<p>За зразком попередніх форм проектується нова форма додавання викиду (рис. 4.3). Ця форма повинна бути активована після натиску на кнопці <span style="color: #0000ff;">“Додати викиди…”</span>. У програмі ім’я форми <span style="color: #0000ff;">Form4.</span> Файл форми має ім’я <span style="color: #0000ff;">“Form4.cs”</span>.</p>
+<p style="text-align: center;"><a href="https://www.bestprog.net/wp-content/uploads/2017/08/02_02_00_020_04_03u.jpg"><img class="alignnone size-medium wp-image-6344" src="./C#. Курсова робота. База даних MS SQL Server _ BestProg_files/02_02_00_020_04_03u-300x250.jpg" alt="" width="300" height="250" srcset="https://www.bestprog.net/wp-content/uploads/2017/08/02_02_00_020_04_03u-300x250.jpg 300w, https://www.bestprog.net/wp-content/uploads/2017/08/02_02_00_020_04_03u.jpg 303w" sizes="(max-width: 300px) 100vw, 300px"></a></p>
+<p style="text-align: center;">Рис. 4.3. Вигляд форми додавання нового викиду для заданого джерела</p>
+<p>На формі розміщуються наступні елементи управління:</p>
+<ul>
+<li>4 елементи управління типу <span style="color: #0000ff;">Label</span> з іменами <span style="color: #0000ff;">label1, label2, label3, label4;</span></li>
+<li>3 елементи управління типу <span style="color: #0000ff;">TextBox</span> з іменами <span style="color: #0000ff;">textBox1, textBox2, textBox3;</span></li>
+<li>2 елементи управління типу <span style="color: #0000ff;">Button</span> з іменами <span style="color: #0000ff;">button1, button2.</span></li>
+</ul>
+<p>Налаштувати такі властивості форми та елементів управління:</p>
+<ul>
+<li>у формі <span style="color: #0000ff;">Form4</span> властивість <span style="color: #0000ff;">Text</span> = <span style="color: #0000ff;">“Додати викиди”</span>;</li>
+<li>у формі <span style="color: #0000ff;">Form4</span> властивість <span style="color: #0000ff;">StartPosition</span> = <span style="color: #0000ff;">CenterScreen;</span></li>
+<li>в <span style="color: #0000ff;">label1</span> властивість <span style="color: #0000ff;">Text</span> = <span style="color: #0000ff;">“Кількість викидів”</span>;</li>
+<li>в <span style="color: #0000ff;">label2</span> властивість <span style="color: #0000ff;">Text</span> = <span style="color: #0000ff;">“Коментарій”</span>;</li>
+<li>в <span style="color: #0000ff;">label3</span> властивість <span style="color: #0000ff;">Text</span> = <span style="color: #0000ff;">“Дата”</span>;</li>
+<li>в <span style="color: #0000ff;">label4</span> властивість <span style="color: #0000ff;">Text</span> = <span style="color: #0000ff;">“Джерело”</span>;</li>
+<li>в <span style="color: #0000ff;">label4</span> властивість <span style="color: #0000ff;">Modifiers</span> = <span style="color: #0000ff;">Public</span> (видимий ззовні);</li>
+<li>в <span style="color: #0000ff;">button1</span> властивість <span style="color: #0000ff;">Text</span> = <span style="color: #0000ff;">“Додати”</span>;</li>
+<li>в <span style="color: #0000ff;">button2</span> властивість <span style="color: #0000ff;">Text</span> = <span style="color: #0000ff;">“Відмінити”</span>;</li>
+<li>в <span style="color: #0000ff;">button1</span> властивість <span style="color: #0000ff;">DialogResult</span> = <span style="color: #0000ff;">OK;</span></li>
+<li>в <span style="color: #0000ff;">button2</span> властивість <span style="color: #0000ff;">DialogResult</span> = <span style="color: #0000ff;">No;</span></li>
+<li>в <span style="color: #0000ff;">textBox1</span> властивість <span style="color: #0000ff;">Modifiers</span> = <span style="color: #0000ff;">Public;</span></li>
+<li>в <span style="color: #0000ff;">textBox2</span> властивість <span style="color: #0000ff;">Modifiers</span> = <span style="color: #0000ff;">Public;</span></li>
+<li>в <span style="color: #0000ff;">textBox3</span> властивість <span style="color: #0000ff;">Modifiers</span> = <span style="color: #0000ff;">Public.</span></li>
+</ul>
+<h5 id="p04_04" style="text-align: left;">4.4. Проектування форми вікна підтвердження <span style="color: #0000ff;">“Видалити джерело”</span></h5>
+<p>Після того, як користувач викличе команду <span style="color: #0000ff;">“Видалити джерело”</span>, повинно відкритись вікно підтвердження команди. Для цього створюється нова форма з іменем <span style="color: #0000ff;">Form5.</span> Файл форми має ім’я <span style="color: #0000ff;">“Form5.cs”</span>. Вигляд форми <span style="color: #0000ff;">Form5</span> зображено на рисунку 4.4.</p>
+<p style="text-align: center;"><a href="./C#. Курсова робота. База даних MS SQL Server _ BestProg_files/02_02_00_020_04_04u.jpg"><img class="alignnone size-full wp-image-6345" src="./C#. Курсова робота. База даних MS SQL Server _ BestProg_files/02_02_00_020_04_04u.jpg" alt="" width="278" height="162"></a></p>
+<p style="text-align: center;">Рис. 4.4. Форма підтвердження <span style="color: #0000ff;">“Видалити джерело”</span></p>
+<p>На формі розміщуються наступні елементи управління:</p>
+<ul>
+<li>два елементи управління типу <span style="color: #0000ff;">Label</span> з іменами <span style="color: #0000ff;">label1, label2;</span></li>
+<li>два елементи управління типу <span style="color: #0000ff;">Button</span> з іменами <span style="color: #0000ff;">button1, button2.</span></li>
+</ul>
+<p>Налаштувати такі властивості форми та елементів управління:</p>
+<ul>
+<li>у формі <span style="color: #0000ff;">Form5</span> властивість <span style="color: #0000ff;">Text</span> = <span style="color: #0000ff;">“Видалити джерело зараження”</span>;</li>
+<li>у формі <span style="color: #0000ff;">Form5</span> властивість <span style="color: #0000ff;">StartPosition</span> = <span style="color: #0000ff;">CenterScreen;</span></li>
+<li>в елементі управління <span style="color: #0000ff;">label1</span> властивість <span style="color: #0000ff;">Text</span> = <span style="color: #0000ff;">“Ви дійсно бажаєте видалити джерело:”</span>;</li>
+<li>в елементі управління <span style="color: #0000ff;">label2</span> властивість <span style="color: #0000ff;">Modifiers</span> = <span style="color: #0000ff;">Public;</span></li>
+<li>у <span style="color: #0000ff;">button1</span> властивість <span style="color: #0000ff;">Text</span> = <span style="color: #0000ff;">“Так”</span>;</li>
+<li>у <span style="color: #0000ff;">button1</span> властивість <span style="color: #0000ff;">DialogResult</span> = <span style="color: #0000ff;">OK;</span></li>
+<li>у <span style="color: #0000ff;">button2</span> властивість <span style="color: #0000ff;">Text</span> = <span style="color: #0000ff;">“Ні”</span>;</li>
+<li>у <span style="color: #0000ff;">button2</span> властивість <span style="color: #0000ff;">DialogResult</span> = <span style="color: #0000ff;">No.</span></li>
+</ul>
+<p>&nbsp;</p>
+<h5 id="p04_05">4.5. Проектування форми вікна підтвердження <span style="color: #0000ff;">“Видалити викиди”</span></h5>
+<p>За зразком п. 4.4. розробляється форма видалення викидів (рис. 4.5). Ім’я форми <span style="color: #0000ff;">Form6.cs</span>. Файл форми має ім’я <span style="color: #0000ff;">“Form6.cs”</span>.</p>
+<p style="text-align: center;"><a href="https://www.bestprog.net/wp-content/uploads/2017/08/02_02_00_020_04_05u.jpg"><img class="alignnone size-medium wp-image-6346" src="./C#. Курсова робота. База даних MS SQL Server _ BestProg_files/02_02_00_020_04_05u-300x153.jpg" alt="" width="300" height="153" srcset="https://www.bestprog.net/wp-content/uploads/2017/08/02_02_00_020_04_05u-300x153.jpg 300w, https://www.bestprog.net/wp-content/uploads/2017/08/02_02_00_020_04_05u.jpg 310w" sizes="(max-width: 300px) 100vw, 300px"></a></p>
+<p style="text-align: center;">Рис. 4.5. Форма підтвердження <span style="color: #0000ff;">“Видалити викиди”</span></p>
+<p>На формі розміщуються наступні елементи управління:</p>
+<ul>
+<li>два елементи управління типу <span style="color: #0000ff;">Label</span> з іменами <span style="color: #0000ff;">label1, label2;</span></li>
+<li>два елементи управління типу <span style="color: #0000ff;">Button</span> з іменами <span style="color: #0000ff;">button1, button2.</span></li>
+</ul>
+<p>Налаштувати такі властивості форми та елементів управління:</p>
+<ul>
+<li>у формі <span style="color: #0000ff;">Form6</span> властивість <span style="color: #0000ff;">Text</span> =<span style="color: #0000ff;"> “Видалити викиди”</span>;</li>
+<li>у формі <span style="color: #0000ff;">Form6</span> властивість <span style="color: #0000ff;">StartPosition</span> = <span style="color: #0000ff;">CenterScreen;</span></li>
+<li>в елементі управління <span style="color: #0000ff;">label1</span> властивість <span style="color: #0000ff;">Text</span> = <span style="color: #0000ff;">“Ви дійсно бажаєте видалити рядок з викидами?”</span>;</li>
+<li>в елементі управління <span style="color: #0000ff;">label2</span> властивість <span style="color: #0000ff;">Modifiers</span> = <span style="color: #0000ff;">Public;</span></li>
+<li>у <span style="color: #0000ff;">button1</span> властивість <span style="color: #0000ff;">Text</span> = <span style="color: #0000ff;">“Так”</span>;</li>
+<li>у <span style="color: #0000ff;">button1</span> властивість <span style="color: #0000ff;">DialogResult</span> = <span style="color: #0000ff;">OK;</span></li>
+<li>у <span style="color: #0000ff;">button2</span> властивість <span style="color: #0000ff;">Text</span> = <span style="color: #0000ff;">“Ні”</span>;</li>
+<li>у <span style="color: #0000ff;">button2</span> властивість <span style="color: #0000ff;">DialogResult</span> = <span style="color: #0000ff;">No.</span></li>
+</ul>
+<p>&nbsp;</p>
+<h5 id="p04_06">4.6. Проектування форми вікна <span style="color: #0000ff;">“Редагувати викиди…”</span></h5>
+<p>Форма редагування рядка викидів має вигляд, як показано на рисунку 4.6. У програмі форма має ім’я <span style="color: #0000ff;">Form7</span> і розміщується у файлі<span style="color: #0000ff;"> “Form7.cs”</span>.</p>
+<p style="text-align: center;"><a href="https://www.bestprog.net/wp-content/uploads/2017/08/02_02_00_020_04_06u.jpg"><img class="alignnone size-medium wp-image-6347" src="./C#. Курсова робота. База даних MS SQL Server _ BestProg_files/02_02_00_020_04_06u-300x268.jpg" alt="" width="300" height="268" srcset="https://www.bestprog.net/wp-content/uploads/2017/08/02_02_00_020_04_06u-300x268.jpg 300w, https://www.bestprog.net/wp-content/uploads/2017/08/02_02_00_020_04_06u.jpg 308w" sizes="(max-width: 300px) 100vw, 300px"></a></p>
+<p style="text-align: center;">Рис. 4.6. Вікно <span style="color: #0000ff;">“Редагувати викиди…”</span></p>
+<p>На формі розміщуються наступні елементи управління:</p>
+<ul>
+<li>4 елементи управління типу <span style="color: #0000ff;">Label</span> з іменами <span style="color: #0000ff;">label1, label2, label3, label4;</span></li>
+<li>3 елементи управління типу <span style="color: #0000ff;">TextBox</span> з іменами <span style="color: #0000ff;">textBox1, textBox2, textBox3;</span></li>
+<li>2 елементи управління типу <span style="color: #0000ff;">Button</span> з іменами <span style="color: #0000ff;">button1, button2.</span></li>
+</ul>
+<p>Налаштувати такі властивості форми та елементів управління:</p>
+<ul>
+<li>у формі <span style="color: #0000ff;">Form7</span> властивість <span style="color: #0000ff;">Text</span> = <span style="color: #0000ff;">“Редагувати викиди”</span>;</li>
+<li>у формі <span style="color: #0000ff;">Form7</span> властивість <span style="color: #0000ff;">StartPosition</span> = <span style="color: #0000ff;">CenterScreen;</span></li>
+<li>в <span style="color: #0000ff;">label1</span> властивість <span style="color: #0000ff;">Text</span> = <span style="color: #0000ff;">“Джерело”</span>;</li>
+<li>в <span style="color: #0000ff;">label2</span> властивість <span style="color: #0000ff;">Text</span> = <span style="color: #0000ff;">“Кількість викидів”</span>;</li>
+<li>в <span style="color: #0000ff;">label3</span> властивість <span style="color: #0000ff;">Text</span> = <span style="color: #0000ff;">“Коментар”</span>;</li>
+<li>в <span style="color: #0000ff;">label4</span> властивість <span style="color: #0000ff;">Text</span> = <span style="color: #0000ff;">“Дата”</span>;</li>
+<li>в <span style="color: #0000ff;">label1</span> властивість <span style="color: #0000ff;">Modifiers</span> = <span style="color: #0000ff;">Public</span> (видимий ззовні);</li>
+<li>в <span style="color: #0000ff;">button1</span> властивість <span style="color: #0000ff;">Text</span> = <span style="color: #0000ff;">“Змінити”</span>;</li>
+<li>в <span style="color: #0000ff;">button2</span> властивість <span style="color: #0000ff;">Text</span> = <span style="color: #0000ff;">“Відмінити”</span>;</li>
+<li>в <span style="color: #0000ff;">button1</span> властивість <span style="color: #0000ff;">DialogResult</span> = <span style="color: #0000ff;">OK;</span></li>
+<li>в <span style="color: #0000ff;">button2</span> властивість <span style="color: #0000ff;">DialogResult</span> = <span style="color: #0000ff;">No;</span></li>
+<li>в <span style="color: #0000ff;">textBox1</span> властивість <span style="color: #0000ff;">Modifiers</span> = <span style="color: #0000ff;">Public;</span></li>
+<li>в <span style="color: #0000ff;">textBox2</span> властивість <span style="color: #0000ff;">Modifiers</span> = <span style="color: #0000ff;">Public;</span></li>
+<li>в <span style="color: #0000ff;">textBox3</span> властивість <span style="color: #0000ff;">Modifiers</span> = <span style="color: #0000ff;">Public.</span></li>
+</ul>
+<p>&nbsp;</p>
+<h5 id="p04_07">4.7. Проектування форми <span style="color: #0000ff;">“Мінімальні викиди”</span></h5>
+<p>Згідно з умовою задачі, у програмі проводиться розрахунок мінімальних викидів для кожного джерела. Результат відображається в окремому вікні <span style="color: #0000ff;">“Мінімальні викиди”</span>. Для відображення результату до проекту додається відповідна форма з іменем <span style="color: #0000ff;">Form8,</span> яка зображена на рисунку 4.7. Файл форми має назву <span style="color: #0000ff;">“Form8.cs”</span>.</p>
+<p style="text-align: center;"><a href="https://www.bestprog.net/wp-content/uploads/2017/08/02_02_00_020_04_07u.jpg"><img class="alignnone size-medium wp-image-6348" src="./C#. Курсова робота. База даних MS SQL Server _ BestProg_files/02_02_00_020_04_07u-300x170.jpg" alt="" width="300" height="170" srcset="https://www.bestprog.net/wp-content/uploads/2017/08/02_02_00_020_04_07u-300x170.jpg 300w, https://www.bestprog.net/wp-content/uploads/2017/08/02_02_00_020_04_07u.jpg 501w" sizes="(max-width: 300px) 100vw, 300px"></a></p>
+<p style="text-align: center;">Рис. 4.7. Вікно форми <span style="color: #0000ff;">“Мінімальні викиди”</span></p>
+<p>На формі розміщуються такі елементи управління:</p>
+<ul>
+<li>елемент управління типу <span style="color: #0000ff;">Label</span> з іменем <span style="color: #0000ff;">label1;</span></li>
+<li>елемент управління типу <span style="color: #0000ff;">DataGridView</span> з іменем <span style="color: #0000ff;">dataGridView1;</span></li>
+<li>елемент управління типу <span style="color: #0000ff;">Button</span> з іменем <span style="color: #0000ff;">button1.</span></li>
+</ul>
+<p>Налаштовуються такі властивості форми та елементів управління:</p>
+<ul>
+<li>у формі <span style="color: #0000ff;">Form8</span> властивість <span style="color: #0000ff;">Text</span> = <span style="color: #0000ff;">“Мінімальні викиди”</span></li>
+<li>у формі <span style="color: #0000ff;">Form8</span> властивість <span style="color: #0000ff;">StartPosition</span> = <span style="color: #0000ff;">CenterScreen;</span></li>
+<li>в елементі управління <span style="color: #0000ff;">label1</span> властивість <span style="color: #0000ff;">Text</span> =<span style="color: #0000ff;"> “Мінімальні викиди”</span>;</li>
+<li>в <span style="color: #0000ff;">button1</span> властивість <span style="color: #0000ff;">Text</span> = <span style="color: #0000ff;">“OK”</span>;</li>
+<li>в <span style="color: #0000ff;">button1</span> властивість <span style="color: #0000ff;">DialogResult</span> = <span style="color: #0000ff;">OK;</span></li>
+<li>в <span style="color: #0000ff;">dataGridView1</span> властивість <span style="color: #0000ff;">Modifiers</span> = <span style="color: #0000ff;">Public.</span></li>
+</ul>
+<p>&nbsp;</p>
+<h5 id="p04_08">4.8. Проектування форми <span style="color: #0000ff;">“Максимальні викиди”</span></h5>
+<p>Форма “Максимальні викиди” призначена для відображення максимальних викидів для кожного джерела (рис. 4.8). У програмі дана форма має ім’я <span style="color: #0000ff;">Form9</span>. Файл форми має ім’я <span style="color: #0000ff;">“Form9.cs”</span>.</p>
+<p style="text-align: center;"><a href="https://www.bestprog.net/wp-content/uploads/2017/08/02_02_00_020_04_08u.jpg"><img class="alignnone size-medium wp-image-6349" src="./C#. Курсова робота. База даних MS SQL Server _ BestProg_files/02_02_00_020_04_08u-300x216.jpg" alt="" width="300" height="216" srcset="https://www.bestprog.net/wp-content/uploads/2017/08/02_02_00_020_04_08u-300x216.jpg 300w, https://www.bestprog.net/wp-content/uploads/2017/08/02_02_00_020_04_08u.jpg 404w" sizes="(max-width: 300px) 100vw, 300px"></a></p>
+<p style="text-align: center;">Рис. 4.8. Вікно форми <span style="color: #0000ff;">“Максимальні викиди”</span></p>
+<p>На формі розміщуються такі елементи управління:</p>
+<ul>
+<li>елемент управління типу <span style="color: #0000ff;">Label</span> з іменем <span style="color: #0000ff;">label1;</span></li>
+<li>елемент управління типу <span style="color: #0000ff;">DataGridView</span> з іменем <span style="color: #0000ff;">dataGridView1;</span></li>
+<li>елемент управління типу <span style="color: #0000ff;">Button</span> з іменем <span style="color: #0000ff;">button1.</span></li>
+</ul>
+<p>Налаштовуються такі властивості форми та елементів управління:</p>
+<ul>
+<li>у формі <span style="color: #0000ff;">Form9</span> властивість <span style="color: #0000ff;">Text</span> = <span style="color: #0000ff;">“Максимальні викиди”</span></li>
+<li>у формі <span style="color: #0000ff;">Form9</span> властивість <span style="color: #0000ff;">StartPosition</span> = <span style="color: #0000ff;">CenterScreen;</span></li>
+<li>в елементі управління <span style="color: #0000ff;">label1</span> властивість <span style="color: #0000ff;">Text</span> = <span style="color: #0000ff;">“Максимальні викиди”</span>;</li>
+<li>в <span style="color: #0000ff;">button1</span> властивість <span style="color: #0000ff;">Text</span> = <span style="color: #0000ff;">“OK”</span>;</li>
+<li>в <span style="color: #0000ff;">button1</span> властивість <span style="color: #0000ff;">DialogResult</span> = <span style="color: #0000ff;">OK;</span></li>
+<li>в <span style="color: #0000ff;">dataGridView1</span> властивість <span style="color: #0000ff;">Modifiers</span> = <span style="color: #0000ff;">Public.</span></li>
+</ul>
+<p>&nbsp;</p>
+<h5 id="p04_09">4.9. Проектування форми <span style="color: #0000ff;">“Середні викиди”</span></h5>
+<p>Форма <span style="color: #0000ff;">“Середні викиди”</span> призначена для відображення середніх викидів для кожного джерела (рис. 4.9). Розраховується середнє арифметичне значення. У програмі дана форма має ім’я <span style="color: #0000ff;">Form10.</span> Файл форми має ім’я <span style="color: #0000ff;">“Form10.cs”</span>.</p>
+<p style="text-align: center;"><a href="https://www.bestprog.net/wp-content/uploads/2017/08/02_02_00_020_04_09u.jpg"><img class="alignnone size-medium wp-image-6351" src="./C#. Курсова робота. База даних MS SQL Server _ BestProg_files/02_02_00_020_04_09u-300x208.jpg" alt="" width="300" height="208" srcset="https://www.bestprog.net/wp-content/uploads/2017/08/02_02_00_020_04_09u-300x208.jpg 300w, https://www.bestprog.net/wp-content/uploads/2017/08/02_02_00_020_04_09u.jpg 413w" sizes="(max-width: 300px) 100vw, 300px"></a></p>
+<p style="text-align: center;">Рис. 4.9. Вікно форми <span style="color: #0000ff;">“Середні викиди”</span></p>
+<p>На формі розміщуються такі елементи управління:</p>
+<ul>
+<li>елемент управління типу <span style="color: #0000ff;">Label</span> з іменем <span style="color: #0000ff;">label1;</span></li>
+<li>елемент управління типу <span style="color: #0000ff;">DataGridView</span> з іменем <span style="color: #0000ff;">dataGridView1;</span></li>
+<li>елемент управління типу <span style="color: #0000ff;">Button</span> з іменем <span style="color: #0000ff;">button1.</span></li>
+</ul>
+<p>Налаштовуються такі властивості форми та елементів управління:</p>
+<ul>
+<li>у формі <span style="color: #0000ff;">Form10</span> властивість <span style="color: #0000ff;">Text</span> = <span style="color: #0000ff;">“Середні викиди”</span></li>
+<li>у формі <span style="color: #0000ff;">Form9</span> властивість <span style="color: #0000ff;">StartPosition</span> = <span style="color: #0000ff;">CenterScreen;</span></li>
+<li>в елементі управління <span style="color: #0000ff;">label1</span> властивість <span style="color: #0000ff;">Text</span> = <span style="color: #0000ff;">“Середні викиди”</span>;</li>
+<li>в <span style="color: #0000ff;">button1</span> властивість <span style="color: #0000ff;">Text</span> = <span style="color: #0000ff;">“OK”</span>;</li>
+<li>в <span style="color: #0000ff;">button1</span> властивість <span style="color: #0000ff;">DialogResult</span> = <span style="color: #0000ff;">OK;</span></li>
+<li>в <span style="color: #0000ff;">dataGridView1</span> властивість <span style="color: #0000ff;">Modifiers</span> = <span style="color: #0000ff;">Public.</span></li>
+</ul>
+<p>&nbsp;</p>
+<h5 id="p05">5. Написання програмного коду</h5>
+<h5 id="p05_01">5.1. Додавання простору імен <span style="color: #0000ff;">System.Data.SqlClient</span></h5>
+<p>Щоб на програмному рівні працювати з<span style="color: #0000ff;"> “*.mdf”</span>-файлами бази даних <span style="color: #0000ff;">Microsoft SQL Server</span>, у верхній частині файлу <span style="color: #0000ff;">“Form1.cs”</span> потрібно підключити простір імен <span style="color: #0000ff;">System.Data.SqlClient</span></p>
+<pre><span style="color: #0000ff;">using</span> System.Data.SqlClient;</pre>
+<p>На даний момент текст модуля основної форми <span style="color: #0000ff;">Form1.cs</span> має приблизно такий вигляд:</p>
+<pre><span style="color: #0000ff;">using</span> System;
+<span style="color: #0000ff;">using</span> System.Collections.Generic;
+<span style="color: #0000ff;">using</span> System.ComponentModel;
+<span style="color: #0000ff;">using</span> System.Data;
+<span style="color: #0000ff;">using</span> System.Drawing;
+<span style="color: #0000ff;">using</span> System.Linq;
+<span style="color: #0000ff;">using</span> System.Text;
+<span style="color: #0000ff;">using</span> System.Windows.Forms;
+
+<span style="color: #008000;">// простір імен для роботи з базою даних MS SQL</span>
+<span style="color: #0000ff;">using</span> System.Data.SqlClient;
+
+<span style="color: #0000ff;">namespace</span> TermPaper1
+{
+    <span style="color: #0000ff;">public partial class</span> <span style="color: #008080;">Form1</span> : <span style="color: #008080;">Form</span>
+    {
+        <span style="color: #008000;">// рядок з'єднання з базою даних</span>
+        <span style="color: #0000ff;">string</span> ConnStr = <span style="color: #800000;">@"Data Source=.\SQLEXPRESS;AttachDbFilename=D:\Programs\C_SHARP\TermPaper1\TermPaper1\MyDataBase.mdf;Integrated Security=True;User Instance=True"</span>;
+
+        <span style="color: #0000ff;">public</span> Form1()
+        {
+            InitializeComponent();
+        }
+
+        <span style="color: #0000ff;">private void</span> Form1_Load(<span style="color: #0000ff;">object</span> sender, <span style="color: #008080;">EventArgs</span> e)
+        {
+
+        }
+
+}</pre>
+<p>&nbsp;</p>
+<h5 id="p05_02">5.2. Розробка методу заповнення методу <span style="color: #0000ff;">dataGridView1</span> з таблиці <span style="color: #0000ff;">Source</span></h5>
+<p>Після завантаження програми, внесення змін у таблиці тощо, дані з бази даних повинні відображатись у таблицях <span style="color: #0000ff;">Source</span> і <span style="color: #0000ff;">Emission.</span> Тому потрібно створити методи, що читають дані з цих таблиць на основі простого запиту на мові <span style="color: #0000ff;">SQL</span>.</p>
+<p>Метод <span style="color: #0000ff;">FillSource()</span>, що читає дані з таблиці <span style="color: #0000ff;">Source</span> має вигляд</p>
+<pre><span style="color: #008000;">// Показати таблицю Source</span>
+<span style="color: #0000ff;">private void</span> FillSource()
+{
+    <span style="color: #0000ff;">string</span> SqlText = <span style="color: #800000;">"SELECT * FROM [Source]"</span>;
+    <span style="color: #008080;">SqlDataAdapter</span> da = <span style="color: #0000ff;">new</span> <span style="color: #008080;">SqlDataAdapter</span>(SqlText,ConnStr);
+    <span style="color: #008080;">DataSet</span> ds = <span style="color: #0000ff;">new</span> <span style="color: #008080;">DataSet</span>();
+    da.Fill(ds,<span style="color: #800000;">"[Source]"</span>);
+    dataGridView1.DataSource = ds.Tables[<span style="color: #800000;">"[Source]"</span>].DefaultView;
+}</pre>
+<p>Цей метод потрібно додати у текст класу форми <span style="color: #0000ff;">Form1</span> після методу <span style="color: #0000ff;">Form1_Load()</span>.</p>
+<p>Пояснимо деякі фрагменти коду методу <span style="color: #0000ff;">Source</span>. Звертання до бази даних здійснюється з допомогою методу <span style="color: #0000ff;">FillSource()</span>. Змінна <span style="color: #0000ff;">SqlText</span> містить рядок на мові <span style="color: #0000ff;">SQL</span> читання даних з таблиці <span style="color: #0000ff;">Source</span></p>
+<pre><span style="color: #0000ff;">SELECT</span> *
+<span style="color: #0000ff;">FROM</span> [Source]</pre>
+<p>У методі оголошується екземпляр класу <span style="color: #0000ff;">SqlDataAdapter</span> з іменем <span style="color: #0000ff;">da</span>. Клас <span style="color: #0000ff;">SqlDataAdapter</span> представляє набір команд над даними і з’єднанням з базою даних, що використовуються для заповнення об’єкту класу <span style="color: #0000ff;">System.Data.DataSet</span> та оновлення бази даних <span style="color: #0000ff;">SQL Server.</span></p>
+<p>Екземпляр класу <span style="color: #0000ff;">DataSet</span> має ім’я <span style="color: #0000ff;">ds</span>. Клас <span style="color: #0000ff;">DataSet</span> реалізує кеш даних в пам’яті.</p>
+<p>У програмному коді використовується метод <span style="color: #0000ff;">Fill()</span> класу <span style="color: #0000ff;">SqlDataAdapter</span>. Цей метод додає або оновлює рядки в <span style="color: #0000ff;">System.Data.DataSet</span> у відповідності з іменами у джерелі даних.</p>
+<p>Метод Fill() отримує два параметри типу <span style="color: #0000ff;">System.Data.DataSet</span> та <span style="color: #0000ff;">System.Data.DataTable</span>. Перший параметр необхідний, щоб заповнити записи таблиці або схему. Другий параметр містить назву таблиці.</p>
+<p>&nbsp;</p>
+<h5 id="p05_03">5.3. Розробка методу заповнення елементу управління <span style="color: #0000ff;">dataGridView2</span> з таблиці <span style="color: #0000ff;">Emission</span></h5>
+<p>Для відображення даних таблиці <span style="color: #0000ff;">Emission</span> в <span style="color: #0000ff;">dataGridView2</span> розробимо метод за зразком попереднього пункту (п. 5.2). Метод має назву <span style="color: #0000ff;">FillEmission()</span></p>
+<pre><span style="color: #008000;">// Показати таблицю Emissions</span>
+<span style="color: #0000ff;">private void</span> FillEmission()
+{
+    <span style="color: #008000;">// сформувати рядок SQL-запиту</span>
+    <span style="color: #0000ff;">string</span> SqlText = <span style="color: #800000;">"SELECT * FROM [Emission]"</span>;
+    <span style="color: #0000ff;">int</span> index;
+    <span style="color: #0000ff;">string</span> ID_Source;
+    index = dataGridView1.CurrentRow.Index;
+    ID_Source = dataGridView1[0, index].Value.ToString();
+
+    SqlText = <span style="color: #800000;">"SELECT * FROM [Emission],[Source] WHERE (([Emission].ID_Source = "</span>;
+    SqlText = SqlText + ID_Source + <span style="color: #800000;">") AND ([Source].ID_Source = "</span> + ID_Source + <span style="color: #800000;">"))"</span>;
+
+    <span style="color: #008080;">SqlDataAdapter</span> da = <span style="color: #0000ff;">new</span> <span style="color: #008080;">SqlDataAdapter</span>(SqlText, ConnStr);
+    <span style="color: #008080;">DataSet</span> ds = <span style="color: #0000ff;">new</span> <span style="color: #008080;">DataSet</span>();
+    da.Fill(ds, <span style="color: #800000;">"[Emission]"</span>);
+    dataGridView2.DataSource = ds.Tables[<span style="color: #800000;">"[Emission]"</span>].DefaultView;
+}</pre>
+<p>У цьому методі у змінній <span style="color: #0000ff;">SqlText</span> програмно формується наступний запит на мові <span style="color: #0000ff;">SQL</span>:</p>
+<pre><span style="color: #0000ff;"> SELECT</span> *
+ <span style="color: #0000ff;">FROM</span> [Emission], [Source]
+ <span style="color: #0000ff;">WHERE</span> ([Emission].ID_ Source = ID_Source) <span style="color: #0000ff;">AND</span>
+       ([Source].ID_Source = ID_Source)</pre>
+<p>де <span style="color: #0000ff;">ID_Source</span> – унікальне значення лічильника в таблицях <span style="color: #0000ff;">Emission</span> та <span style="color: #0000ff;">Source.</span></p>
+<p>Щоб отримати значення <span style="color: #0000ff;">ID_Source,</span> спочатку обчислюється індекс рядка в таблиці <span style="color: #0000ff;">Source</span></p>
+<pre>index = dataGridView1.CurrentRow.Index;</pre>
+<p>потім обчислюється значення<span style="color: #0000ff;"> ID_Source</span>, яке по порядку йде в позиції 0 таблиці <span style="color: #0000ff;">Source:</span></p>
+<pre>ID_Source = dataGridView1[0, index].Value.ToString();</pre>
+<p>Наступні кроки виконуються за зразком п. 5.2. Тільки дані виводяться в елементі управління <span style="color: #0000ff;">dataGridView2.</span></p>
+<p>&nbsp;</p>
+<h5 id="p05_04">5.4. Модифікація методу <span style="color: #0000ff;">Form_Load()</span> основної форми <span style="color: #0000ff;">Form1</span></h5>
+<p>У класі основної форми <span style="color: #0000ff;">Form1</span> є метод <span style="color: #0000ff;">Form_Load()</span>, який викликається одразу після запуску програми на виконання. Тому сюди потрібно вписати виклик методів <span style="color: #0000ff;">FillSource()</span> та <span style="color: #0000ff;">FillEmission()</span>.<br>
+Загальний вигляд методу <span style="color: #0000ff;">Form_Load()</span>:</p>
+<pre><span style="color: #0000ff;">private void</span> Form1_Load(<span style="color: #0000ff;">object</span> sender, <span style="color: #008080;">EventArgs</span> e)
+{
+    FillSource();
+    FillEmission();
+}</pre>
+<p>&nbsp;</p>
+<h5 id="p05_05">5.5. Розробка методу <span style="color: #0000ff;">MyExecuteNonQuery()</span> зміни даних в таблицях</h5>
+<p>У програмі передбачається редагування (зміна) даних в таблицях з допомогою <span style="color: #0000ff;">SQL</span>-команд <span style="color: #0000ff;">INSERT</span>, <span style="color: #0000ff;">UPDATE</span>, <span style="color: #0000ff;">DELETE</span>. Тому, потрібно реалізувати спільний метод, який буде викликатись в залежності від вибраної команди. Метод називається <span style="color: #0000ff;">MyExecuteNonQuery()</span>. Лістинг методу наступний:</p>
+<pre><span style="color: #008000;">// Метод, для зручної обробки команд INSERT, UPDATE, DELETE</span>
+<span style="color: #008000;">// метод отримує SQL-запит</span>
+<span style="color: #0000ff;">public void</span> MyExecuteNonQuery(<span style="color: #0000ff;">string</span> SqlText)
+{
+    <span style="color: #008080;">SqlConnection</span> cn; <span style="color: #008000;">// екземпляр класу типу SqlConnection</span>
+    <span style="color: #008080;">SqlCommand</span> cmd;
+    <span style="color: #008000;">// виділення пам'яті з ініціалізацією рядком з'єднання з базою даних</span>
+    cn = <span style="color: #0000ff;">new</span> <span style="color: #008080;">SqlConnection</span>(ConnStr);
+
+    cn.Open(); <span style="color: #008000;">// відкрити джерело даних</span>
+    cmd = cn.CreateCommand(); <span style="color: #008000;">// задати SQL-команду</span>
+    cmd.CommandText = SqlText; <span style="color: #008000;">// задати командний рядок</span>
+    cmd.ExecuteNonQuery(); <span style="color: #008000;">// виконати SQL-команду</span>
+    cn.Close(); <span style="color: #008000;">// закрити джерело даних</span>
+}</pre>
+<p>Пояснимо роботу методу. Метод отримує текст <span style="color: #0000ff;">SQL</span>-команди в змінній <span style="color: #0000ff;">SqlText</span>. Це може бути одна з команд <span style="color: #0000ff;">INSERT</span>, <span style="color: #0000ff;">UPDATE</span>, <span style="color: #0000ff;">DELETE</span>.</p>
+<p>Після цього створюється екземпляр класу <span style="color: #0000ff;">SqlConnection</span>, який символізує з’єднання з базою даних. Об’єкт класу має назву cn.<br>
+Інший клас <span style="color: #0000ff;">SqlCommand</span> призначений для коректного збереження <span style="color: #0000ff;">SQL-команди</span> в змінній <span style="color: #0000ff;">CommandText.</span> Відповідно створюється об’єкт цього класу з іменем <span style="color: #0000ff;">cmd.</span> У класі <span style="color: #0000ff;">SqlCommand</span> є метод <span style="color: #0000ff;">ExecuteNonQuery()</span>, який виконує <span style="color: #0000ff;">SQL-команду.</span></p>
+<p>Перед внесенням змін в джерело даних, його потрібно відкрити командою <span style="color: #0000ff;">Open()</span>. Після внесення змін, джерело даних (база даних) закривається методом <span style="color: #0000ff;">Close()</span>.</p>
+<p>Метод <span style="color: #0000ff;">MyExecuteNonQuery()</span> може бути викликаний з інших методів з допомогою рядка:</p>
+<pre><span style="color: #008000;">// виконати SQL-команду</span>
+MyExecuteNonQuery(SqlText);</pre>
+<p>де <span style="color: #0000ff;">SqlText</span> – текст відповідної <span style="color: #0000ff;">SQL</span>-команди.</p>
+<p>&nbsp;</p>
+<h5 id="p05_06">5.6. Програмування події кліку на кнопці <span style="color: #0000ff;">button1</span> (<span style="color: #0000ff;">“Додати джерело…”</span>)</h5>
+<p>Щоб викликати вікно додавання нового джерела потрібно зробити клік на кнопці <span style="color: #0000ff;">button1</span> (<span style="color: #0000ff;">“Додати джерело…”</span>). У результаті відкриється вікно додавання нового джерела (див. п. 4.1).</p>
+<p>Лістинг обробника події кліку на кнопці <span style="color: #0000ff;">button1</span> має вигляд:</p>
+<pre><span style="color: #008000;">// Кнопка "Додати джерело..."</span>
+<span style="color: #0000ff;">private void</span> button1_Click(<span style="color: #0000ff;">object</span> sender, <span style="color: #008080;">EventArgs</span> e)
+{
+    <span style="color: #0000ff;">string</span> SqlText = <span style="color: #800000;">"INSERT INTO [Source] ([ID_Source],[Name],[Address]) VALUES (1, 'Source-01','Address-01') "</span>;
+    <span style="color: #008080;">Form2</span> f = new <span style="color: #008080;">Form2</span>(); <span style="color: #008000;">// створити екземпляр вікна</span>
+
+    <span style="color: #0000ff;">if</span> (f.ShowDialog() == <span style="color: #008080;">DialogResult</span>.OK)
+    {
+        <span style="color: #008000;">// сформувати SQL-рядок</span>
+        SqlText = <span style="color: #800000;">"INSERT INTO [Source] ([Name], [Address]) VALUES ("</span>;
+        SqlText = SqlText + <span style="color: #800000;">"\'"</span> + f.textBox1.Text + <span style="color: #800000;">"\', "</span>;
+        SqlText = SqlText + <span style="color: #800000;">"\'"</span> + f.textBox2.Text + <span style="color: #800000;">"\')"</span>;
+
+        <span style="color: #008000;">// виконати SQL-команду</span>
+        MyExecuteNonQuery(SqlText);
+        <span style="color: #008000;">// відобразати таблицю Source</span>
+        FillSource();
+    }
+}</pre>
+<p>Пояснимо деякі фрагменти коду.</p>
+<p>Додавання джерела здійснюється на основі <span style="color: #0000ff;">SQL</span>-команди:</p>
+<pre><span style="color: #0000ff;">INSERT INTO</span> [Source] ([Name], [Address])
+<span style="color: #0000ff;">VALUES</span> (name, address)
+</pre>
+<p>де <em><span style="color: #0000ff;">name</span></em>, <span style="color: #0000ff;"><em>address</em> </span>– значення полів <span style="color: #0000ff;">textBox1, textBox2</span> форми <span style="color: #0000ff;">Form2.</span> У ці поля користувач вводить назву та адресу нового джерела.</p>
+<p><span style="color: #0000ff;">SQL</span>-команда програмно формується у змінній <span style="color: #0000ff;">SqlText.</span> Виконання команди здійснюється в методі <span style="color: #0000ff;">MyExecuteNonQuery()</span>, який отримує параметром значення змінної <span style="color: #0000ff;">SqlText</span> (див. п. 5.5).</p>
+<p>Створення нової форми здійснюється стандартним для <span style="color: #0000ff;">C# .NET</span> шляхом:</p>
+<pre><span style="color: #008080;">Form2</span> f = <span style="color: #0000ff;">new</span> <span style="color: #008080;">Form2</span>();</pre>
+<p>Виклик вікна форми здійснюється методом <span style="color: #0000ff;">ShowDialog()</span> форми <span style="color: #0000ff;">Form2</span>:</p>
+<pre> f.ShowDialog()</pre>
+<p>Після додавання джерела в базу даних виконується перемальовування елементу управління <span style="color: #0000ff;">dataGridView1</span> головної форми програми <span style="color: #0000ff;">Form1</span> з допомогою методу <span style="color: #0000ff;">FillSource()</span>.</p>
+<p>&nbsp;</p>
+<h5 id="p05_07">5.7. Програмування події кліку на кнопці <span style="color: #0000ff;">button3</span> (<span style="color: #0000ff;">“Редагувати джерело…”</span>)</h5>
+<p>За зразком попереднього пункту, програмується подія кліку на кнопці button3. Обробник події має вигляд:</p>
+<pre><span style="color: #008000;">// Команда "Редагувати джерело..."</span>
+<span style="color: #0000ff;">private void</span> button3_Click(<span style="color: #0000ff;">object</span> sender, <span style="color: #008080;">EventArgs</span> e)
+{
+    <span style="color: #0000ff;">int</span> index, n;
+    <span style="color: #0000ff;">string</span> SqlText = <span style="color: #800000;">"UPDATE [Source] SET "</span>;
+    <span style="color: #0000ff;">string</span> ID_Source, name, address;
+
+    <span style="color: #008000;">// перевірка, чи є взагалі записи в таблиці Source</span>
+    n = dataGridView1.Rows.Count;
+    <span style="color: #0000ff;">if</span> (n == 1) <span style="color: #0000ff;">return</span>;
+
+    <span style="color: #008080;">Form3</span> f = <span style="color: #0000ff;">new</span> <span style="color: #008080;">Form3</span>();
+
+    <span style="color: #008000;">// заповнити форму даними перед відкриттям</span>
+    index = dataGridView1.CurrentRow.Index;
+    ID_Source = dataGridView1[0, index].Value.ToString();
+    name = dataGridView1[1, index].Value.ToString();
+    address = dataGridView1[2, index].Value.ToString();
+
+    f.textBox1.Text = name;
+    f.textBox2.Text = address;
+
+    <span style="color: #0000ff;">if</span> (f.ShowDialog() == <span style="color: #008080;">DialogResult</span>.OK)
+    {
+        name = f.textBox1.Text;
+        address = f.textBox2.Text;
+        SqlText += <span style="color: #800000;">"Name = \'" + name + "\', Address = '"</span> + address + <span style="color: #800000;">"\' "</span>;
+        SqlText += <span style="color: #800000;">"WHERE [Source].ID_Source = "</span> + ID_Source;
+        MyExecuteNonQuery(SqlText);
+        FillSource();
+    }
+}</pre>
+<p>В обробнику події відкривається форма <span style="color: #0000ff;">Form3</span> (<span style="color: #0000ff;">“Редагувати джерело”</span>), яка була спроектована в п. 4.2.</p>
+<p>Перед відкриттям форми заповнюються змінні <span style="color: #0000ff;">index, ID_Source, name, address.</span> Потім значення змінних записується в <span style="color: #0000ff;">textBox1, textBox2</span> форми <span style="color: #0000ff;">Form3.</span> Усі інші команди виконуються за зразком попереднього пункту (п. 5.6).</p>
+<p>Текст SQL-команди має вигляд:</p>
+<pre><strong><span style="color: #0000ff;">UPDATE</span></strong> [Source]
+<strong><span style="color: #0000ff;">SET</span> </strong>Name = name, Address = address
+<strong><span style="color: #0000ff;">WHERE</span> </strong>[Source].ID_Source = ID_Source
+</pre>
+<p>де <span style="color: #0000ff;"><em>name,</em> <em>address</em></span> – змінена назва та адреса джерела.</p>
+<p>&nbsp;</p>
+<h5 id="p05_08">5.8. Налаштування властивості <span style="color: #0000ff;">DeleteRule</span> в об’єкті <span style="color: #0000ff;">FK_Emission_Source</span> (зв’язок між діаграмами) для коректного видалення джерела</h5>
+<p>Для того, щоб видалити джерело з таблиці [Source], потрібно виконати наступний <span style="color: #0000ff;">SQL</span>-запит:</p>
+<pre><strong><span style="color: #0000ff;">DELETE FROM</span></strong> [Source]
+<strong><span style="color: #0000ff;">WHERE</span> </strong>[Source].ID_Source = ID_Source</pre>
+<p>де <span style="color: #0000ff;">ID_Source</span> – унікальний ідентифікатор джерела, який обчислюється програмно.</p>
+<p>При видаленні джерела з таблиці <span style="color: #0000ff;">Source</span> може виникнути проблема. Ця проблема полягає в тому, що при видаленні джерела з таблиці <span style="color: #0000ff;">Source</span> мають бути видалені усі записи з таблиці <span style="color: #0000ff;">Emission</span>. Тому, вищенаведений <span style="color: #0000ff;">SQL</span>-запит поки що працювати не буде: база даних буде видавати помилку, що з таблицею <span style="color: #0000ff;">Source</span> зв’язані дані в таблиці <span style="color: #0000ff;">Emission.</span></p>
+<p>Щоб уникнути цієї проблеми, потрібно правильно налаштувати зв’язок між діаграмами. У програмі, об’єкт, що відповідає за зв’язок між діаграмами має назву <span style="color: #0000ff;">FK_Emission_Source.</span> Для правильного налаштування зв’язку потрібно виконати такі дії:</p>
+<p>1. Перейти в утиліту <span style="color: #0000ff;">Server Explorer</span>. Для бази даних <span style="color: #0000ff;">“MyDataBase.mdf”</span> розкрити вкладку <span style="color: #0000ff;">“Database Diagrams”</span> (рис. 5.1).</p>
+<p>2. Викликати контекстне меню, з допомогою кліку правою кнопкою мишки на елементі <span style="color: #0000ff;">Diagram1</span>. У контекстному меню вибрати команду <span style="color: #0000ff;">“Design Database Diagram”</span> (рис. 5.1). У результаті відкриється вікно з діаграмою <span style="color: #0000ff;">dbo.Diagram1</span>, що зв’язує таблиці <span style="color: #0000ff;">Source</span> та <span style="color: #0000ff;">Emission</span>.</p>
+<p style="text-align: center;"><a href="https://www.bestprog.net/wp-content/uploads/2017/08/05_01_.jpg"><img class="alignnone size-medium wp-image-6354" src="./C#. Курсова робота. База даних MS SQL Server _ BestProg_files/05_01_-279x300.jpg" alt="" width="279" height="300" srcset="https://www.bestprog.net/wp-content/uploads/2017/08/05_01_-279x300.jpg 279w, https://www.bestprog.net/wp-content/uploads/2017/08/05_01_.jpg 491w" sizes="(max-width: 279px) 100vw, 279px"></a></p>
+<p style="text-align: center;">Рис. 5.1. Виклик діаграми зв’язку між таблицями</p>
+<p>3. У вікні <span style="color: #0000ff;">dbo.Diagram1 </span>виділити зв’язок між діаграмами <span style="color: #0000ff;">FK_Emission_Source</span> (рис. 5.2)</p>
+<p>4. У вікні властивостей у вкладці <span style="color: #0000ff;">“INSERT AND UPDATE”</span> встановити значення властивості <span style="color: #0000ff;">Delete Rule</span> = <span style="color: #0000ff;">Cascade</span> (каскадне видалення полів).</p>
+<p>Після цього можна програмувати подію кліку на кнопці <span style="color: #0000ff;">button2</span> – <span style="color: #0000ff;">“Видалити джерело”</span> (див. п. 5.9).</p>
+<p style="text-align: center;"><a href="https://www.bestprog.net/wp-content/uploads/2017/08/05_02_.jpg"><img class="alignnone size-medium wp-image-6355" src="./C#. Курсова робота. База даних MS SQL Server _ BestProg_files/05_02_-300x154.jpg" alt="" width="300" height="154" srcset="https://www.bestprog.net/wp-content/uploads/2017/08/05_02_-300x154.jpg 300w, https://www.bestprog.net/wp-content/uploads/2017/08/05_02_-768x394.jpg 768w, https://www.bestprog.net/wp-content/uploads/2017/08/05_02_-1024x525.jpg 1024w, https://www.bestprog.net/wp-content/uploads/2017/08/05_02_.jpg 1257w" sizes="(max-width: 300px) 100vw, 300px"></a></p>
+<p style="text-align: center;">Рис. 5.2. Налаштування властивості <span style="color: #0000ff;">DeleteRule</span> в значення <span style="color: #0000ff;">Cascade</span></p>
+<p>&nbsp;</p>
+<h5 id="p05_09">5.9. Програмування події кліку на кнопці <span style="color: #0000ff;">button2</span> (<span style="color: #0000ff;">“Видалити джерело”</span>)</h5>
+<p>Тепер всі підготовчі операції для реалізації команди видалення джерела з таблиці <span style="color: #0000ff;">[Source]</span> виконано (див. п. 5.8).</p>
+<p>Команда видалення джерела базується на <span style="color: #0000ff;">SQL</span>-запиті:</p>
+<pre><span style="color: #0000ff;"><strong>DELETE FROM</strong></span> [Source]
+<strong><span style="color: #0000ff;">WHERE</span> </strong>[Source].ID_Source = ID_Source
+</pre>
+<p>де <span style="color: #0000ff;">ID_Source</span> – унікальний ідентифікатор джерела, який програмно обчислюється в наступних рядках:</p>
+<pre>index = dataGridView1.CurrentRow.Index;
+ID_Source = Convert.ToString(dataGridView1[0, index].Value);</pre>
+<p>Лістинг обробника події кліку на кнопці <span style="color: #0000ff;">“Видалити джерело”</span> має вигляд:</p>
+<pre><span style="color: #008000;">// Кнопка "Видалити джерело"</span>
+<span style="color: #0000ff;">private void</span> button2_Click(<span style="color: #0000ff;">object</span> sender, <span style="color: #008080;">EventArgs</span> e)
+{
+    <span style="color: #0000ff;">int</span> index, n;
+    <span style="color: #0000ff;">string</span> ID_Source;
+    <span style="color: #0000ff;">string</span> name, address;
+    <span style="color: #0000ff;">string</span> SqlText = <span style="color: #800000;">"DELETE FROM [Source] WHERE [Source].ID_Source = "</span>;
+
+    <span style="color: #008000;">// перевірка, чи є взагалі записи в таблиці Source</span>
+    n = dataGridView1.Rows.Count;
+    <span style="color: #0000ff;">if</span> (n == 1) <span style="color: #0000ff;">return</span>;
+
+    <span style="color: #008080;">Form5</span> f = <span style="color: #0000ff;">new</span> <span style="color: #008080;">Form5</span>();
+    index = dataGridView1.CurrentRow.Index;
+    ID_Source = Convert.ToString(dataGridView1[0, index].Value);
+
+    <span style="color: #008000;">// сформувати SQL-команду</span>
+    SqlText = SqlText + ID_Source;
+
+    <span style="color: #008000;">// заповнити інформаційну довідку у вікні Form5</span>
+    name = Convert.ToString(dataGridView1[1, index].Value);
+    address = Convert.ToString(dataGridView1[2, index].Value);
+
+    f.label2.Text = ID_Source + <span style="color: #800000;">" - "</span> + name + <span style="color: #800000;">" - "</span> + address;
+
+    <span style="color: #0000ff;">if</span> (f.ShowDialog() == <span style="color: #008080;">DialogResult</span>.OK) <span style="color: #008000;">// вивести форму</span>
+    {
+        <span style="color: #008000;">// виконати SQL-команду</span>
+        MyExecuteNonQuery(SqlText);
+        <span style="color: #008000;">// відобразити таблицю Source</span>
+        FillSource();
+    }
+}</pre>
+<p>Перед видаленням джерела викликається вікно підтвердження команди (форма <span style="color: #0000ff;">Form5</span>). Форма <span style="color: #0000ff;">Form5</span> підтвердження команди видалення джерела була спроектована у п. 4.4. Попередньо формується інформаційна довідка про джерело, що видаляється.</p>
+<p>&nbsp;</p>
+<h5 id="p05_10">5.10. Програмування події кліку на кнопці <span style="color: #0000ff;">button4</span> (<span style="color: #0000ff;">“Додати викиди…”</span>)</h5>
+<p>Після натиску на кнопці <span style="color: #0000ff;">“Додати викиди…”</span> викликається форма <span style="color: #0000ff;">Form4</span> додавання викидів (див. п. 4.3).</p>
+<p>Лістинг обробника події додавання викидів (кнопка <span style="color: #0000ff;">button4</span>) має вигляд:</p>
+<pre><span style="color: #008000;">// Команда "Додати викиди"</span>
+<span style="color: #0000ff;">private void</span> button4_Click(object sender, EventArgs e)
+{
+    <span style="color: #0000ff;">string</span> SqlText = <span style="color: #800000;">""</span>;
+    <span style="color: #0000ff;">int</span> index; <span style="color: #008000;">// номер виділеного рядка в таблиці Source</span>
+    <span style="color: #0000ff;">string</span> ID_Source;
+    <span style="color: #0000ff;">string</span> name;
+    <span style="color: #008080;">Form4</span> f = <span style="color: #0000ff;">new</span> <span style="color: #008080;">Form4</span>();
+
+    <span style="color: #008000;">// 1.1. Знайти активний рядок в Source і взяти з нього ID_Source</span>
+    index = dataGridView1.CurrentRow.Index;
+    ID_Source = Convert.ToString(dataGridView1[0, index].Value);
+    name = Convert.ToString(dataGridView1[1, index].Value);
+
+    <span style="color: #0000ff;">if</span> (f.ShowDialog() == <span style="color: #008080;">DialogResult</span>.OK)
+    {
+<span style="color: #008000;">        // Додати дані в таблицю</span>
+<span style="color: #008000;">        // Сформувати SQL-рядок</span>
+        SqlText = <span style="color: #800000;">"INSERT INTO [Emission] ([ID_Source], [count], [Text], [date]) VALUES ("</span>;
+        <span style="color: #008000;">// Сформувати значення змінної SqlText</span>
+        SqlText = SqlText + ID_Source + <span style="color: #800000;">", "</span>; <span style="color: #008000;">// ID_Source</span>
+        SqlText = SqlText + f.textBox1.Text + <span style="color: #800000;">", "</span>; <span style="color: #008000;">// count</span>
+        SqlText = SqlText + <span style="color: #800000;">"\'"</span> + f.textBox2.Text + <span style="color: #800000;">"\', "</span>; <span style="color: #008000;">// Text</span>
+        SqlText = SqlText + <span style="color: #800000;">"\'"</span> + f.textBox3.Text + <span style="color: #800000;">"\')"</span>; <span style="color: #008000;">// date</span>
+
+        <span style="color: #008000;">// виконати SQL-команду</span>
+        MyExecuteNonQuery(SqlText);
+        <span style="color: #008000;">// вивести таблицю Emission</span>
+        FillEmission();
+    }
+}</pre>
+<p>Додавання рядка викидів у таблицю Emission виконується з допомогою SQL-команди:</p>
+<pre><span style="color: #0000ff;"><strong>INSERT INTO</strong></span> [Emission] ([ID_Source], [count], [Text], [date])
+<strong><span style="color: #0000ff;">VALUES</span> </strong>(ID_Source, f.textBox1.Text, f.textBox2.Text, f.textBox3.Text)</pre>
+<p>де</p>
+<ul>
+<li><span style="color: #0000ff;">ID_Source</span> – унікальний ідентифікатор джерела викидів (обчислюється програмно);</li>
+<li><span style="color: #0000ff;">f.textBox1.Text</span> – значення, введене користувачем у полі <span style="color: #0000ff;">textBox1</span> форми <span style="color: #0000ff;">Form4</span>. Це значення відповідає полю count таблиці <span style="color: #0000ff;">Emission</span>;</li>
+<li><span style="color: #0000ff;">f.textBox2.Text</span> – значення, введене користувачем у полі <span style="color: #0000ff;">textBox2</span> форми <span style="color: #0000ff;">Form4</span>. Це значення відповідає полю <span style="color: #0000ff;">Text</span> таблиці <span style="color: #0000ff;">Emission</span>;</li>
+<li><span style="color: #0000ff;">f.textBox3.Text</span> – значення, введене користувачем у полі <span style="color: #0000ff;">textBox3</span> форми <span style="color: #0000ff;">Form4</span>. Це значення відповідає полю <span style="color: #0000ff;">date</span> таблиці <span style="color: #0000ff;">Emission</span>.</li>
+</ul>
+<p>&nbsp;</p>
+<h5 id="p05_11">5.11. Програмування події кліку на кнопці <span style="color: #0000ff;">button6</span> (<span style="color: #0000ff;">“Редагувати викиди…”</span>)</h5>
+<p>Після вибору команди <span style="color: #0000ff;">“Редагувати викиди…”</span> відкривається відповідне вікно (форма <span style="color: #0000ff;">Form7</span>), яке було спроектоване в п. 4.6.</p>
+<p>Лістинг обробника події кліку на кнопці <span style="color: #0000ff;">button6</span> має вигляд:</p>
+<pre><span style="color: #008000;">// Кнопка "Редагувати викиди..."</span>
+<span style="color: #0000ff;">private void</span> button6_Click(<span style="color: #0000ff;">object</span> sender, <span style="color: #008080;">EventArgs</span> e)
+{
+    <span style="color: #0000ff;">int</span> index, index_src, n;
+    <span style="color: #0000ff;">string</span> SqlText = <span style="color: #800000;">"UPDATE [Emission] SET "</span>;
+    <span style="color: #0000ff;">string</span> ID_Emission, ID_Source, count, Text, date;
+    <span style="color: #0000ff;">string</span> Name_Source;
+
+    <span style="color: #008000;">// перевірка, чи є взагалі записи в таблиці Emission</span>
+    n = dataGridView2.Rows.Count;
+    <span style="color: #0000ff;">if</span> (n == 1) <span style="color: #0000ff;">return</span>;
+
+    <span style="color: #008080;">Form7</span> f = <span style="color: #0000ff;">new</span> <span style="color: #008080;">Form7</span>();
+
+    <span style="color: #008000;">// заповнити форму даними перед відкриттям</span>
+    index = dataGridView2.CurrentRow.Index;
+    ID_Emission = dataGridView2[0, index].Value.ToString();
+    ID_Source = dataGridView2[1, index].Value.ToString();
+    count = dataGridView2[2, index].Value.ToString();
+    Text = dataGridView2[3, index].Value.ToString();
+    date = dataGridView2[4, index].Value.ToString();
+
+    index_src = dataGridView1.CurrentRow.Index;
+    Name_Source = dataGridView1[1, index_src].Value.ToString();
+
+    <span style="color: #008000;">//</span>
+    f.label1.Text = Name_Source;
+    f.textBox1.Text = count;
+    f.textBox2.Text = Text;
+    f.textBox3.Text = date;
+
+    <span style="color: #0000ff;">if</span> (f.ShowDialog() == <span style="color: #008080;">DialogResult</span>.OK)
+    {
+        count = f.textBox1.Text;
+        Text = f.textBox2.Text;
+        date = f.textBox3.Text;
+
+        SqlText += <span style="color: #800000;">"count = "</span> + count + <span style="color: #800000;">", Text = \'"</span> + Text + <span style="color: #800000;">"\', date = \'"</span> + date + <span style="color: #800000;">"\' "</span>;
+        SqlText += <span style="color: #800000;">"WHERE [Emission].ID_Emission = "</span> + ID_Emission;
+
+        MyExecuteNonQuery(SqlText);
+        FillEmission();
+    }
+}</pre>
+<p>Команда <span style="color: #0000ff;">“Редагувати викиди…”</span> базується на <span style="color: #0000ff;">SQL</span>-команді:</p>
+<pre><span style="color: #0000ff;"><strong>UPDATE</strong></span> [Emission]
+<strong><span style="color: #0000ff;">SET</span> </strong>count = count1, Text = Text1, date = date1
+<strong><span style="color: #0000ff;">WHERE</span> </strong>[Emission].ID_Emission = ID_Emission</pre>
+<p>де</p>
+<ul>
+<li><span style="color: #0000ff;">count1</span> – значення, введене користувачем у полі <span style="color: #0000ff;">textBox1</span> форми <span style="color: #0000ff;">Form7.</span> Це значення відповідає полю <span style="color: #0000ff;">[Emission].[count]</span>;</li>
+<li><span style="color: #0000ff;">Text1</span> – значення, введене користувачем у полі <span style="color: #0000ff;">textBox2</span> форми <span style="color: #0000ff;">Form7.</span> Це значення відповідає полю <span style="color: #0000ff;">[Emission].[Text]</span>;</li>
+<li><span style="color: #0000ff;">date1</span> – значення, введене користувачем у полі <span style="color: #0000ff;">textBox3</span> форми <span style="color: #0000ff;">Form7.</span> Це значення відповідає полю <span style="color: #0000ff;">[Emission].[date]</span>;</li>
+<li><span style="color: #0000ff;">ID_Source</span> – унікальний ідентифікатор джерела з таблиці <span style="color: #0000ff;">Source.</span> Це значення відповідає полю <span style="color: #0000ff;">[Emission].ID_Source</span>.</li>
+</ul>
+<p>&nbsp;</p>
+<h5 id="p05_12">5.12. Програмування події кліку на кнопці <span style="color: #0000ff;">button5</span> (<span style="color: #0000ff;">“Видалити викиди”</span>)</h5>
+<p>Лістинг обробника події видалення рядка викидів з таблиці <span style="color: #0000ff;">Emission</span> має вигляд:</p>
+<pre><span style="color: #008000;">// Кнопка "Видалити викиди"</span>
+<span style="color: #0000ff;">private void</span> button5_Click(<span style="color: #0000ff;">object</span> sender, <span style="color: #008080;">EventArgs</span> e)
+{
+    <span style="color: #008000;">//</span>
+    <span style="color: #0000ff;">int</span> index, n;
+    <span style="color: #0000ff;">string</span> ID_Emission;
+    <span style="color: #0000ff;">string</span> count, text;
+    <span style="color: #0000ff;">string</span> SqlText = <span style="color: #800000;">"DELETE FROM [Emission] WHERE [Emission].ID_Emission = "</span>;
+
+    <span style="color: #008000;">// перевірка, чи є взагалі записи в таблиці Emission</span>
+    n = dataGridView2.Rows.Count;
+    <span style="color: #0000ff;">if</span> (n == 1) <span style="color: #0000ff;">return</span>;
+
+    <span style="color: #008080;">Form6</span> f = <span style="color: #0000ff;">new</span> <span style="color: #008080;">Form6</span>();
+
+    index = dataGridView2.CurrentRow.Index;
+    ID_Emission = Convert.ToString(dataGridView2[0, index].Value);
+
+    <span style="color: #008000;">// сформувати SQL-команду</span>
+    SqlText += ID_Emission;
+
+    <span style="color: #008000;">// заповнити інформаційну довідку у вікні Form6</span>
+    count = Convert.ToString(dataGridView2[2, index].Value);
+    text = Convert.ToString(dataGridView2[3, index].Value);
+
+    f.label2.Text = ID_Emission + <span style="color: #800000;">" - "</span> + count + <span style="color: #800000;">" - "</span> + text;
+
+    <span style="color: #0000ff;">if</span> (f.ShowDialog() == <span style="color: #008080;">DialogResult</span>.OK)
+    {
+        MyExecuteNonQuery(SqlText); <span style="color: #008000;">// виконати SQL-команду</span>
+        FillEmission(); <span style="color: #008000;">// відобразити таблицю Emission</span>
+    }
+}</pre>
+<p>Команда <span style="color: #0000ff;">“Видалити викиди”</span> базується на <span style="color: #0000ff;">SQL</span>-команді:</p>
+<pre><span style="color: #0000ff;"><strong>DELETE FROM</strong></span> [Emission]
+<strong><span style="color: #0000ff;">WHERE</span> </strong>[Emission].ID_Emission = ID_Emission</pre>
+<p>де <span style="color: #0000ff;">ID_Emission</span> – унікальний ідентифікатор рядка викидів у таблиці <span style="color: #0000ff;">Emission. ID_Emission</span> формується програмно на основі активного рядка елементу управління <span style="color: #0000ff;">dataGridView2:</span></p>
+<pre>index = dataGridView2.CurrentRow.Index;
+ID_Emission = Convert.ToString(dataGridView2[0, index].Value);</pre>
+<p>&nbsp;</p>
+<h5 id="p05_13">5.13. Програмування події кліку на кнопці <span style="color: #0000ff;">button7</span> (<span style="color: #0000ff;">“Мінімальні викиди”</span>)</h5>
+<p>Щоб обчислити мінімальні викиди для кожного джерела, використовуєтья SQL-запит:</p>
+<pre><span style="color: #0000ff;"><strong>SELECT</strong></span> [Emission].ID_Source, <span style="color: #0000ff;"><strong>MIN</strong></span>([Emission].count) <strong><span style="color: #0000ff;">AS</span> </strong>'Мінімальні викиди'
+<strong><span style="color: #0000ff;">FROM</span> </strong>[Emission]
+<strong><span style="color: #0000ff;">GROUP BY</span></strong> [Emission].ID_Source</pre>
+<p>Для пошуку мінімуму, у даному запиті використовується функція агрегування <span style="color: #0000ff;">MIN</span> з бібліотеки мови <span style="color: #0000ff;">SQL</span>.</p>
+<p>Лістинг обробника події кліку на кнопці <span style="color: #0000ff;">button7</span> наступний:</p>
+<pre><span style="color: #008000;">// Кнопка "Мінімальні викиди"</span>
+<span style="color: #0000ff;">private void</span> button7_Click(<span style="color: #0000ff;">object</span> sender, <span style="color: #008080;">EventArgs</span> e)
+{
+    <span style="color: #008000;">// SQL-запит - визначає мінімальні викиди для кожного джерела</span>
+    <span style="color: #0000ff;">string</span> SqlText;
+
+    <span style="color: #008000;">// варіант 1</span>
+    SqlText = <span style="color: #800000;">"SELECT [Emission].ID_Source, MIN([Emission].count) AS \'Мінімальні викиди\' "</span>;
+    SqlText += <span style="color: #800000;">" FROM [Emission]"</span>;
+    SqlText += <span style="color: #800000;">" GROUP BY [Emission].ID_Source"</span>;
+
+    <span style="color: #008080;">Form8</span> f = <span style="color: #0000ff;">new</span> <span style="color: #008080;">Form8</span>();
+
+    <span style="color: #008080;">SqlDataAdapter</span> da = <span style="color: #0000ff;">new</span> <span style="color: #008080;">SqlDataAdapter</span>(SqlText, ConnStr);
+    <span style="color: #008080;">DataSet</span> ds = <span style="color: #0000ff;">new</span> <span style="color: #008080;">DataSet</span>();
+    da.Fill(ds, <span style="color: #800000;">"[Emission]"</span>);
+    f.dataGridView1.DataSource = ds.Tables[<span style="color: #800000;">"[Emission]"</span>].DefaultView;
+    f.ShowDialog();
+}</pre>
+<p>Результат виводиться у формі <span style="color: #0000ff;">Form8,</span> яка була спроектована у п. 4.7.</p>
+<p>&nbsp;</p>
+<h5 id="p05_14">5.14. Програмування події кліку на кнопці <span style="color: #0000ff;">button8</span> (<span style="color: #0000ff;">“Максимальні викиди”</span>)</h5>
+<p>За зразком попереднього пункту (п. 5.13) реалізований обробник події кліку на кнопці <span style="color: #0000ff;">button8.</span></p>
+<p>Максимальні викиди обчислюються на основі <span style="color: #0000ff;">SQL</span>-запиту:</p>
+<pre><span style="color: #0000ff;"><strong>SELECT</strong></span> [Emission].ID_Source, <strong><span style="color: #0000ff;">MAX</span></strong>([Emission].count) <strong><span style="color: #0000ff;">AS</span> </strong>'Максимальні викиди'
+<span style="color: #0000ff;"><strong>FROM</strong> </span>[Emission]
+<strong><span style="color: #0000ff;">GROUP BY</span></strong> [Emission].ID_Source</pre>
+<p>Для пошуку максимуму, в <span style="color: #0000ff;">SQL</span>-запиті використовується функція агрегування <span style="color: #0000ff;">MAX</span>.</p>
+<p>Лістинг обробника події наступний:</p>
+<pre><span style="color: #008000;">// Кнопка "Максимальні викиди"</span>
+<span style="color: #0000ff;">private void</span> button8_Click(<span style="color: #0000ff;">object</span> sender, <span style="color: #008080;">EventArgs</span> e)
+{
+    <span style="color: #008000;">// SQL-запит - визначає максимальні викиди для кожного джерела</span>
+    <span style="color: #0000ff;">string</span> SqlText = <span style="color: #800000;">"SELECT [Emission].ID_Source, MAX([Emission].count) AS \'Максимальні викиди\' "</span>;
+    SqlText += <span style="color: #800000;">" FROM [Emission]"</span>;
+    SqlText += <span style="color: #800000;">" GROUP BY [Emission].ID_Source"</span>;
+
+    Form9 f = <span style="color: #0000ff;">new</span> Form9();
+    <span style="color: #008080;">SqlDataAdapter</span> da = <span style="color: #0000ff;">new</span> <span style="color: #008080;">SqlDataAdapter</span>(SqlText, ConnStr);
+    <span style="color: #008080;">DataSet</span> ds = <span style="color: #0000ff;">new</span> <span style="color: #008080;">DataSet</span>();
+    da.Fill(ds, <span style="color: #800000;">"[Emission]"</span>);
+    f.dataGridView1.DataSource = ds.Tables[<span style="color: #800000;">"[Emission]"</span>].DefaultView;
+    f.ShowDialog();
+}</pre>
+<p>&nbsp;</p>
+<h5 id="p05_15">5.15. Програмування події кліку на кнопці <span style="color: #0000ff;">button9 (“Середні викиди”)</span></h5>
+<p>Середні викиди обчислюються на основі <span style="color: #0000ff;">SQL</span>-запиту:</p>
+<pre><strong><span style="color: #0000ff;">SELECT</span></strong> [Emission].ID_Source, <strong><span style="color: #0000ff;">AVG</span></strong>([Emission].count) <span style="color: #0000ff;"><strong>AS</strong> </span>'Середні викиди'
+<strong><span style="color: #0000ff;">FROM</span> </strong>[Emission]
+<strong><span style="color: #0000ff;">GROUP BY</span></strong> [Emission].ID_Source</pre>
+<p>Для пошуку середнього арифметичного значення, в <span style="color: #0000ff;">SQL</span>-запиті використовується функція агрегування <span style="color: #0000ff;">AVG</span>.</p>
+<p>Лістинг обробника події наступний:</p>
+<pre><span style="color: #008000;">// Кнопка "Середні викиди"</span>
+<span style="color: #0000ff;">private void</span> button9_Click(<span style="color: #0000ff;">object</span> sender, <span style="color: #008080;">EventArgs</span> e)
+{
+    <span style="color: #008000;">// SQL-запит - визначає середні викиди для кожного джерела</span>
+    <span style="color: #0000ff;">string</span> SqlText = <span style="color: #800000;">"SELECT [Emission].ID_Source, AVG([Emission].count) AS \'Середні викиди\' "</span>;
+    SqlText += <span style="color: #800000;">" FROM [Emission]"</span>;
+    SqlText += <span style="color: #800000;">" GROUP BY [Emission].ID_Source"</span>;
+
+    <span style="color: #008080;">Form10</span> f = <span style="color: #0000ff;">new</span> <span style="color: #008080;">Form10</span>();
+    <span style="color: #008080;">SqlDataAdapter</span> da = <span style="color: #0000ff;">new</span> <span style="color: #008080;">SqlDataAdapter</span>(SqlText, ConnStr);
+    <span style="color: #008080;">DataSet</span> ds = <span style="color: #0000ff;">new</span> <span style="color: #008080;">DataSet</span>();
+    da.Fill(ds, <span style="color: #800000;">"[Emission]"</span>);
+    f.dataGridView1.DataSource = ds.Tables[<span style="color: #800000;">"[Emission]"</span>].DefaultView;
+    f.ShowDialog();
+}</pre>
+<p>&nbsp;</p>
+<h5 id="p05_16">5.16. Програмування події вибору рядка в <span style="color: #0000ff;">dataGridView1</span> (таблиця <span style="color: #0000ff;">Source)</span></h5>
+<p>Якщо користувач вибирає рядок в таблиці <span style="color: #0000ff;">Source</span> (елемент управління <span style="color: #0000ff;">dataGridView1),</span> мають виводитись зв’язані рядки таблиці <span style="color: #0000ff;">Emission,</span> що мають таке саме значення <span style="color: #0000ff;">ID_Source.</span> Дані таблиці <span style="color: #0000ff;">Emission</span> виводяться в елементі управління <span style="color: #0000ff;">dataGridView2.</span></p>
+<p>Тому, доцільно запрограмувати подію <span style="color: #0000ff;">Click</span> елементу управління <span style="color: #0000ff;">dataGridView1</span> (рис. 5.3). Обробник цієї події має назву <span style="color: #0000ff;">dataGridView1_Click()</span>.</p>
+<p style="text-align: center;"><a href="https://www.bestprog.net/wp-content/uploads/2017/08/05_03u.jpg"><img class="alignnone size-medium wp-image-6356" src="./C#. Курсова робота. База даних MS SQL Server _ BestProg_files/05_03u-300x157.jpg" alt="" width="300" height="157" srcset="https://www.bestprog.net/wp-content/uploads/2017/08/05_03u-300x157.jpg 300w, https://www.bestprog.net/wp-content/uploads/2017/08/05_03u-768x401.jpg 768w, https://www.bestprog.net/wp-content/uploads/2017/08/05_03u-1024x534.jpg 1024w, https://www.bestprog.net/wp-content/uploads/2017/08/05_03u.jpg 1259w" sizes="(max-width: 300px) 100vw, 300px"></a></p>
+<p style="text-align: center;">Рис. 5.3. Подія Click елементу управління <span style="color: #0000ff;">dataGridView1</span></p>
+<p>Лістинг обробника події кліку мишкою на <span style="color: #0000ff;">dataGridView1</span> наступний:</p>
+<pre><span style="color: #008000;">// клік мишкою на dataGridView1</span>
+<span style="color: #0000ff;">private void</span> dataGridView1_Click(<span style="color: #0000ff;">object</span> sender, <span style="color: #008080;">EventArgs</span> e)
+{
+    <span style="color: #008000;">// на основі виділеного рядка в таблиці Source вивести таблицю Emission</span>
+    <span style="color: #008000;">// визначити кількість рядків в dataGridView1</span>
+    <span style="color: #0000ff;">int</span> n = dataGridView1.RowCount;
+    <span style="color: #0000ff;">int</span> row = dataGridView1.CurrentRow.Index;
+
+    <span style="color: #0000ff;">if</span> (n != (row + 1)) <span style="color: #008000;">// Перевірка, чи на клацнули на останньому рядку</span>
+    FillEmission();
+}</pre>
+<p>&nbsp;</p>
+<h5 id="p05_17">5.17. Програмування події зміни активної комірки в <span style="color: #0000ff;">dataGridView1</span> (таблиця <span style="color: #0000ff;">Source)</span></h5>
+<p>Якщо змінити значення комірки в таблиці <span style="color: #0000ff;">Source</span> (елемент управління <span style="color: #0000ff;">dataGridView1)</span> з допомогою мишки або клавіатури, то мають виводитись відповідні дані таблиці <span style="color: #0000ff;">Emission</span> (елемент управління <span style="color: #0000ff;">dataGridView2).</span></p>
+<p>У цьому випадку ефективним є програмування події <span style="color: #0000ff;">CellEnter</span> елементу управління <span style="color: #0000ff;">dataGridView1.</span> Ця подія генерується, коли будь-яка комірка таблиці <span style="color: #0000ff;">dataGridView1</span> отримує фокус введення.</p>
+<p>Така ситуація можлива у випадку, коли користувач з допомогою мишки або клавіатури змінює активні комірки (рядки).</p>
+<p style="text-align: center;"><a href="https://www.bestprog.net/wp-content/uploads/2017/08/05_04u.jpg"><img class="alignnone size-medium wp-image-6357" src="./C#. Курсова робота. База даних MS SQL Server _ BestProg_files/05_04u-300x170.jpg" alt="" width="300" height="170" srcset="https://www.bestprog.net/wp-content/uploads/2017/08/05_04u-300x170.jpg 300w, https://www.bestprog.net/wp-content/uploads/2017/08/05_04u-768x436.jpg 768w, https://www.bestprog.net/wp-content/uploads/2017/08/05_04u-1024x581.jpg 1024w, https://www.bestprog.net/wp-content/uploads/2017/08/05_04u.jpg 1139w" sizes="(max-width: 300px) 100vw, 300px"></a></p>
+<p style="text-align: center;">Рис. 5.4. Подія <span style="color: #0000ff;">CellEnter</span> елементу управління <span style="color: #0000ff;">dataGridView1</span></p>
+<p>Обробник події CellEnter має назву dataGridView1_CellEnter().</p>
+<p>Лістинг обробника події має вигляд:</p>
+<pre><span style="color: #008000;">// Зміна активної комірки в dataGridView1</span>
+<span style="color: #0000ff;">private void</span> dataGridView1_CellEnter(<span style="color: #0000ff;">object</span> sender, <span style="color: #008080;">DataGridViewCellEventArgs</span> e)
+{
+    <span style="color: #0000ff;">int</span> n = dataGridView1.RowCount;
+    <span style="color: #0000ff;">int</span> row = dataGridView1.CurrentRow.Index;
+    <span style="color: #0000ff;">if</span> (n != (row + 1)) <span style="color: #008000;">// Перевірка, чи на клацнули на останньому рядку</span>
+    FillEmission();
+}</pre>
+<p>&nbsp;</p>
+<h5 id="p06">6. Налаштування команд меню <span style="color: #0000ff;">menuStrip1</span></h5>
+<p>На цьому кроці налаштовується виконання команд з меню <span style="color: #0000ff;">menuStrip1</span> головної форми <span style="color: #0000ff;">Form1</span> програми. Команди меню <span style="color: #0000ff;">menuStrip1</span> копіюють виконання команд обробників подій кнопок <span style="color: #0000ff;">button1, button2,</span> …, <span style="color: #0000ff;">button9.</span> Оскільки, вже запрограмовані команди кліку на кнопках головної форми, то достатньо перенаправити на них відповідні команди меню.</p>
+<p>Здійснимо перенаправлення команди меню <span style="color: #0000ff;">“Джерело” -&gt; “Додати…”</span> на обробник події <span style="color: #0000ff;">button1_Click()</span>. Для цього потрібно виконати такі дії.</p>
+<ol>
+<li>Активувати команду <span style="color: #0000ff;">“Джерело”-&gt;”Додати…”</span> з меню <span style="color: #0000ff;">menuStrip1</span> (рис. 6.1 – 1).</li>
+<li>Активувати вкладку <span style="color: #0000ff;">Events</span> у вікні <span style="color: #0000ff;">Properties</span> (рис. 6.1 – 2).</li>
+<li>Вибрати подію <span style="color: #0000ff;">Click</span> (рис. 6.1 – 3).</li>
+<li>З спадного списку вибрати назву обробника події <span style="color: #0000ff;">button1_Click()</span>.</li>
+</ol>
+<p style="text-align: center;"><a href="https://www.bestprog.net/wp-content/uploads/2017/08/06_01u.jpg"><img class="alignnone size-medium wp-image-6358" src="./C#. Курсова робота. База даних MS SQL Server _ BestProg_files/06_01u-300x166.jpg" alt="" width="300" height="166" srcset="https://www.bestprog.net/wp-content/uploads/2017/08/06_01u-300x166.jpg 300w, https://www.bestprog.net/wp-content/uploads/2017/08/06_01u-768x426.jpg 768w, https://www.bestprog.net/wp-content/uploads/2017/08/06_01u-1024x568.jpg 1024w, https://www.bestprog.net/wp-content/uploads/2017/08/06_01u-672x372.jpg 672w, https://www.bestprog.net/wp-content/uploads/2017/08/06_01u-1038x576.jpg 1038w, https://www.bestprog.net/wp-content/uploads/2017/08/06_01u.jpg 1133w" sizes="(max-width: 300px) 100vw, 300px"></a></p>
+<p style="text-align: center;">Рис. 6.1. Перенаправлення команди <span style="color: #0000ff;">“Джерело”-&gt;”Додати…”</span> на обробник події <span style="color: #0000ff;">button1_Click()</span></p>
+<p>За зразком налаштовуються усі інші команди меню:</p>
+<ul>
+<li>команда <span style="color: #0000ff;">“Джерело” -&gt; “Видалити”</span> відповідає обробнику події <span style="color: #0000ff;">button2_Click()</span>;</li>
+<li>команда <span style="color: #0000ff;">“Джерело” -&gt; “Редагувати…”</span> відповідає обробнику події <span style="color: #0000ff;">button3_Click()</span>;</li>
+<li>команда <span style="color: #0000ff;">“Викиди” -&gt; “Додати…”</span> відповідає обробнику події <span style="color: #0000ff;">button4_Click()</span>;</li>
+<li>команда <span style="color: #0000ff;">“Викиди” -&gt; “Видалити…”</span> відповідає обробнику події <span style="color: #0000ff;">button5_Click()</span>;</li>
+<li>команда <span style="color: #0000ff;">“Викиди” -&gt; “Редагувати…”</span> відповідає обробнику події <span style="color: #0000ff;">button6_Click()</span>;</li>
+<li>команда <span style="color: #0000ff;">“Розрахунок” -&gt; “Мінімальні викиди…”</span> відповідає обробнику події <span style="color: #0000ff;">button7_Click()</span>;</li>
+<li>команда <span style="color: #0000ff;">“Розрахунок” -&gt; “Максимальні викиди…”</span> відповідає обробнику події <span style="color: #0000ff;">button8_Click()</span>;</li>
+<li>команда <span style="color: #0000ff;">“Розрахунок” -&gt; “Середні викиди…”</span> відповідає обробнику події <span style="color: #0000ff;">button9_Click()</span>.</li>
+</ul>
+<p>&nbsp;</p>
+<h5 id="p07">7. Запуск програми на виконання</h5>
+<p>Після виконаних дій можна запускати програму на виконання (рис. 7).</p>
+<p style="text-align: center;"><a href="https://www.bestprog.net/wp-content/uploads/2017/08/07u.jpg"><img class="alignnone size-medium wp-image-6359" src="./C#. Курсова робота. База даних MS SQL Server _ BestProg_files/07u-300x181.jpg" alt="" width="300" height="181" srcset="https://www.bestprog.net/wp-content/uploads/2017/08/07u-300x181.jpg 300w, https://www.bestprog.net/wp-content/uploads/2017/08/07u-768x462.jpg 768w, https://www.bestprog.net/wp-content/uploads/2017/08/07u.jpg 819w" sizes="(max-width: 300px) 100vw, 300px"></a></p>
+<p style="text-align: center;">Рис. 7. Виконання програми</p>
+<p>&nbsp;</p>
+<hr>
+<h3 id="topics" style="text-align: center;">Зв’язані теми</h3>
+<ul>
+<li><a href="https://www.bestprog.net/uk/2018/06/01/c-term-paper-development-of-a-program-for-accounting-of-material-assets-the-microsoft-access-database-windows-forms-application_ua/" target="_blank" rel="noopener"><span style="color: #0000ff;"><strong>C#</strong></span><span style="color: #333300;">. <strong>Курсова робота</strong>. Розробка програми ведення обліку матеріальних засобів (“Інвентаризація”). База даних <span style="color: #0000ff;">Microsoft Access</span></span></a></li>
+<li><a href="https://www.bestprog.net/uk/2016/03/23/009-c-%d0%ba%d1%83%d1%80%d1%81%d0%be%d0%b2%d0%b0-%d1%80%d0%be%d0%b1%d0%be%d1%82%d0%b0-%d1%80%d0%be%d0%b7%d1%80%d0%be%d0%b1%d0%ba%d0%b0-%d0%bf%d1%80%d0%be%d0%b3%d1%80%d0%b0%d0%bc%d0%b8-%d0%b0/" target="_blank" rel="noopener"><span style="color: #333300;"><span style="color: #0000ff;"><strong>C#</strong></span><strong>. Розробка програми автоматизації роботи диспетчера кас</strong></span></a></li>
+<li><strong><span style="color: #333300;"><a href="https://www.bestprog.net/uk/2016/01/21/005-%d1%80%d0%be%d0%b7%d1%80%d0%be%d0%b1%d0%ba%d0%b0-%d0%b4%d0%be%d0%b4%d0%b0%d1%82%d0%ba%d1%83-%d1%96%d0%bc%d1%96%d1%82%d1%83%d1%8e%d1%87%d0%be%d0%b3%d0%be-%d1%80%d0%be%d0%b1%d0%be%d1%82%d1%83/" target="_blank" rel="noopener"><span style="color: #333300;"><span style="color: #0000ff;">Delphi</span>. Розробка додатку <span style="color: #0000ff;">“Магазин”</span></span></a></span></strong></li>
+</ul>
+<hr>
+<p>&nbsp;</p>
+
+<!-- Quick Adsense WordPress Plugin: http://quickadsense.com/ -->
+<div style="float: none; margin:10px 0 10px 0; text-align:center;">
+<script async="" src="./C#. Курсова робота. База даних MS SQL Server _ BestProg_files/f(4).txt"></script>
+<!-- Ad5_336_280 -->
+<ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-9065892916791387" data-ad-slot="5848882551" data-adsbygoogle-status="done"><ins id="aswift_1_expand" style="display:inline-table;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:336px;background-color:transparent;"><ins id="aswift_1_anchor" style="display:block;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:336px;background-color:transparent;"><iframe width="336" height="280" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;border:0px;width:336px;height:280px;" src="./C#. Курсова робота. База даних MS SQL Server _ BestProg_files/saved_resource(3).html"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<div style="font-size: 0px; height: 0px; line-height: 0px; margin: 0; padding: 0; clear: both;"></div>	</div><!-- .entry-content -->
+	
+	<footer class="entry-meta"><span class="tag-links"><a href="https://www.bestprog.net/uk/tag/button-uk/" rel="tag">Button</a><a href="https://www.bestprog.net/uk/tag/c-uk/" rel="tag">C#</a><a href="https://www.bestprog.net/uk/tag/datagridview-uk/" rel="tag">dataGridView</a><a href="https://www.bestprog.net/uk/tag/form/" rel="tag">Form</a><a href="https://www.bestprog.net/uk/tag/label-uk/" rel="tag">Label</a><a href="https://www.bestprog.net/uk/tag/ms-sql-server-uk/" rel="tag">MS SQL Server</a><a href="https://www.bestprog.net/uk/tag/ms-visual-studio-uk/" rel="tag">MS Visual Studio</a><a href="https://www.bestprog.net/uk/tag/sql-uk/" rel="tag">SQL</a><a href="https://www.bestprog.net/uk/tag/%d0%b1%d0%b0%d0%b7%d0%b0-%d0%b4%d0%b0%d0%bd%d0%b8%d1%85/" rel="tag">база даних</a></span></footer></article><!-- #post-## -->
+	<nav class="navigation post-navigation" role="navigation">
+		<h1 class="screen-reader-text">Навігація по записах</h1>
+		<div class="nav-links">
+			<a href="https://www.bestprog.net/uk/2017/08/21/the-switch-operator-cpp-ua/" rel="prev"><span class="meta-nav">Попередній запис</span>Оператор вибору switch</a><a href="https://www.bestprog.net/uk/2017/09/04/cycles-operators-of-the-cycle-for-while-do-while_ua/" rel="next"><span class="meta-nav">Наступний запис</span>Цикли. Оператори циклу for, while, do…while</a>		</div><!-- .nav-links -->
+	</nav><!-- .navigation -->
+			</div><!-- #content -->
+	</div><!-- #primary -->
+
+<div id="secondary">
+		<h2 class="site-description">Programming: theory and practice</h2>
+	
+		<nav role="navigation" class="navigation site-navigation secondary-navigation">
+		<div class="menu-site_map_ua-container"><ul id="menu-site_map_ua" class="menu"><li id="menu-item-2020" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-2020"><a href="https://www.bestprog.net/uk/sitemap_ua/">Карта сайту</a></li>
+<li id="menu-item-4553" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4553"><a href="https://www.bestprog.net/uk/sitemap_ua/4547-2/">Java</a></li>
+<li id="menu-item-2046" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2046"><a href="https://www.bestprog.net/uk/sitemap_ua/c/">C++</a></li>
+<li id="menu-item-2030" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2030"><a href="https://www.bestprog.net/uk/sitemap_ua/c-3/">C#</a></li>
+<li id="menu-item-2037" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2037"><a href="https://www.bestprog.net/uk/sitemap_ua/delphi/">Delphi</a></li>
+<li id="menu-item-2677" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2677"><a href="https://www.bestprog.net/uk/sitemap_ua/%d0%b1%d0%b0%d0%b7%d0%b8-%d0%b4%d0%b0%d0%bd%d0%b8%d1%85/">Бази даних</a></li>
+<li id="menu-item-15162" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15162"><a href="https://www.bestprog.net/uk/sitemap_ua/python-ua/">Python</a></li>
+</ul></div>	</nav>
+	
+		<div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
+		
+<!-- Quick Adsense Wordpress Plugin: http://quickadsense.com/ -->
+<aside id="adswidget1-quick-adsense-2" class="widget widget_adswidget1-quick-adsense"><script async="" src="./C#. Курсова робота. База даних MS SQL Server _ BestProg_files/f(4).txt"></script>
+<!-- Ad_160_600_Vertical -->
+<ins class="adsbygoogle" style="display:inline-block;width:160px;height:600px" data-ad-client="ca-pub-9065892916791387" data-ad-slot="6716172460" data-adsbygoogle-status="done"><ins id="aswift_2_expand" style="display:inline-table;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:160px;background-color:transparent;"><ins id="aswift_2_anchor" style="display:block;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:160px;background-color:transparent;"><iframe width="160" height="600" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_2" name="aswift_2" style="left:0;position:absolute;top:0;border:0px;width:160px;height:600px;" src="./C#. Курсова робота. База даних MS SQL Server _ BestProg_files/saved_resource(4).html"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></aside><aside id="categories-2" class="widget widget_categories"><h1 class="widget-title">Категорії</h1>		<ul>
+				<li class="cat-item cat-item-29"><a href="https://www.bestprog.net/uk/category/c_sharp_ua/">C#</a> (86)
+<ul class="children">
+	<li class="cat-item cat-item-639"><a href="https://www.bestprog.net/uk/category/c_sharp_ua/%d0%bf%d0%b8%d1%82%d0%b0%d0%bd%d0%bd%d1%8f-%d0%b2%d1%96%d0%b4%d0%bf%d0%be%d0%b2%d1%96%d0%b4%d1%8c/" title="Питання-Відповідь">Питання-Відповідь</a> (57)
+</li>
+	<li class="cat-item cat-item-603"><a href="https://www.bestprog.net/uk/category/c_sharp_ua/%d0%bf%d1%80%d0%b0%d0%ba%d1%82%d0%b8%d0%ba%d0%b0-uk-c_sharp_ua/">Практика</a> (29)
+	<ul class="children">
+	<li class="cat-item cat-item-33"><a href="https://www.bestprog.net/uk/category/c_sharp_ua/%d0%bf%d1%80%d0%b0%d0%ba%d1%82%d0%b8%d0%ba%d0%b0-uk-c_sharp_ua/ms-visual-studio-2010-ua/">MS Visual Studio 2010</a> (28)
+</li>
+	<li class="cat-item cat-item-1587"><a href="https://www.bestprog.net/uk/category/c_sharp_ua/%d0%bf%d1%80%d0%b0%d0%ba%d1%82%d0%b8%d0%ba%d0%b0-uk-c_sharp_ua/ms-visual-studio-2017/" title="MS Visual Studio 2017">MS Visual Studio 2017</a> (1)
+</li>
+	</ul>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-39"><a href="https://www.bestprog.net/uk/category/cpp_ua/" title="05">C++</a> (88)
+<ul class="children">
+	<li class="cat-item cat-item-648"><a href="https://www.bestprog.net/uk/category/cpp_ua/%d0%bf%d0%b8%d1%82%d0%b0%d0%bd%d0%bd%d1%8f-%d0%b2%d1%96%d0%b4%d0%bf%d0%be%d0%b2%d1%96%d0%b4%d1%8c-cpp_ua/" title="Питання-відповідь">Питання-Відповідь</a> (68)
+	<ul class="children">
+	<li class="cat-item cat-item-653"><a href="https://www.bestprog.net/uk/category/cpp_ua/%d0%bf%d0%b8%d1%82%d0%b0%d0%bd%d0%bd%d1%8f-%d0%b2%d1%96%d0%b4%d0%bf%d0%be%d0%b2%d1%96%d0%b4%d1%8c-cpp_ua/visual-c-%d0%bf%d0%b8%d1%82%d0%b0%d0%bd%d0%bd%d1%8f-%d0%b2%d1%96%d0%b4%d0%bf%d0%be%d0%b2%d1%96%d0%b4%d1%8c-cpp_ua/" title="Visual C++ - Питання та відповіді ">Visual C++</a> (64)
+</li>
+	</ul>
+</li>
+	<li class="cat-item cat-item-609"><a href="https://www.bestprog.net/uk/category/cpp_ua/%d0%bf%d1%80%d0%b0%d0%ba%d1%82%d0%b8%d0%ba%d0%b0-uk-2/" title="C++. Практичні приклади програм. Borland C++ Builder. MS Visual Studio - Visual C++.">Практика</a> (21)
+	<ul class="children">
+	<li class="cat-item cat-item-45"><a href="https://www.bestprog.net/uk/category/cpp_ua/%d0%bf%d1%80%d0%b0%d0%ba%d1%82%d0%b8%d0%ba%d0%b0-uk-2/cpp_builder_ua/" title="Приклади програм в Borland C++ Builder.">Borland C++ Builder 2007</a> (10)
+</li>
+	<li class="cat-item cat-item-370"><a href="https://www.bestprog.net/uk/category/cpp_ua/%d0%bf%d1%80%d0%b0%d0%ba%d1%82%d0%b8%d0%ba%d0%b0-uk-2/ms-visual-studio-2010-ua-cpp_ua/" title="Microsoft Visual Studio. Практичні приклади. Розробка програм">MS Visual Studio 2010</a> (11)
+</li>
+	</ul>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-1"><a href="https://www.bestprog.net/uk/category/delphi_ua/">Delphi</a> (25)
+<ul class="children">
+	<li class="cat-item cat-item-697"><a href="https://www.bestprog.net/uk/category/delphi_ua/%d0%bf%d0%b8%d1%82%d0%b0%d0%bd%d0%bd%d1%8f-%d0%b2%d1%96%d0%b4%d0%bf%d0%be%d0%b2%d1%96%d0%b4%d1%8c-delphi_ua/">Питання-Відповідь</a> (7)
+</li>
+	<li class="cat-item cat-item-597"><a href="https://www.bestprog.net/uk/category/delphi_ua/%d0%bf%d1%80%d0%b0%d0%ba%d1%82%d0%b8%d0%ba%d0%b0-uk/">Практика</a> (18)
+	<ul class="children">
+	<li class="cat-item cat-item-581"><a href="https://www.bestprog.net/uk/category/delphi_ua/%d0%bf%d1%80%d0%b0%d0%ba%d1%82%d0%b8%d0%ba%d0%b0-uk/delphi-7-uk/">Delphi-7</a> (2)
+</li>
+	<li class="cat-item cat-item-60"><a href="https://www.bestprog.net/uk/category/delphi_ua/%d0%bf%d1%80%d0%b0%d0%ba%d1%82%d0%b8%d0%ba%d0%b0-uk/embarcadero-rad-studio-2010-uk/">Embarcadero RAD Studio 2010</a> (16)
+</li>
+	</ul>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-951"><a href="https://www.bestprog.net/uk/category/java_ua/">Java</a> (44)
+<ul class="children">
+	<li class="cat-item cat-item-953"><a href="https://www.bestprog.net/uk/category/java_ua/question-answer_ua/">Питання-відповідь</a> (44)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-2435"><a href="https://www.bestprog.net/uk/category/python-ua/" title="Розробка програм на Python">Python</a> (6)
+<ul class="children">
+	<li class="cat-item cat-item-2441"><a href="https://www.bestprog.net/uk/category/python-ua/question-answer-python-ua/" title="Python. Питання-відповідь">Питання-відповідь</a> (6)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-591"><a href="https://www.bestprog.net/uk/category/%d0%b1%d0%b0%d0%b7%d0%b8-%d0%b4%d0%b0%d0%bd%d0%b8%d1%85/">Бази даних</a> (37)
+</li>
+	<li class="cat-item cat-item-554"><a href="https://www.bestprog.net/uk/category/%d0%ba%d0%be%d0%bc%d0%bf%d1%8e%d1%82%d0%b5%d1%80%d0%bd%d0%b0-%d0%b3%d1%80%d0%b0%d1%84%d1%96%d0%ba%d0%b0/">Комп'ютерна графіка</a> (3)
+</li>
+	<li class="cat-item cat-item-616"><a href="https://www.bestprog.net/uk/category/%d0%ba%d1%83%d1%80%d1%81%d0%be%d0%b2%d1%96-%d1%80%d0%be%d0%b1%d0%be%d1%82%d0%b8/" title="Курсові роботи">Курсові роботи</a> (4)
+</li>
+	<li class="cat-item cat-item-431"><a href="https://www.bestprog.net/uk/category/%d0%bc%d0%b0%d1%82%d0%b5%d0%bc%d0%b0%d1%82%d0%b8%d1%87%d0%bd%d0%b5-%d0%bf%d0%b7/">Математичне ПЗ</a> (6)
+</li>
+		</ul>
+			</aside><aside id="search-2" class="widget widget_search"><form role="search" method="get" class="search-form" action="https://www.bestprog.net/uk/">
+				<label>
+					<span class="screen-reader-text">Пошук:</span>
+					<input type="search" class="search-field" placeholder="Пошук …" value="" name="s">
+				</label>
+				<input type="submit" class="search-submit" value="Шукати">
+			</form></aside>		<aside id="recent-posts-2" class="widget widget_recent_entries">		<h1 class="widget-title">Недавні записи</h1>		<ul>
+											<li>
+					<a href="https://www.bestprog.net/uk/2019/04/21/priority-table-unary-binary-ternary-and-n-ary-operations-prefix-and-postfix-operator-form-ua/">Таблиця пріоритетності. Унарні, бінарні, тернарні та n-арні операції. Префіксна та постфіксна форма оператора</a>
+									</li>
+											<li>
+					<a href="https://www.bestprog.net/uk/2019/04/20/the-for-loop-operator-general-form-examples-of-tasks-solving-ua/">Оператор циклу for. Загальна форма. Приклади розвʼязку задач</a>
+									</li>
+											<li>
+					<a href="https://www.bestprog.net/uk/2019/04/14/the-while-loop-operator-general-form-examples-of-tasks-solving-ua/">Оператор циклу while. Загальна форма. Приклади рішення задач</a>
+									</li>
+											<li>
+					<a href="https://www.bestprog.net/uk/2019/04/10/python-statement-for-examples-ua/">Python. Оператор for. Приклади</a>
+									</li>
+											<li>
+					<a href="https://www.bestprog.net/uk/2019/04/06/overloading-operators-new-and-delete-ua/">Перевантаження операторів new та delete</a>
+									</li>
+											<li>
+					<a href="https://www.bestprog.net/uk/2019/04/01/abstract-classes-abstract-methods-keyword-abstract-examples-ua/">Абстрактні класи. Абстрактні методи. Приклади. Ключове слово abstract</a>
+									</li>
+					</ul>
+		</aside>	</div><!-- #primary-sidebar -->
+	</div><!-- #secondary -->
+
+		</div><!-- #main -->
+
+		<footer id="colophon" class="site-footer" role="contentinfo">
+
+			
+<div id="supplementary">
+	<div id="footer-sidebar" class="footer-sidebar widget-area masonry" role="complementary" style="position: relative; height: 270px;">
+		<aside id="pages-2" class="widget widget_pages masonry-brick" style="position: absolute; left: 0px; top: 48px;"><h1 class="widget-title">Сторінки</h1>		<ul>
+			<li class="page_item page-item-91 page_item_has_children"><a href="https://www.bestprog.net/uk/sitemap_ua/">Карта сайту</a>
+<ul class="children">
+	<li class="page_item page-item-2026"><a href="https://www.bestprog.net/uk/sitemap_ua/c-3/">C#</a></li>
+	<li class="page_item page-item-2044"><a href="https://www.bestprog.net/uk/sitemap_ua/c/">C++</a></li>
+	<li class="page_item page-item-2035"><a href="https://www.bestprog.net/uk/sitemap_ua/delphi/">Delphi</a></li>
+	<li class="page_item page-item-4547"><a href="https://www.bestprog.net/uk/sitemap_ua/4547-2/">Java</a></li>
+	<li class="page_item page-item-15090"><a href="https://www.bestprog.net/uk/sitemap_ua/python-ua/">Python</a></li>
+	<li class="page_item page-item-2673"><a href="https://www.bestprog.net/uk/sitemap_ua/%d0%b1%d0%b0%d0%b7%d0%b8-%d0%b4%d0%b0%d0%bd%d0%b8%d1%85/">Бази даних</a></li>
+</ul>
+</li>
+		</ul>
+			</aside>		<aside id="recent-posts-3" class="widget widget_recent_entries masonry-brick" style="position: absolute; left: 360px; top: 48px;">		<h1 class="widget-title">Недавні записи</h1>		<ul>
+											<li>
+					<a href="https://www.bestprog.net/uk/2019/04/21/priority-table-unary-binary-ternary-and-n-ary-operations-prefix-and-postfix-operator-form-ua/">Таблиця пріоритетності. Унарні, бінарні, тернарні та n-арні операції. Префіксна та постфіксна форма оператора</a>
+									</li>
+											<li>
+					<a href="https://www.bestprog.net/uk/2019/04/20/the-for-loop-operator-general-form-examples-of-tasks-solving-ua/">Оператор циклу for. Загальна форма. Приклади розвʼязку задач</a>
+									</li>
+											<li>
+					<a href="https://www.bestprog.net/uk/2019/04/14/the-while-loop-operator-general-form-examples-of-tasks-solving-ua/">Оператор циклу while. Загальна форма. Приклади рішення задач</a>
+									</li>
+											<li>
+					<a href="https://www.bestprog.net/uk/2019/04/10/python-statement-for-examples-ua/">Python. Оператор for. Приклади</a>
+									</li>
+											<li>
+					<a href="https://www.bestprog.net/uk/2019/04/06/overloading-operators-new-and-delete-ua/">Перевантаження операторів new та delete</a>
+									</li>
+					</ul>
+		</aside>	</div><!-- #footer-sidebar -->
+</div><!-- #supplementary -->
+
+			<div class="site-info">
+								<a href="https://wordpress.org/">Працює на WordPress</a>
+
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='//www.liveinternet.ru/click' "+
+"target=_blank><img src='//counter.yadro.ru/hit?t38.6;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet' "+
+"border='0' width='31' height='31'><\/a>")
+//--></script><a href="https://www.liveinternet.ru/click" target="_blank"><img src="https://counter.yadro.ru/hit?t38.6;r;s1440*900*24;uhttps%3A//www.bestprog.net/uk/2017/08/28/term-paper-development-of-an-environmental-pollution-monitoring-program_ua/;0.8403144696336331" alt="" title="LiveInternet" border="0" width="31" height="31"></a><!--/LiveInternet-->
+				
+<!-- I.UA counter --><a href="http://www.i.ua/" target="_blank" onclick="this.href=&#39;http://i.ua/r.php?207878&#39;;" title="Rated by I.UA">
+<script type="text/javascript"><!--
+iS='http'+(window.location.protocol=='https:'?'s':'')+
+'://r.i.ua/s?u207878&p256&n'+Math.random();
+iD=document;if(!iD.cookie)iD.cookie="b=b; path=/";if(iD.cookie)iS+='&c1';
+iS+='&d'+(screen.colorDepth?screen.colorDepth:screen.pixelDepth)
++"&w"+screen.width+'&h'+screen.height;
+iT=iR=iD.referrer.replace(iP=/^[a-z]*:\/\//,'');iH=window.location.href.replace(iP,'');
+((iI=iT.indexOf('/'))!=-1)?(iT=iT.substring(0,iI)):(iI=iT.length);
+if(iT!=iH.substring(0,iI))iS+='&f'+escape(iR);
+iS+='&r'+escape(iH);
+iD.write('<img src="'+iS+'" border="0" width="88" height="31" />');
+//--></script><img src="./C#. Курсова робота. База даних MS SQL Server _ BestProg_files/s" border="0" width="88" height="31"></a><!-- End of I.UA counter -->		
+				
+
+			</div><!-- .site-info -->
+<script language="JavaScript" type="text/javascript">
+TrustLogo("https://www.bestprog.net/wp-content/uploads/2017/12/comodo_secure_seal_76x26_transp.png", "CL1", "none");
+</script><a href="javascript:if(window.open(&#39;https://secure.comodo.com/ttb_searcher/trustlogo?v_querytype=W&amp;v_shortname=CL1&amp;v_search=https://www.bestprog.net/uk/2017/08/28/term-paper-development-of-an-environmental-pollution-monitoring-program_ua/&amp;x=6&amp;y=5&#39;,&#39;tl_wnd_credentials&#39;+(new Date()).getTime(),&#39;toolbar=0,scrollbars=1,location=1,status=1,menubar=1,resizable=1,width=374,height=660,left=60,top=120&#39;)){};tLlB(tLTB);" onmouseover="tLeB(event,&#39;https://secure.comodo.com/ttb_searcher/trustlogo?v_querytype=C&amp;v_shortname=CL1&amp;v_search=https://www.bestprog.net/uk/2017/08/28/term-paper-development-of-an-environmental-pollution-monitoring-program_ua/&amp;x=6&amp;y=5&#39;,&#39;tl_popupCL1&#39;)" onmousemove="tLXB(event)" onmouseout="tLTC(&#39;tl_popupCL1&#39;)" ondragstart="return false;"><img src="./C#. Курсова робота. База даних MS SQL Server _ BestProg_files/comodo_secure_seal_76x26_transp.png" border="0" onmousedown="return tLKB(event,&#39;https://secure.comodo.com/ttb_searcher/trustlogo?v_querytype=W&amp;v_shortname=CL1&amp;v_search=https://www.bestprog.net/uk/2017/08/28/term-paper-development-of-an-environmental-pollution-monitoring-program_ua/&amp;x=6&amp;y=5&#39;);" oncontextmenu="return tLLB(event);"></a><!----><div id="tl_popupCL1" name="tl_popupCL1" style="position:absolute;z-index:0;visibility: hidden;background-color: transparent;overflow:hidden;" onmouseover="tLoB(&#39;tl_popupCL1&#39;)" onmousemove="tLpC(&#39;tl_popupCL1&#39;)" onmouseout="tLpB(&#39;tl_popupCL1&#39;)">&nbsp;</div>
+<a href="https://www.positivessl.com/" id="comodoTL">Positive SSL</a>
+			
+		</footer><!-- #colophon -->
+	</div><!-- #page -->
+	<script type="text/javascript" src="./C#. Курсова робота. База даних MS SQL Server _ BestProg_files/imagesloaded.min.js"></script>
+<script type="text/javascript" src="./C#. Курсова робота. База даних MS SQL Server _ BestProg_files/masonry.min.js"></script>
+<script type="text/javascript" src="./C#. Курсова робота. База даних MS SQL Server _ BestProg_files/jquery.masonry.min.js"></script>
+<script type="text/javascript" src="./C#. Курсова робота. База даних MS SQL Server _ BestProg_files/functions.js"></script>
+<script type="text/javascript" src="./C#. Курсова робота. База даних MS SQL Server _ BestProg_files/wp-embed.min.js"></script><iframe id="google_osd_static_frame_5454431599935" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;" src="./C#. Курсова робота. База даних MS SQL Server _ BestProg_files/saved_resource(5).html"></iframe>
+
+<ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;"><ins id="aswift_3_expand" style="display:inline-table;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;"><ins id="aswift_3_anchor" style="display:block;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;"><iframe frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_3" name="aswift_3" style="left:0;position:absolute;top:0;border:0px;width:0px;height:0px;" src="./C#. Курсова робота. База даних MS SQL Server _ BestProg_files/saved_resource(6).html"></iframe></ins></ins></ins><ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;"></ins></body><iframe id="google_esf" name="google_esf" src="./C#. Курсова робота. База даних MS SQL Server _ BestProg_files/zrt_lookup.html" data-ad-client="ca-pub-9065892916791387" style="display: none;"></iframe></html>
