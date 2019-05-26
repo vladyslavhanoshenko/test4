@@ -52,21 +52,21 @@ namespace GeologicalDataBase
         private async void Form1_Load(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
-            this.TopMost = true;
+
             // TODO: данная строка кода позволяет загрузить данные в таблицу "dIPLOMDataSet.Test". При необходимости она может быть перемещена или удалена.
             this.testTableAdapter.Fill(this.dIPLOMDataSet.Test);
             string connection = @"Data Source=DESKTOP-BQTGVGM\DIPLOMDB;Initial Catalog=DIPLOM;Integrated Security=True";
-            
+
             sqlConnection = new SqlConnection(connection);
 
             await sqlConnection.OpenAsync();
 
             SqlDataReader sqlReader = null;
 
-            
-            
 
-            
+
+
+
 
 
             await LoadTest();
@@ -110,7 +110,7 @@ namespace GeologicalDataBase
             {
                 sqlReader = await getStudentCommand.ExecuteReaderAsync();
 
-                while(await sqlReader.ReadAsync())
+                while (await sqlReader.ReadAsync())
                 {
                     ListViewItem item = new ListViewItem(new string[]
                     {
@@ -140,17 +140,18 @@ namespace GeologicalDataBase
 
                     listView1.Items.Add(item);
 
-                    
-                }
-                
 
-            } catch (Exception ex)
+                }
+
+
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message.ToString(), ex.Source.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
-                if(sqlReader!=null && sqlReader.IsClosed)
+                if (sqlReader != null && sqlReader.IsClosed)
                 {
                     sqlReader.Close();
                 }
@@ -182,7 +183,7 @@ namespace GeologicalDataBase
 
         private void закритиToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if(sqlConnection!=null & sqlConnection.State != ConnectionState.Closed)
+            if (sqlConnection != null & sqlConnection.State != ConnectionState.Closed)
             {
                 sqlConnection.Close();
             }
@@ -207,7 +208,7 @@ namespace GeologicalDataBase
 
 
             //    SqlCommand command = new SqlCommand("INSERT INTO [Test] (SVP)VALUES(@SVP)", sqlConnection);
-                
+
             //    command.Parameters.AddWithValue("SVP", textBox43.Text);
 
             //    await command.ExecuteNonQueryAsync();
@@ -270,6 +271,7 @@ namespace GeologicalDataBase
                 }
 
             }
+            sqlReader.Close();
         }
 
         private void label44_Click(object sender, EventArgs e)
@@ -284,7 +286,7 @@ namespace GeologicalDataBase
                 label46.Visible = false;
             }
             if (
-               !string.IsNullOrEmpty(textBox1.Text) && !string.IsNullOrWhiteSpace(textBox1.Text)&&
+               !string.IsNullOrEmpty(textBox1.Text) && !string.IsNullOrWhiteSpace(textBox1.Text) &&
                !string.IsNullOrEmpty(textBox44.Text) && !string.IsNullOrWhiteSpace(textBox44.Text))
             {
 
@@ -292,7 +294,7 @@ namespace GeologicalDataBase
                 SqlCommand command = new SqlCommand("UPDATE [Test] SET [SVP]=@SVP WHERE [Id]=@Id", sqlConnection);
 
                 command.Parameters.AddWithValue("Id", textBox1.Text);
-                command.Parameters.AddWithValue("SVP", textBox44.Text); 
+                command.Parameters.AddWithValue("SVP", textBox44.Text);
 
                 await command.ExecuteNonQueryAsync();
 
@@ -321,11 +323,11 @@ namespace GeologicalDataBase
 
         private async void button5_Click(object sender, EventArgs e)
         {
-            
+
             SqlCommand command = new SqlCommand("DELETE FROM [TEST] WHERE [Id]=@Id", sqlConnection);
 
             command.Parameters.AddWithValue("Id", textBox45.Text);
-            
+
 
             await command.ExecuteNonQueryAsync();
         }
@@ -367,6 +369,65 @@ namespace GeologicalDataBase
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+        }
+
+        private async void вибратиЗаВмістомAuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SqlDataReader sqlReader = null;
+            SqlCommand getStudentCommand = new SqlCommand("SELECT * FROM [Test] WHERE Pb>5", sqlConnection);
+
+            try
+            {
+                sqlReader = await getStudentCommand.ExecuteReaderAsync();
+
+                while (await sqlReader.ReadAsync())
+                {
+                    ListViewItem item = new ListViewItem(new string[]
+                    {
+                        Convert.ToString(sqlReader["SKV"]),
+                        Convert.ToString(sqlReader["X"]),
+                        Convert.ToString(sqlReader["Y"]),
+                        Convert.ToString(sqlReader["PR"]),
+                        Convert.ToString(sqlReader["F5"]),
+                        Convert.ToString(sqlReader["F6"]),
+                        Convert.ToString(sqlReader["Описание пород"]),
+                        Convert.ToString(sqlReader["Зони"]),
+                        Convert.ToString(sqlReader["Au"]),
+                        Convert.ToString(sqlReader["Ag"]),
+                        Convert.ToString(sqlReader["As"]),
+                        Convert.ToString(sqlReader["Cu"]),
+                        Convert.ToString(sqlReader["Zn"]),
+                        Convert.ToString(sqlReader["Pb"]),
+                        Convert.ToString(sqlReader["Bi"]),
+                        Convert.ToString(sqlReader["Mo"]),
+                        Convert.ToString(sqlReader["W"]),
+                        Convert.ToString(sqlReader["Ni"]),
+                        Convert.ToString(sqlReader["Fe"]),
+                        Convert.ToString(sqlReader["Mn"])
+
+
+                    });
+
+                    listView1.Items.Add(item);
+
+
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString(), ex.Source.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                if (sqlReader != null && sqlReader.IsClosed)
+                {
+                    sqlReader.Close();
+                }
+
+            }
 
         }
     }

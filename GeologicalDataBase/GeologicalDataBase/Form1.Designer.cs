@@ -34,15 +34,86 @@
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.відкритиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.закритиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.довідкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.версіяПрограмиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.зберегтиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.збергтиЯкToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.режимВводуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.експортToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.експортВExelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.повязаніТаблиціToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.вибратиПоляToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.вибратиЗаВмістомAuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.вибратиЗаВмістомAuToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.вибратиЗаВмістомAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.вибратиЗаВмістомAuToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.вибратиЗаВмістомZnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.вибратиЗаВмістомPbToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.вибратиЗаВмістомBiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.вибратиЗаВмістомMoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.вибратиЗаВмістомToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.вибратиЗаВмістомAuToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.вибратиЗаВмістомFeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.вибратиЗаВмістомAuToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.довідкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.версіяПрограмиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.підключенняДоБазиДанихToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.sKVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.xDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.yDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pRDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.f5DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.f6DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.описаниеПородDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.зониDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.auDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.agDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.asDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.znDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pbDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.biDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.moDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.wDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.niDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.feDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.testBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dIPLOMDataSet = new GeologicalDataBase.DIPLOMDataSet();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.sKVDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.xDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.yDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pRDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.f5DataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.f6DataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.описаниеПородDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.зониDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.auDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.agDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.asDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cuDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.znDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pbDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.biDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.moDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.wDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.niDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.feDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mnDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button6 = new System.Windows.Forms.Button();
+            this.label48 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label42 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.label46 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
@@ -99,89 +170,19 @@
             this.button5 = new System.Windows.Forms.Button();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.повязаніТаблиціToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.вибратиПоляToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.вибратиЗаВмістомAuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.вибратиЗаВмістомAuToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.вибратиЗаВмістомAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.вибратиЗаВмістомAuToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.вибратиЗаВмістомZnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.вибратиЗаВмістомPbToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.вибратиЗаВмістомBiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.вибратиЗаВмістомMoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.вибратиЗаВмістомToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.вибратиЗаВмістомAuToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.вибратиЗаВмістомFeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.вибратиЗаВмістомAuToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
-            this.експортВExelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.зберегтиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.збергтиЯкToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.підключенняДоБазиДанихToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dIPLOMDataSet = new GeologicalDataBase.DIPLOMDataSet();
-            this.testBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.testTableAdapter = new GeologicalDataBase.DIPLOMDataSetTableAdapters.TestTableAdapter();
-            this.sKVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.xDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.yDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pRDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.f5DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.f6DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.описаниеПородDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.зониDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.auDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.agDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.asDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.znDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pbDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.biDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.moDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.wDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.niDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.feDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label42 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label48 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.sKVDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.xDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.yDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pRDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.f5DataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.f6DataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.описаниеПородDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.зониDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.auDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.agDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.asDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cuDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.znDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pbDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.biDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.moDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.wDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.niDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.feDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mnDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dIPLOMDataSet)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabPage6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dIPLOMDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.testBindingSource)).BeginInit();
-            this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -214,29 +215,27 @@
             // відкритиToolStripMenuItem
             // 
             this.відкритиToolStripMenuItem.Name = "відкритиToolStripMenuItem";
-            this.відкритиToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.відкритиToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.відкритиToolStripMenuItem.Text = "Відкрити";
             // 
             // закритиToolStripMenuItem
             // 
             this.закритиToolStripMenuItem.Name = "закритиToolStripMenuItem";
-            this.закритиToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.закритиToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.закритиToolStripMenuItem.Text = "Закрити";
             this.закритиToolStripMenuItem.Click += new System.EventHandler(this.закритиToolStripMenuItem_Click);
             // 
-            // довідкаToolStripMenuItem
+            // зберегтиToolStripMenuItem
             // 
-            this.довідкаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.версіяПрограмиToolStripMenuItem});
-            this.довідкаToolStripMenuItem.Name = "довідкаToolStripMenuItem";
-            this.довідкаToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
-            this.довідкаToolStripMenuItem.Text = "Довідка";
+            this.зберегтиToolStripMenuItem.Name = "зберегтиToolStripMenuItem";
+            this.зберегтиToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.зберегтиToolStripMenuItem.Text = "Зберегти";
             // 
-            // версіяПрограмиToolStripMenuItem
+            // збергтиЯкToolStripMenuItem
             // 
-            this.версіяПрограмиToolStripMenuItem.Name = "версіяПрограмиToolStripMenuItem";
-            this.версіяПрограмиToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.версіяПрограмиToolStripMenuItem.Text = "Версія програми";
+            this.збергтиЯкToolStripMenuItem.Name = "збергтиЯкToolStripMenuItem";
+            this.збергтиЯкToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.збергтиЯкToolStripMenuItem.Text = "Збергти як";
             // 
             // режимВводуToolStripMenuItem
             // 
@@ -251,6 +250,134 @@
             this.експортToolStripMenuItem.Name = "експортToolStripMenuItem";
             this.експортToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
             this.експортToolStripMenuItem.Text = "Експорт";
+            // 
+            // експортВExelToolStripMenuItem
+            // 
+            this.експортВExelToolStripMenuItem.Name = "експортВExelToolStripMenuItem";
+            this.експортВExelToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.експортВExelToolStripMenuItem.Text = "Експорт в MS Exel";
+            this.експортВExelToolStripMenuItem.Click += new System.EventHandler(this.експортВExelToolStripMenuItem_Click);
+            // 
+            // повязаніТаблиціToolStripMenuItem
+            // 
+            this.повязаніТаблиціToolStripMenuItem.Name = "повязаніТаблиціToolStripMenuItem";
+            this.повязаніТаблиціToolStripMenuItem.Size = new System.Drawing.Size(116, 20);
+            this.повязаніТаблиціToolStripMenuItem.Text = "Пов\'язані таблиці";
+            // 
+            // вибратиПоляToolStripMenuItem
+            // 
+            this.вибратиПоляToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.вибратиЗаВмістомAuToolStripMenuItem,
+            this.вибратиЗаВмістомAuToolStripMenuItem1,
+            this.вибратиЗаВмістомAsToolStripMenuItem,
+            this.вибратиЗаВмістомAuToolStripMenuItem2,
+            this.вибратиЗаВмістомZnToolStripMenuItem,
+            this.вибратиЗаВмістомPbToolStripMenuItem,
+            this.вибратиЗаВмістомBiToolStripMenuItem,
+            this.вибратиЗаВмістомMoToolStripMenuItem,
+            this.вибратиЗаВмістомToolStripMenuItem,
+            this.вибратиЗаВмістомAuToolStripMenuItem3,
+            this.вибратиЗаВмістомFeToolStripMenuItem,
+            this.вибратиЗаВмістомAuToolStripMenuItem4});
+            this.вибратиПоляToolStripMenuItem.Name = "вибратиПоляToolStripMenuItem";
+            this.вибратиПоляToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
+            this.вибратиПоляToolStripMenuItem.Text = "Вибрати поля";
+            // 
+            // вибратиЗаВмістомAuToolStripMenuItem
+            // 
+            this.вибратиЗаВмістомAuToolStripMenuItem.Name = "вибратиЗаВмістомAuToolStripMenuItem";
+            this.вибратиЗаВмістомAuToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
+            this.вибратиЗаВмістомAuToolStripMenuItem.Text = "Вибрати за вмістом Au";
+            this.вибратиЗаВмістомAuToolStripMenuItem.Click += new System.EventHandler(this.вибратиЗаВмістомAuToolStripMenuItem_Click);
+            // 
+            // вибратиЗаВмістомAuToolStripMenuItem1
+            // 
+            this.вибратиЗаВмістомAuToolStripMenuItem1.Name = "вибратиЗаВмістомAuToolStripMenuItem1";
+            this.вибратиЗаВмістомAuToolStripMenuItem1.Size = new System.Drawing.Size(203, 22);
+            this.вибратиЗаВмістомAuToolStripMenuItem1.Text = "Вибрати за вмістом Ag";
+            this.вибратиЗаВмістомAuToolStripMenuItem1.Click += new System.EventHandler(this.вибратиЗаВмістомAuToolStripMenuItem1_Click);
+            // 
+            // вибратиЗаВмістомAsToolStripMenuItem
+            // 
+            this.вибратиЗаВмістомAsToolStripMenuItem.Name = "вибратиЗаВмістомAsToolStripMenuItem";
+            this.вибратиЗаВмістомAsToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
+            this.вибратиЗаВмістомAsToolStripMenuItem.Text = "Вибрати за вмістом As";
+            // 
+            // вибратиЗаВмістомAuToolStripMenuItem2
+            // 
+            this.вибратиЗаВмістомAuToolStripMenuItem2.Name = "вибратиЗаВмістомAuToolStripMenuItem2";
+            this.вибратиЗаВмістомAuToolStripMenuItem2.Size = new System.Drawing.Size(203, 22);
+            this.вибратиЗаВмістомAuToolStripMenuItem2.Text = "Вибрати за вмістом Cu";
+            // 
+            // вибратиЗаВмістомZnToolStripMenuItem
+            // 
+            this.вибратиЗаВмістомZnToolStripMenuItem.Name = "вибратиЗаВмістомZnToolStripMenuItem";
+            this.вибратиЗаВмістомZnToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
+            this.вибратиЗаВмістомZnToolStripMenuItem.Text = "Вибрати за вмістом Zn";
+            // 
+            // вибратиЗаВмістомPbToolStripMenuItem
+            // 
+            this.вибратиЗаВмістомPbToolStripMenuItem.Name = "вибратиЗаВмістомPbToolStripMenuItem";
+            this.вибратиЗаВмістомPbToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
+            this.вибратиЗаВмістомPbToolStripMenuItem.Text = "Вибрати за вмістом Pb";
+            // 
+            // вибратиЗаВмістомBiToolStripMenuItem
+            // 
+            this.вибратиЗаВмістомBiToolStripMenuItem.Name = "вибратиЗаВмістомBiToolStripMenuItem";
+            this.вибратиЗаВмістомBiToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
+            this.вибратиЗаВмістомBiToolStripMenuItem.Text = "Вибрати за вмістом Bi";
+            // 
+            // вибратиЗаВмістомMoToolStripMenuItem
+            // 
+            this.вибратиЗаВмістомMoToolStripMenuItem.Name = "вибратиЗаВмістомMoToolStripMenuItem";
+            this.вибратиЗаВмістомMoToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
+            this.вибратиЗаВмістомMoToolStripMenuItem.Text = "Вибрати за вмістом Mo";
+            // 
+            // вибратиЗаВмістомToolStripMenuItem
+            // 
+            this.вибратиЗаВмістомToolStripMenuItem.Name = "вибратиЗаВмістомToolStripMenuItem";
+            this.вибратиЗаВмістомToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
+            this.вибратиЗаВмістомToolStripMenuItem.Text = "Вибрати за вмістом W ";
+            // 
+            // вибратиЗаВмістомAuToolStripMenuItem3
+            // 
+            this.вибратиЗаВмістомAuToolStripMenuItem3.Name = "вибратиЗаВмістомAuToolStripMenuItem3";
+            this.вибратиЗаВмістомAuToolStripMenuItem3.Size = new System.Drawing.Size(203, 22);
+            this.вибратиЗаВмістомAuToolStripMenuItem3.Text = "Вибрати за вмістом Ni";
+            this.вибратиЗаВмістомAuToolStripMenuItem3.Click += new System.EventHandler(this.вибратиЗаВмістомAuToolStripMenuItem3_Click);
+            // 
+            // вибратиЗаВмістомFeToolStripMenuItem
+            // 
+            this.вибратиЗаВмістомFeToolStripMenuItem.Name = "вибратиЗаВмістомFeToolStripMenuItem";
+            this.вибратиЗаВмістомFeToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
+            this.вибратиЗаВмістомFeToolStripMenuItem.Text = "Вибрати за вмістом Fe";
+            // 
+            // вибратиЗаВмістомAuToolStripMenuItem4
+            // 
+            this.вибратиЗаВмістомAuToolStripMenuItem4.Name = "вибратиЗаВмістомAuToolStripMenuItem4";
+            this.вибратиЗаВмістомAuToolStripMenuItem4.Size = new System.Drawing.Size(203, 22);
+            this.вибратиЗаВмістомAuToolStripMenuItem4.Text = "Вибрати за вмістом Mn";
+            this.вибратиЗаВмістомAuToolStripMenuItem4.Click += new System.EventHandler(this.вибратиЗаВмістомAuToolStripMenuItem4_Click);
+            // 
+            // довідкаToolStripMenuItem
+            // 
+            this.довідкаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.версіяПрограмиToolStripMenuItem});
+            this.довідкаToolStripMenuItem.Name = "довідкаToolStripMenuItem";
+            this.довідкаToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.довідкаToolStripMenuItem.Text = "Довідка";
+            // 
+            // версіяПрограмиToolStripMenuItem
+            // 
+            this.версіяПрограмиToolStripMenuItem.Name = "версіяПрограмиToolStripMenuItem";
+            this.версіяПрограмиToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.версіяПрограмиToolStripMenuItem.Text = "Версія програми";
+            // 
+            // підключенняДоБазиДанихToolStripMenuItem
+            // 
+            this.підключенняДоБазиДанихToolStripMenuItem.Name = "підключенняДоБазиДанихToolStripMenuItem";
+            this.підключенняДоБазиДанихToolStripMenuItem.Size = new System.Drawing.Size(171, 20);
+            this.підключенняДоБазиДанихToolStripMenuItem.Text = "Підключення до бази даних";
             // 
             // toolStrip1
             // 
@@ -272,6 +399,15 @@
             this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton1.Text = "toolStripButton1";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton2.Text = "toolStripButton2";
             // 
             // tabControl1
             // 
@@ -299,6 +435,168 @@
             this.tabPage1.Text = "Панель відображення";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.sKVDataGridViewTextBoxColumn,
+            this.xDataGridViewTextBoxColumn,
+            this.yDataGridViewTextBoxColumn,
+            this.pRDataGridViewTextBoxColumn,
+            this.f5DataGridViewTextBoxColumn,
+            this.f6DataGridViewTextBoxColumn,
+            this.описаниеПородDataGridViewTextBoxColumn,
+            this.зониDataGridViewTextBoxColumn,
+            this.auDataGridViewTextBoxColumn,
+            this.agDataGridViewTextBoxColumn,
+            this.asDataGridViewTextBoxColumn,
+            this.cuDataGridViewTextBoxColumn,
+            this.znDataGridViewTextBoxColumn,
+            this.pbDataGridViewTextBoxColumn,
+            this.biDataGridViewTextBoxColumn,
+            this.moDataGridViewTextBoxColumn,
+            this.wDataGridViewTextBoxColumn,
+            this.niDataGridViewTextBoxColumn,
+            this.feDataGridViewTextBoxColumn,
+            this.mnDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.testBindingSource;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(970, 435);
+            this.dataGridView1.TabIndex = 1;
+            // 
+            // sKVDataGridViewTextBoxColumn
+            // 
+            this.sKVDataGridViewTextBoxColumn.DataPropertyName = "SKV";
+            this.sKVDataGridViewTextBoxColumn.HeaderText = "SKV";
+            this.sKVDataGridViewTextBoxColumn.Name = "sKVDataGridViewTextBoxColumn";
+            // 
+            // xDataGridViewTextBoxColumn
+            // 
+            this.xDataGridViewTextBoxColumn.DataPropertyName = "X";
+            this.xDataGridViewTextBoxColumn.HeaderText = "X";
+            this.xDataGridViewTextBoxColumn.Name = "xDataGridViewTextBoxColumn";
+            // 
+            // yDataGridViewTextBoxColumn
+            // 
+            this.yDataGridViewTextBoxColumn.DataPropertyName = "Y";
+            this.yDataGridViewTextBoxColumn.HeaderText = "Y";
+            this.yDataGridViewTextBoxColumn.Name = "yDataGridViewTextBoxColumn";
+            // 
+            // pRDataGridViewTextBoxColumn
+            // 
+            this.pRDataGridViewTextBoxColumn.DataPropertyName = "PR";
+            this.pRDataGridViewTextBoxColumn.HeaderText = "PR";
+            this.pRDataGridViewTextBoxColumn.Name = "pRDataGridViewTextBoxColumn";
+            // 
+            // f5DataGridViewTextBoxColumn
+            // 
+            this.f5DataGridViewTextBoxColumn.DataPropertyName = "F5";
+            this.f5DataGridViewTextBoxColumn.HeaderText = "F5";
+            this.f5DataGridViewTextBoxColumn.Name = "f5DataGridViewTextBoxColumn";
+            // 
+            // f6DataGridViewTextBoxColumn
+            // 
+            this.f6DataGridViewTextBoxColumn.DataPropertyName = "F6";
+            this.f6DataGridViewTextBoxColumn.HeaderText = "F6";
+            this.f6DataGridViewTextBoxColumn.Name = "f6DataGridViewTextBoxColumn";
+            // 
+            // описаниеПородDataGridViewTextBoxColumn
+            // 
+            this.описаниеПородDataGridViewTextBoxColumn.DataPropertyName = "Описание пород";
+            this.описаниеПородDataGridViewTextBoxColumn.HeaderText = "Описание пород";
+            this.описаниеПородDataGridViewTextBoxColumn.Name = "описаниеПородDataGridViewTextBoxColumn";
+            // 
+            // зониDataGridViewTextBoxColumn
+            // 
+            this.зониDataGridViewTextBoxColumn.DataPropertyName = "Зони";
+            this.зониDataGridViewTextBoxColumn.HeaderText = "Зони";
+            this.зониDataGridViewTextBoxColumn.Name = "зониDataGridViewTextBoxColumn";
+            // 
+            // auDataGridViewTextBoxColumn
+            // 
+            this.auDataGridViewTextBoxColumn.DataPropertyName = "Au";
+            this.auDataGridViewTextBoxColumn.HeaderText = "Au";
+            this.auDataGridViewTextBoxColumn.Name = "auDataGridViewTextBoxColumn";
+            // 
+            // agDataGridViewTextBoxColumn
+            // 
+            this.agDataGridViewTextBoxColumn.DataPropertyName = "Ag";
+            this.agDataGridViewTextBoxColumn.HeaderText = "Ag";
+            this.agDataGridViewTextBoxColumn.Name = "agDataGridViewTextBoxColumn";
+            // 
+            // asDataGridViewTextBoxColumn
+            // 
+            this.asDataGridViewTextBoxColumn.DataPropertyName = "As";
+            this.asDataGridViewTextBoxColumn.HeaderText = "As";
+            this.asDataGridViewTextBoxColumn.Name = "asDataGridViewTextBoxColumn";
+            // 
+            // cuDataGridViewTextBoxColumn
+            // 
+            this.cuDataGridViewTextBoxColumn.DataPropertyName = "Cu";
+            this.cuDataGridViewTextBoxColumn.HeaderText = "Cu";
+            this.cuDataGridViewTextBoxColumn.Name = "cuDataGridViewTextBoxColumn";
+            // 
+            // znDataGridViewTextBoxColumn
+            // 
+            this.znDataGridViewTextBoxColumn.DataPropertyName = "Zn";
+            this.znDataGridViewTextBoxColumn.HeaderText = "Zn";
+            this.znDataGridViewTextBoxColumn.Name = "znDataGridViewTextBoxColumn";
+            // 
+            // pbDataGridViewTextBoxColumn
+            // 
+            this.pbDataGridViewTextBoxColumn.DataPropertyName = "Pb";
+            this.pbDataGridViewTextBoxColumn.HeaderText = "Pb";
+            this.pbDataGridViewTextBoxColumn.Name = "pbDataGridViewTextBoxColumn";
+            // 
+            // biDataGridViewTextBoxColumn
+            // 
+            this.biDataGridViewTextBoxColumn.DataPropertyName = "Bi";
+            this.biDataGridViewTextBoxColumn.HeaderText = "Bi";
+            this.biDataGridViewTextBoxColumn.Name = "biDataGridViewTextBoxColumn";
+            // 
+            // moDataGridViewTextBoxColumn
+            // 
+            this.moDataGridViewTextBoxColumn.DataPropertyName = "Mo";
+            this.moDataGridViewTextBoxColumn.HeaderText = "Mo";
+            this.moDataGridViewTextBoxColumn.Name = "moDataGridViewTextBoxColumn";
+            // 
+            // wDataGridViewTextBoxColumn
+            // 
+            this.wDataGridViewTextBoxColumn.DataPropertyName = "W";
+            this.wDataGridViewTextBoxColumn.HeaderText = "W";
+            this.wDataGridViewTextBoxColumn.Name = "wDataGridViewTextBoxColumn";
+            // 
+            // niDataGridViewTextBoxColumn
+            // 
+            this.niDataGridViewTextBoxColumn.DataPropertyName = "Ni";
+            this.niDataGridViewTextBoxColumn.HeaderText = "Ni";
+            this.niDataGridViewTextBoxColumn.Name = "niDataGridViewTextBoxColumn";
+            // 
+            // feDataGridViewTextBoxColumn
+            // 
+            this.feDataGridViewTextBoxColumn.DataPropertyName = "Fe";
+            this.feDataGridViewTextBoxColumn.HeaderText = "Fe";
+            this.feDataGridViewTextBoxColumn.Name = "feDataGridViewTextBoxColumn";
+            // 
+            // mnDataGridViewTextBoxColumn
+            // 
+            this.mnDataGridViewTextBoxColumn.DataPropertyName = "Mn";
+            this.mnDataGridViewTextBoxColumn.HeaderText = "Mn";
+            this.mnDataGridViewTextBoxColumn.Name = "mnDataGridViewTextBoxColumn";
+            // 
+            // testBindingSource
+            // 
+            this.testBindingSource.DataMember = "Test";
+            this.testBindingSource.DataSource = this.dIPLOMDataSet;
+            // 
+            // dIPLOMDataSet
+            // 
+            this.dIPLOMDataSet.DataSetName = "DIPLOMDataSet";
+            this.dIPLOMDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // listBox1
             // 
             this.listBox1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -307,6 +605,264 @@
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(970, 435);
             this.listBox1.TabIndex = 0;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.button1);
+            this.tabPage2.Controls.Add(this.dataGridView2);
+            this.tabPage2.Controls.Add(this.button6);
+            this.tabPage2.Controls.Add(this.label48);
+            this.tabPage2.Controls.Add(this.comboBox2);
+            this.tabPage2.Controls.Add(this.comboBox1);
+            this.tabPage2.Controls.Add(this.label42);
+            this.tabPage2.Controls.Add(this.button3);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(976, 441);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Панель вставки";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(478, 309);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(101, 23);
+            this.button1.TabIndex = 52;
+            this.button1.Text = "Добавить все";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.sKVDataGridViewTextBoxColumn1,
+            this.xDataGridViewTextBoxColumn1,
+            this.yDataGridViewTextBoxColumn1,
+            this.pRDataGridViewTextBoxColumn1,
+            this.f5DataGridViewTextBoxColumn1,
+            this.f6DataGridViewTextBoxColumn1,
+            this.описаниеПородDataGridViewTextBoxColumn1,
+            this.зониDataGridViewTextBoxColumn1,
+            this.auDataGridViewTextBoxColumn1,
+            this.agDataGridViewTextBoxColumn1,
+            this.asDataGridViewTextBoxColumn1,
+            this.cuDataGridViewTextBoxColumn1,
+            this.znDataGridViewTextBoxColumn1,
+            this.pbDataGridViewTextBoxColumn1,
+            this.biDataGridViewTextBoxColumn1,
+            this.moDataGridViewTextBoxColumn1,
+            this.wDataGridViewTextBoxColumn1,
+            this.niDataGridViewTextBoxColumn1,
+            this.feDataGridViewTextBoxColumn1,
+            this.mnDataGridViewTextBoxColumn1});
+            this.dataGridView2.DataSource = this.testBindingSource;
+            this.dataGridView2.Location = new System.Drawing.Point(-4, 94);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(1480, 650);
+            this.dataGridView2.TabIndex = 51;
+            // 
+            // sKVDataGridViewTextBoxColumn1
+            // 
+            this.sKVDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.sKVDataGridViewTextBoxColumn1.DataPropertyName = "SKV";
+            this.sKVDataGridViewTextBoxColumn1.HeaderText = "SKV";
+            this.sKVDataGridViewTextBoxColumn1.Name = "sKVDataGridViewTextBoxColumn1";
+            // 
+            // xDataGridViewTextBoxColumn1
+            // 
+            this.xDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.xDataGridViewTextBoxColumn1.DataPropertyName = "X";
+            this.xDataGridViewTextBoxColumn1.HeaderText = "X";
+            this.xDataGridViewTextBoxColumn1.Name = "xDataGridViewTextBoxColumn1";
+            // 
+            // yDataGridViewTextBoxColumn1
+            // 
+            this.yDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.yDataGridViewTextBoxColumn1.DataPropertyName = "Y";
+            this.yDataGridViewTextBoxColumn1.HeaderText = "Y";
+            this.yDataGridViewTextBoxColumn1.Name = "yDataGridViewTextBoxColumn1";
+            // 
+            // pRDataGridViewTextBoxColumn1
+            // 
+            this.pRDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.pRDataGridViewTextBoxColumn1.DataPropertyName = "PR";
+            this.pRDataGridViewTextBoxColumn1.HeaderText = "PR";
+            this.pRDataGridViewTextBoxColumn1.Name = "pRDataGridViewTextBoxColumn1";
+            // 
+            // f5DataGridViewTextBoxColumn1
+            // 
+            this.f5DataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.f5DataGridViewTextBoxColumn1.DataPropertyName = "F5";
+            this.f5DataGridViewTextBoxColumn1.HeaderText = "F5";
+            this.f5DataGridViewTextBoxColumn1.Name = "f5DataGridViewTextBoxColumn1";
+            // 
+            // f6DataGridViewTextBoxColumn1
+            // 
+            this.f6DataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.f6DataGridViewTextBoxColumn1.DataPropertyName = "F6";
+            this.f6DataGridViewTextBoxColumn1.HeaderText = "F6";
+            this.f6DataGridViewTextBoxColumn1.Name = "f6DataGridViewTextBoxColumn1";
+            // 
+            // описаниеПородDataGridViewTextBoxColumn1
+            // 
+            this.описаниеПородDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.описаниеПородDataGridViewTextBoxColumn1.DataPropertyName = "Описание пород";
+            this.описаниеПородDataGridViewTextBoxColumn1.HeaderText = "Описание пород";
+            this.описаниеПородDataGridViewTextBoxColumn1.Name = "описаниеПородDataGridViewTextBoxColumn1";
+            // 
+            // зониDataGridViewTextBoxColumn1
+            // 
+            this.зониDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.зониDataGridViewTextBoxColumn1.DataPropertyName = "Зони";
+            this.зониDataGridViewTextBoxColumn1.HeaderText = "Зони";
+            this.зониDataGridViewTextBoxColumn1.Name = "зониDataGridViewTextBoxColumn1";
+            // 
+            // auDataGridViewTextBoxColumn1
+            // 
+            this.auDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.auDataGridViewTextBoxColumn1.DataPropertyName = "Au";
+            this.auDataGridViewTextBoxColumn1.HeaderText = "Au";
+            this.auDataGridViewTextBoxColumn1.Name = "auDataGridViewTextBoxColumn1";
+            // 
+            // agDataGridViewTextBoxColumn1
+            // 
+            this.agDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.agDataGridViewTextBoxColumn1.DataPropertyName = "Ag";
+            this.agDataGridViewTextBoxColumn1.HeaderText = "Ag";
+            this.agDataGridViewTextBoxColumn1.Name = "agDataGridViewTextBoxColumn1";
+            // 
+            // asDataGridViewTextBoxColumn1
+            // 
+            this.asDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.asDataGridViewTextBoxColumn1.DataPropertyName = "As";
+            this.asDataGridViewTextBoxColumn1.HeaderText = "As";
+            this.asDataGridViewTextBoxColumn1.Name = "asDataGridViewTextBoxColumn1";
+            // 
+            // cuDataGridViewTextBoxColumn1
+            // 
+            this.cuDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cuDataGridViewTextBoxColumn1.DataPropertyName = "Cu";
+            this.cuDataGridViewTextBoxColumn1.HeaderText = "Cu";
+            this.cuDataGridViewTextBoxColumn1.Name = "cuDataGridViewTextBoxColumn1";
+            // 
+            // znDataGridViewTextBoxColumn1
+            // 
+            this.znDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.znDataGridViewTextBoxColumn1.DataPropertyName = "Zn";
+            this.znDataGridViewTextBoxColumn1.HeaderText = "Zn";
+            this.znDataGridViewTextBoxColumn1.Name = "znDataGridViewTextBoxColumn1";
+            // 
+            // pbDataGridViewTextBoxColumn1
+            // 
+            this.pbDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.pbDataGridViewTextBoxColumn1.DataPropertyName = "Pb";
+            this.pbDataGridViewTextBoxColumn1.HeaderText = "Pb";
+            this.pbDataGridViewTextBoxColumn1.Name = "pbDataGridViewTextBoxColumn1";
+            // 
+            // biDataGridViewTextBoxColumn1
+            // 
+            this.biDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.biDataGridViewTextBoxColumn1.DataPropertyName = "Bi";
+            this.biDataGridViewTextBoxColumn1.HeaderText = "Bi";
+            this.biDataGridViewTextBoxColumn1.Name = "biDataGridViewTextBoxColumn1";
+            // 
+            // moDataGridViewTextBoxColumn1
+            // 
+            this.moDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.moDataGridViewTextBoxColumn1.DataPropertyName = "Mo";
+            this.moDataGridViewTextBoxColumn1.HeaderText = "Mo";
+            this.moDataGridViewTextBoxColumn1.Name = "moDataGridViewTextBoxColumn1";
+            // 
+            // wDataGridViewTextBoxColumn1
+            // 
+            this.wDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.wDataGridViewTextBoxColumn1.DataPropertyName = "W";
+            this.wDataGridViewTextBoxColumn1.HeaderText = "W";
+            this.wDataGridViewTextBoxColumn1.Name = "wDataGridViewTextBoxColumn1";
+            // 
+            // niDataGridViewTextBoxColumn1
+            // 
+            this.niDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.niDataGridViewTextBoxColumn1.DataPropertyName = "Ni";
+            this.niDataGridViewTextBoxColumn1.HeaderText = "Ni";
+            this.niDataGridViewTextBoxColumn1.Name = "niDataGridViewTextBoxColumn1";
+            // 
+            // feDataGridViewTextBoxColumn1
+            // 
+            this.feDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.feDataGridViewTextBoxColumn1.DataPropertyName = "Fe";
+            this.feDataGridViewTextBoxColumn1.HeaderText = "Fe";
+            this.feDataGridViewTextBoxColumn1.Name = "feDataGridViewTextBoxColumn1";
+            // 
+            // mnDataGridViewTextBoxColumn1
+            // 
+            this.mnDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.mnDataGridViewTextBoxColumn1.DataPropertyName = "Mn";
+            this.mnDataGridViewTextBoxColumn1.HeaderText = "Mn";
+            this.mnDataGridViewTextBoxColumn1.Name = "mnDataGridViewTextBoxColumn1";
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(760, 45);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.TabIndex = 50;
+            this.button6.Text = "Вибрати";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(447, 47);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(132, 13);
+            this.label48.TabIndex = 49;
+            this.label48.Text = "Виберіть режим вставки";
+            this.label48.Click += new System.EventHandler(this.label48_Click);
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(619, 47);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 21);
+            this.comboBox2.TabIndex = 48;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Проби свердловини",
+            "Свердловини",
+            "Еще что-то"});
+            this.comboBox1.Location = new System.Drawing.Point(619, 20);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 47;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.CausesValidation = false;
+            this.label42.Location = new System.Drawing.Point(447, 25);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(162, 13);
+            this.label42.TabIndex = 43;
+            this.label42.Text = "Виберіть таблицю для вставки";
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(760, 18);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 42;
+            this.button3.Text = "Вибрати";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // tabPage3
             // 
@@ -824,533 +1380,9 @@
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
-            // повязаніТаблиціToolStripMenuItem
-            // 
-            this.повязаніТаблиціToolStripMenuItem.Name = "повязаніТаблиціToolStripMenuItem";
-            this.повязаніТаблиціToolStripMenuItem.Size = new System.Drawing.Size(116, 20);
-            this.повязаніТаблиціToolStripMenuItem.Text = "Пов\'язані таблиці";
-            // 
-            // вибратиПоляToolStripMenuItem
-            // 
-            this.вибратиПоляToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.вибратиЗаВмістомAuToolStripMenuItem,
-            this.вибратиЗаВмістомAuToolStripMenuItem1,
-            this.вибратиЗаВмістомAsToolStripMenuItem,
-            this.вибратиЗаВмістомAuToolStripMenuItem2,
-            this.вибратиЗаВмістомZnToolStripMenuItem,
-            this.вибратиЗаВмістомPbToolStripMenuItem,
-            this.вибратиЗаВмістомBiToolStripMenuItem,
-            this.вибратиЗаВмістомMoToolStripMenuItem,
-            this.вибратиЗаВмістомToolStripMenuItem,
-            this.вибратиЗаВмістомAuToolStripMenuItem3,
-            this.вибратиЗаВмістомFeToolStripMenuItem,
-            this.вибратиЗаВмістомAuToolStripMenuItem4});
-            this.вибратиПоляToolStripMenuItem.Name = "вибратиПоляToolStripMenuItem";
-            this.вибратиПоляToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
-            this.вибратиПоляToolStripMenuItem.Text = "Вибрати поля";
-            // 
-            // вибратиЗаВмістомAuToolStripMenuItem
-            // 
-            this.вибратиЗаВмістомAuToolStripMenuItem.Name = "вибратиЗаВмістомAuToolStripMenuItem";
-            this.вибратиЗаВмістомAuToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
-            this.вибратиЗаВмістомAuToolStripMenuItem.Text = "Вибрати за вмістом Au";
-            // 
-            // вибратиЗаВмістомAuToolStripMenuItem1
-            // 
-            this.вибратиЗаВмістомAuToolStripMenuItem1.Name = "вибратиЗаВмістомAuToolStripMenuItem1";
-            this.вибратиЗаВмістомAuToolStripMenuItem1.Size = new System.Drawing.Size(203, 22);
-            this.вибратиЗаВмістомAuToolStripMenuItem1.Text = "Вибрати за вмістом Ag";
-            this.вибратиЗаВмістомAuToolStripMenuItem1.Click += new System.EventHandler(this.вибратиЗаВмістомAuToolStripMenuItem1_Click);
-            // 
-            // вибратиЗаВмістомAsToolStripMenuItem
-            // 
-            this.вибратиЗаВмістомAsToolStripMenuItem.Name = "вибратиЗаВмістомAsToolStripMenuItem";
-            this.вибратиЗаВмістомAsToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
-            this.вибратиЗаВмістомAsToolStripMenuItem.Text = "Вибрати за вмістом As";
-            // 
-            // вибратиЗаВмістомAuToolStripMenuItem2
-            // 
-            this.вибратиЗаВмістомAuToolStripMenuItem2.Name = "вибратиЗаВмістомAuToolStripMenuItem2";
-            this.вибратиЗаВмістомAuToolStripMenuItem2.Size = new System.Drawing.Size(203, 22);
-            this.вибратиЗаВмістомAuToolStripMenuItem2.Text = "Вибрати за вмістом Cu";
-            // 
-            // вибратиЗаВмістомZnToolStripMenuItem
-            // 
-            this.вибратиЗаВмістомZnToolStripMenuItem.Name = "вибратиЗаВмістомZnToolStripMenuItem";
-            this.вибратиЗаВмістомZnToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
-            this.вибратиЗаВмістомZnToolStripMenuItem.Text = "Вибрати за вмістом Zn";
-            // 
-            // вибратиЗаВмістомPbToolStripMenuItem
-            // 
-            this.вибратиЗаВмістомPbToolStripMenuItem.Name = "вибратиЗаВмістомPbToolStripMenuItem";
-            this.вибратиЗаВмістомPbToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
-            this.вибратиЗаВмістомPbToolStripMenuItem.Text = "Вибрати за вмістом Pb";
-            // 
-            // вибратиЗаВмістомBiToolStripMenuItem
-            // 
-            this.вибратиЗаВмістомBiToolStripMenuItem.Name = "вибратиЗаВмістомBiToolStripMenuItem";
-            this.вибратиЗаВмістомBiToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
-            this.вибратиЗаВмістомBiToolStripMenuItem.Text = "Вибрати за вмістом Bi";
-            // 
-            // вибратиЗаВмістомMoToolStripMenuItem
-            // 
-            this.вибратиЗаВмістомMoToolStripMenuItem.Name = "вибратиЗаВмістомMoToolStripMenuItem";
-            this.вибратиЗаВмістомMoToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
-            this.вибратиЗаВмістомMoToolStripMenuItem.Text = "Вибрати за вмістом Mo";
-            // 
-            // вибратиЗаВмістомToolStripMenuItem
-            // 
-            this.вибратиЗаВмістомToolStripMenuItem.Name = "вибратиЗаВмістомToolStripMenuItem";
-            this.вибратиЗаВмістомToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
-            this.вибратиЗаВмістомToolStripMenuItem.Text = "Вибрати за вмістом W ";
-            // 
-            // вибратиЗаВмістомAuToolStripMenuItem3
-            // 
-            this.вибратиЗаВмістомAuToolStripMenuItem3.Name = "вибратиЗаВмістомAuToolStripMenuItem3";
-            this.вибратиЗаВмістомAuToolStripMenuItem3.Size = new System.Drawing.Size(203, 22);
-            this.вибратиЗаВмістомAuToolStripMenuItem3.Text = "Вибрати за вмістом Ni";
-            this.вибратиЗаВмістомAuToolStripMenuItem3.Click += new System.EventHandler(this.вибратиЗаВмістомAuToolStripMenuItem3_Click);
-            // 
-            // вибратиЗаВмістомFeToolStripMenuItem
-            // 
-            this.вибратиЗаВмістомFeToolStripMenuItem.Name = "вибратиЗаВмістомFeToolStripMenuItem";
-            this.вибратиЗаВмістомFeToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
-            this.вибратиЗаВмістомFeToolStripMenuItem.Text = "Вибрати за вмістом Fe";
-            // 
-            // вибратиЗаВмістомAuToolStripMenuItem4
-            // 
-            this.вибратиЗаВмістомAuToolStripMenuItem4.Name = "вибратиЗаВмістомAuToolStripMenuItem4";
-            this.вибратиЗаВмістомAuToolStripMenuItem4.Size = new System.Drawing.Size(203, 22);
-            this.вибратиЗаВмістомAuToolStripMenuItem4.Text = "Вибрати за вмістом Mn";
-            this.вибратиЗаВмістомAuToolStripMenuItem4.Click += new System.EventHandler(this.вибратиЗаВмістомAuToolStripMenuItem4_Click);
-            // 
-            // експортВExelToolStripMenuItem
-            // 
-            this.експортВExelToolStripMenuItem.Name = "експортВExelToolStripMenuItem";
-            this.експортВExelToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.експортВExelToolStripMenuItem.Text = "Експорт в MS Exel";
-            this.експортВExelToolStripMenuItem.Click += new System.EventHandler(this.експортВExelToolStripMenuItem_Click);
-            // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton2.Text = "toolStripButton2";
-            // 
-            // зберегтиToolStripMenuItem
-            // 
-            this.зберегтиToolStripMenuItem.Name = "зберегтиToolStripMenuItem";
-            this.зберегтиToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.зберегтиToolStripMenuItem.Text = "Зберегти";
-            // 
-            // збергтиЯкToolStripMenuItem
-            // 
-            this.збергтиЯкToolStripMenuItem.Name = "збергтиЯкToolStripMenuItem";
-            this.збергтиЯкToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.збергтиЯкToolStripMenuItem.Text = "Збергти як";
-            // 
-            // підключенняДоБазиДанихToolStripMenuItem
-            // 
-            this.підключенняДоБазиДанихToolStripMenuItem.Name = "підключенняДоБазиДанихToolStripMenuItem";
-            this.підключенняДоБазиДанихToolStripMenuItem.Size = new System.Drawing.Size(171, 20);
-            this.підключенняДоБазиДанихToolStripMenuItem.Text = "Підключення до бази даних";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.sKVDataGridViewTextBoxColumn,
-            this.xDataGridViewTextBoxColumn,
-            this.yDataGridViewTextBoxColumn,
-            this.pRDataGridViewTextBoxColumn,
-            this.f5DataGridViewTextBoxColumn,
-            this.f6DataGridViewTextBoxColumn,
-            this.описаниеПородDataGridViewTextBoxColumn,
-            this.зониDataGridViewTextBoxColumn,
-            this.auDataGridViewTextBoxColumn,
-            this.agDataGridViewTextBoxColumn,
-            this.asDataGridViewTextBoxColumn,
-            this.cuDataGridViewTextBoxColumn,
-            this.znDataGridViewTextBoxColumn,
-            this.pbDataGridViewTextBoxColumn,
-            this.biDataGridViewTextBoxColumn,
-            this.moDataGridViewTextBoxColumn,
-            this.wDataGridViewTextBoxColumn,
-            this.niDataGridViewTextBoxColumn,
-            this.feDataGridViewTextBoxColumn,
-            this.mnDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.testBindingSource;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(970, 435);
-            this.dataGridView1.TabIndex = 1;
-            // 
-            // dIPLOMDataSet
-            // 
-            this.dIPLOMDataSet.DataSetName = "DIPLOMDataSet";
-            this.dIPLOMDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // testBindingSource
-            // 
-            this.testBindingSource.DataMember = "Test";
-            this.testBindingSource.DataSource = this.dIPLOMDataSet;
-            // 
             // testTableAdapter
             // 
             this.testTableAdapter.ClearBeforeFill = true;
-            // 
-            // sKVDataGridViewTextBoxColumn
-            // 
-            this.sKVDataGridViewTextBoxColumn.DataPropertyName = "SKV";
-            this.sKVDataGridViewTextBoxColumn.HeaderText = "SKV";
-            this.sKVDataGridViewTextBoxColumn.Name = "sKVDataGridViewTextBoxColumn";
-            // 
-            // xDataGridViewTextBoxColumn
-            // 
-            this.xDataGridViewTextBoxColumn.DataPropertyName = "X";
-            this.xDataGridViewTextBoxColumn.HeaderText = "X";
-            this.xDataGridViewTextBoxColumn.Name = "xDataGridViewTextBoxColumn";
-            // 
-            // yDataGridViewTextBoxColumn
-            // 
-            this.yDataGridViewTextBoxColumn.DataPropertyName = "Y";
-            this.yDataGridViewTextBoxColumn.HeaderText = "Y";
-            this.yDataGridViewTextBoxColumn.Name = "yDataGridViewTextBoxColumn";
-            // 
-            // pRDataGridViewTextBoxColumn
-            // 
-            this.pRDataGridViewTextBoxColumn.DataPropertyName = "PR";
-            this.pRDataGridViewTextBoxColumn.HeaderText = "PR";
-            this.pRDataGridViewTextBoxColumn.Name = "pRDataGridViewTextBoxColumn";
-            // 
-            // f5DataGridViewTextBoxColumn
-            // 
-            this.f5DataGridViewTextBoxColumn.DataPropertyName = "F5";
-            this.f5DataGridViewTextBoxColumn.HeaderText = "F5";
-            this.f5DataGridViewTextBoxColumn.Name = "f5DataGridViewTextBoxColumn";
-            // 
-            // f6DataGridViewTextBoxColumn
-            // 
-            this.f6DataGridViewTextBoxColumn.DataPropertyName = "F6";
-            this.f6DataGridViewTextBoxColumn.HeaderText = "F6";
-            this.f6DataGridViewTextBoxColumn.Name = "f6DataGridViewTextBoxColumn";
-            // 
-            // описаниеПородDataGridViewTextBoxColumn
-            // 
-            this.описаниеПородDataGridViewTextBoxColumn.DataPropertyName = "Описание пород";
-            this.описаниеПородDataGridViewTextBoxColumn.HeaderText = "Описание пород";
-            this.описаниеПородDataGridViewTextBoxColumn.Name = "описаниеПородDataGridViewTextBoxColumn";
-            // 
-            // зониDataGridViewTextBoxColumn
-            // 
-            this.зониDataGridViewTextBoxColumn.DataPropertyName = "Зони";
-            this.зониDataGridViewTextBoxColumn.HeaderText = "Зони";
-            this.зониDataGridViewTextBoxColumn.Name = "зониDataGridViewTextBoxColumn";
-            // 
-            // auDataGridViewTextBoxColumn
-            // 
-            this.auDataGridViewTextBoxColumn.DataPropertyName = "Au";
-            this.auDataGridViewTextBoxColumn.HeaderText = "Au";
-            this.auDataGridViewTextBoxColumn.Name = "auDataGridViewTextBoxColumn";
-            // 
-            // agDataGridViewTextBoxColumn
-            // 
-            this.agDataGridViewTextBoxColumn.DataPropertyName = "Ag";
-            this.agDataGridViewTextBoxColumn.HeaderText = "Ag";
-            this.agDataGridViewTextBoxColumn.Name = "agDataGridViewTextBoxColumn";
-            // 
-            // asDataGridViewTextBoxColumn
-            // 
-            this.asDataGridViewTextBoxColumn.DataPropertyName = "As";
-            this.asDataGridViewTextBoxColumn.HeaderText = "As";
-            this.asDataGridViewTextBoxColumn.Name = "asDataGridViewTextBoxColumn";
-            // 
-            // cuDataGridViewTextBoxColumn
-            // 
-            this.cuDataGridViewTextBoxColumn.DataPropertyName = "Cu";
-            this.cuDataGridViewTextBoxColumn.HeaderText = "Cu";
-            this.cuDataGridViewTextBoxColumn.Name = "cuDataGridViewTextBoxColumn";
-            // 
-            // znDataGridViewTextBoxColumn
-            // 
-            this.znDataGridViewTextBoxColumn.DataPropertyName = "Zn";
-            this.znDataGridViewTextBoxColumn.HeaderText = "Zn";
-            this.znDataGridViewTextBoxColumn.Name = "znDataGridViewTextBoxColumn";
-            // 
-            // pbDataGridViewTextBoxColumn
-            // 
-            this.pbDataGridViewTextBoxColumn.DataPropertyName = "Pb";
-            this.pbDataGridViewTextBoxColumn.HeaderText = "Pb";
-            this.pbDataGridViewTextBoxColumn.Name = "pbDataGridViewTextBoxColumn";
-            // 
-            // biDataGridViewTextBoxColumn
-            // 
-            this.biDataGridViewTextBoxColumn.DataPropertyName = "Bi";
-            this.biDataGridViewTextBoxColumn.HeaderText = "Bi";
-            this.biDataGridViewTextBoxColumn.Name = "biDataGridViewTextBoxColumn";
-            // 
-            // moDataGridViewTextBoxColumn
-            // 
-            this.moDataGridViewTextBoxColumn.DataPropertyName = "Mo";
-            this.moDataGridViewTextBoxColumn.HeaderText = "Mo";
-            this.moDataGridViewTextBoxColumn.Name = "moDataGridViewTextBoxColumn";
-            // 
-            // wDataGridViewTextBoxColumn
-            // 
-            this.wDataGridViewTextBoxColumn.DataPropertyName = "W";
-            this.wDataGridViewTextBoxColumn.HeaderText = "W";
-            this.wDataGridViewTextBoxColumn.Name = "wDataGridViewTextBoxColumn";
-            // 
-            // niDataGridViewTextBoxColumn
-            // 
-            this.niDataGridViewTextBoxColumn.DataPropertyName = "Ni";
-            this.niDataGridViewTextBoxColumn.HeaderText = "Ni";
-            this.niDataGridViewTextBoxColumn.Name = "niDataGridViewTextBoxColumn";
-            // 
-            // feDataGridViewTextBoxColumn
-            // 
-            this.feDataGridViewTextBoxColumn.DataPropertyName = "Fe";
-            this.feDataGridViewTextBoxColumn.HeaderText = "Fe";
-            this.feDataGridViewTextBoxColumn.Name = "feDataGridViewTextBoxColumn";
-            // 
-            // mnDataGridViewTextBoxColumn
-            // 
-            this.mnDataGridViewTextBoxColumn.DataPropertyName = "Mn";
-            this.mnDataGridViewTextBoxColumn.HeaderText = "Mn";
-            this.mnDataGridViewTextBoxColumn.Name = "mnDataGridViewTextBoxColumn";
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(760, 18);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 42;
-            this.button3.Text = "Вибрати";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.CausesValidation = false;
-            this.label42.Location = new System.Drawing.Point(447, 25);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(162, 13);
-            this.label42.TabIndex = 43;
-            this.label42.Text = "Виберіть таблицю для вставки";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Проби свердловини",
-            "Свердловини",
-            "Еще что-то"});
-            this.comboBox1.Location = new System.Drawing.Point(619, 20);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 47;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(619, 47);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 48;
-            // 
-            // label48
-            // 
-            this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(447, 47);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(132, 13);
-            this.label48.TabIndex = 49;
-            this.label48.Text = "Виберіть режим вставки";
-            this.label48.Click += new System.EventHandler(this.label48_Click);
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(760, 45);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 50;
-            this.button6.Text = "Вибрати";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.dataGridView2);
-            this.tabPage2.Controls.Add(this.button6);
-            this.tabPage2.Controls.Add(this.label48);
-            this.tabPage2.Controls.Add(this.comboBox2);
-            this.tabPage2.Controls.Add(this.comboBox1);
-            this.tabPage2.Controls.Add(this.label42);
-            this.tabPage2.Controls.Add(this.button3);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(976, 441);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Панель вставки";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.AutoGenerateColumns = false;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.sKVDataGridViewTextBoxColumn1,
-            this.xDataGridViewTextBoxColumn1,
-            this.yDataGridViewTextBoxColumn1,
-            this.pRDataGridViewTextBoxColumn1,
-            this.f5DataGridViewTextBoxColumn1,
-            this.f6DataGridViewTextBoxColumn1,
-            this.описаниеПородDataGridViewTextBoxColumn1,
-            this.зониDataGridViewTextBoxColumn1,
-            this.auDataGridViewTextBoxColumn1,
-            this.agDataGridViewTextBoxColumn1,
-            this.asDataGridViewTextBoxColumn1,
-            this.cuDataGridViewTextBoxColumn1,
-            this.znDataGridViewTextBoxColumn1,
-            this.pbDataGridViewTextBoxColumn1,
-            this.biDataGridViewTextBoxColumn1,
-            this.moDataGridViewTextBoxColumn1,
-            this.wDataGridViewTextBoxColumn1,
-            this.niDataGridViewTextBoxColumn1,
-            this.feDataGridViewTextBoxColumn1,
-            this.mnDataGridViewTextBoxColumn1});
-            this.dataGridView2.DataSource = this.testBindingSource;
-            this.dataGridView2.Location = new System.Drawing.Point(-4, 94);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(1480, 835);
-            this.dataGridView2.TabIndex = 51;
-            // 
-            // sKVDataGridViewTextBoxColumn1
-            // 
-            this.sKVDataGridViewTextBoxColumn1.DataPropertyName = "SKV";
-            this.sKVDataGridViewTextBoxColumn1.HeaderText = "SKV";
-            this.sKVDataGridViewTextBoxColumn1.Name = "sKVDataGridViewTextBoxColumn1";
-            // 
-            // xDataGridViewTextBoxColumn1
-            // 
-            this.xDataGridViewTextBoxColumn1.DataPropertyName = "X";
-            this.xDataGridViewTextBoxColumn1.HeaderText = "X";
-            this.xDataGridViewTextBoxColumn1.Name = "xDataGridViewTextBoxColumn1";
-            // 
-            // yDataGridViewTextBoxColumn1
-            // 
-            this.yDataGridViewTextBoxColumn1.DataPropertyName = "Y";
-            this.yDataGridViewTextBoxColumn1.HeaderText = "Y";
-            this.yDataGridViewTextBoxColumn1.Name = "yDataGridViewTextBoxColumn1";
-            // 
-            // pRDataGridViewTextBoxColumn1
-            // 
-            this.pRDataGridViewTextBoxColumn1.DataPropertyName = "PR";
-            this.pRDataGridViewTextBoxColumn1.HeaderText = "PR";
-            this.pRDataGridViewTextBoxColumn1.Name = "pRDataGridViewTextBoxColumn1";
-            // 
-            // f5DataGridViewTextBoxColumn1
-            // 
-            this.f5DataGridViewTextBoxColumn1.DataPropertyName = "F5";
-            this.f5DataGridViewTextBoxColumn1.HeaderText = "F5";
-            this.f5DataGridViewTextBoxColumn1.Name = "f5DataGridViewTextBoxColumn1";
-            // 
-            // f6DataGridViewTextBoxColumn1
-            // 
-            this.f6DataGridViewTextBoxColumn1.DataPropertyName = "F6";
-            this.f6DataGridViewTextBoxColumn1.HeaderText = "F6";
-            this.f6DataGridViewTextBoxColumn1.Name = "f6DataGridViewTextBoxColumn1";
-            // 
-            // описаниеПородDataGridViewTextBoxColumn1
-            // 
-            this.описаниеПородDataGridViewTextBoxColumn1.DataPropertyName = "Описание пород";
-            this.описаниеПородDataGridViewTextBoxColumn1.HeaderText = "Описание пород";
-            this.описаниеПородDataGridViewTextBoxColumn1.Name = "описаниеПородDataGridViewTextBoxColumn1";
-            // 
-            // зониDataGridViewTextBoxColumn1
-            // 
-            this.зониDataGridViewTextBoxColumn1.DataPropertyName = "Зони";
-            this.зониDataGridViewTextBoxColumn1.HeaderText = "Зони";
-            this.зониDataGridViewTextBoxColumn1.Name = "зониDataGridViewTextBoxColumn1";
-            // 
-            // auDataGridViewTextBoxColumn1
-            // 
-            this.auDataGridViewTextBoxColumn1.DataPropertyName = "Au";
-            this.auDataGridViewTextBoxColumn1.HeaderText = "Au";
-            this.auDataGridViewTextBoxColumn1.Name = "auDataGridViewTextBoxColumn1";
-            // 
-            // agDataGridViewTextBoxColumn1
-            // 
-            this.agDataGridViewTextBoxColumn1.DataPropertyName = "Ag";
-            this.agDataGridViewTextBoxColumn1.HeaderText = "Ag";
-            this.agDataGridViewTextBoxColumn1.Name = "agDataGridViewTextBoxColumn1";
-            // 
-            // asDataGridViewTextBoxColumn1
-            // 
-            this.asDataGridViewTextBoxColumn1.DataPropertyName = "As";
-            this.asDataGridViewTextBoxColumn1.HeaderText = "As";
-            this.asDataGridViewTextBoxColumn1.Name = "asDataGridViewTextBoxColumn1";
-            // 
-            // cuDataGridViewTextBoxColumn1
-            // 
-            this.cuDataGridViewTextBoxColumn1.DataPropertyName = "Cu";
-            this.cuDataGridViewTextBoxColumn1.HeaderText = "Cu";
-            this.cuDataGridViewTextBoxColumn1.Name = "cuDataGridViewTextBoxColumn1";
-            // 
-            // znDataGridViewTextBoxColumn1
-            // 
-            this.znDataGridViewTextBoxColumn1.DataPropertyName = "Zn";
-            this.znDataGridViewTextBoxColumn1.HeaderText = "Zn";
-            this.znDataGridViewTextBoxColumn1.Name = "znDataGridViewTextBoxColumn1";
-            // 
-            // pbDataGridViewTextBoxColumn1
-            // 
-            this.pbDataGridViewTextBoxColumn1.DataPropertyName = "Pb";
-            this.pbDataGridViewTextBoxColumn1.HeaderText = "Pb";
-            this.pbDataGridViewTextBoxColumn1.Name = "pbDataGridViewTextBoxColumn1";
-            // 
-            // biDataGridViewTextBoxColumn1
-            // 
-            this.biDataGridViewTextBoxColumn1.DataPropertyName = "Bi";
-            this.biDataGridViewTextBoxColumn1.HeaderText = "Bi";
-            this.biDataGridViewTextBoxColumn1.Name = "biDataGridViewTextBoxColumn1";
-            // 
-            // moDataGridViewTextBoxColumn1
-            // 
-            this.moDataGridViewTextBoxColumn1.DataPropertyName = "Mo";
-            this.moDataGridViewTextBoxColumn1.HeaderText = "Mo";
-            this.moDataGridViewTextBoxColumn1.Name = "moDataGridViewTextBoxColumn1";
-            // 
-            // wDataGridViewTextBoxColumn1
-            // 
-            this.wDataGridViewTextBoxColumn1.DataPropertyName = "W";
-            this.wDataGridViewTextBoxColumn1.HeaderText = "W";
-            this.wDataGridViewTextBoxColumn1.Name = "wDataGridViewTextBoxColumn1";
-            // 
-            // niDataGridViewTextBoxColumn1
-            // 
-            this.niDataGridViewTextBoxColumn1.DataPropertyName = "Ni";
-            this.niDataGridViewTextBoxColumn1.HeaderText = "Ni";
-            this.niDataGridViewTextBoxColumn1.Name = "niDataGridViewTextBoxColumn1";
-            // 
-            // feDataGridViewTextBoxColumn1
-            // 
-            this.feDataGridViewTextBoxColumn1.DataPropertyName = "Fe";
-            this.feDataGridViewTextBoxColumn1.HeaderText = "Fe";
-            this.feDataGridViewTextBoxColumn1.Name = "feDataGridViewTextBoxColumn1";
-            // 
-            // mnDataGridViewTextBoxColumn1
-            // 
-            this.mnDataGridViewTextBoxColumn1.DataPropertyName = "Mn";
-            this.mnDataGridViewTextBoxColumn1.HeaderText = "Mn";
-            this.mnDataGridViewTextBoxColumn1.Name = "mnDataGridViewTextBoxColumn1";
             // 
             // GeoDataBase
             // 
@@ -1371,17 +1403,17 @@
             this.toolStrip1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dIPLOMDataSet)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             this.tabPage6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dIPLOMDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.testBindingSource)).EndInit();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1529,6 +1561,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn niDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn feDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn mnDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.Button button1;
     }
 }
 
