@@ -1,0 +1,103 @@
+﻿@using DAL.Entities
+@model IEnumerable<WaterIntake>
+
+@{
+    ViewBag.Title = "WaterIntakes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    <h3>WaterIntake List</h3>
+    <p>
+        <a href="~/Home/Maps" class="btn btn-info btn-lg" target="_blank"><span class="glyphicon glyphicon-map-marker"></span> Google Map</a>
+        Create new waterintake
+        <a href="~/Home/CreateWaterIntake" role="button" class="addlink btn " data-toggle="tooltip" data-placement="left" title="Add"><span class="glyphicon glyphicon-plus"></span></a>
+    </p> 
+
+    <table class="table table-striped">
+        <tr class="header">
+            <td><p>IntakeDate</p></td>
+            <td><p>Worker</p></td>
+            <td><p>Station</p></td>
+            <td><p>Station XY</p></td>
+            @*<td><p>Class</p></td>*@
+            <td><p>LaboratoryDate</p></td>
+            <td><p>Laboratory</p></td>
+            <td><p>Status</p></td>
+            <td></td>
+        </tr>
+        @foreach (WaterIntake b in Model)
+            {
+            <tr>
+                <td><p>@b.IntakeDate</p></td>
+                <td><p>@b.WorkerName</p></td>
+                <td><p>@b.StationId</p></td>
+                <td><p>(@b.Station.X ; @b.Station.Y)</p></td>
+                @*<td><p>@b.State</p></td>*@
+                <td><p>@b.LaboratoryDate</p></td>
+                <td width="10%"><p>@b.Laboratory.Name</p></td>
+                <td><p>@b.Status</p></td>
+                <td>
+                    <p>
+                        <a href="~/Home/EditWaterIntake/@b.Id" role="button" class="changelink btn " title="Change" data-toggle="tooltip" data-placement="left"><span class="glyphicon glyphicon-pencil"></span></a>|
+                        <a href="~/Home/DeleteWaterIntake/@b.Id" role="button" class="deletelink btn " data-toggle="tooltip" data-placement="left" title="Delete"><span class="glyphicon glyphicon-trash"></span></a>|
+                        <a href="~/Home/WaterIntakeDetails/@b.Id" class="changelink btn" data-toggle="tooltip" data-placement="left" title="Details"><span class="glyphicon glyphicon-search"></span></a>|                   
+                        @*@Html.ActionLink("Edit", "EditWaterIntake", new { id = b.Id }) |
+                        @Html.ActionLink("Delete", "DeleteWaterIntake", new { id = b.Id }) |
+                        @Html.ActionLink("Details", "WaterIntakeDetails", new { id = b.Id }, new { @class = "WaterIntakeItem" }) |*@
+                    </p>
+                </td>
+            </tr>
+        }
+    </table>
+    @*<p>@Html.ActionLink("Переход на пейджинговую страницу", "IndexPaged", new { page = 1 })</p>*@
+
+
+</div>
+
+
+
+@*<td class="model-group actions">
+    <div class="btn-group btn-group-justified btn-group-actions">
+        <a href="/auth/group/add/" role="button" class="addlink btn " data-toggle="tooltip" data-placement="left" title="Add"><span class="glyphicon glyphicon-plus"></span></a>
+        <a href="/auth/group/delete/" role="button" class="deletelink btn " data-toggle="tooltip" data-placement="left" title="delete"><span class="glyphicon glyphicon-trash"></span></a>
+        <a href="/auth/group/" role="button" class="changelink btn " title="Change" data-toggle="tooltip" data-placement="left"><span class="glyphicon glyphicon-pencil"></span></a>
+        <a href="#" class="btn search-in-model" data-toggle="tooltip" data-placement="left" title="Search" data-model-name="Groups" data-url-model-name="/auth/group/"><span class="glyphicon glyphicon-search"></span></a>
+    </div>
+</td>*@
+
+
+
+<link href="@Url.Content("~/Content/bootstrap.css")" rel="stylesheet" type="text/css" />
+<script src="@Url.Content("~/scripts/jquery-3.1.0.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/scripts/bootstrap.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/scripts/jquery.unobtrusive-ajax.min.js")" type="text/javascript"></script>
+
+<!--button Up  -->
+<div id="scrollup"><img alt="Scroll up" src="~/Content/Images/Up.png"></div>
+
+
+
+<!--button Up  -->
+<script type="text/javascript">
+	jQuery( document ).ready(function() {
+	jQuery('#scrollup img').mouseover( function(){
+		jQuery( this ).animate({opacity: 0.65},100);
+	}).mouseout( function(){
+		jQuery( this ).animate({opacity: 1},100);
+	}).click( function(){
+		window.scroll(0 ,0);
+		return false;
+	});
+
+	jQuery(window).scroll(function(){
+		if ( jQuery(document).scrollTop() > 0 ) {
+			jQuery('#scrollup').fadeIn('fast');
+		} else {
+			jQuery('#scrollup').fadeOut('fast');
+		}
+	});
+});
+</script>
+
+

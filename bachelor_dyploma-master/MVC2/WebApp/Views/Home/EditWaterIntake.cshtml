@@ -1,0 +1,166 @@
+﻿@model WebApp.Models.WaterIntakeModel
+
+@{
+    ViewBag.Title = "EditWaterIntake";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div>
+    <h3>WaterIntake # @Model.Id  </h3>
+    @using (Html.BeginForm("EditWaterIntake", "Home", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        @Html.HiddenFor(m => m.Id)
+        <div class="form-group">
+            @Html.LabelFor(m => m.IntakeDate, "IntakeDate", new { @class = "col-md-2 control-label" })
+            <div class="col-md-4">
+                @Html.EditorFor(m => m.IntakeDate, new { @class = "form-control" })
+                @*<input type="date" name="IntakeDate" class="form-control" />*@
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.WorkerName, "WorkerName", new { @class = "col-md-2 control-label" })
+            <div class="col-md-4">
+                @Html.DisplayFor(m => m.WorkerName, new { @class = "form-control" })
+                @Html.HiddenFor(m => m.WorkerName)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.StationId, "Station", new { @class = "col-md-2 control-label" })
+            <div class="col-md-4">
+                @Html.DropDownList("StationId", ViewBag.Stations as SelectList)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.LaboratoryDate, "LaboratoryDate", new { @class = "col-md-2 control-label" })
+            <div class="col-md-4">
+                @Html.EditorFor(m => m.LaboratoryDate, new { @class = "form-control" })
+                @*<input type="date" name="LaboratoryDate" class="form-control" />*@
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.LaboratoryId, "Laboratory", new { @class = "col-md-2 control-label" })
+            <div class="col-md-4">
+                @Html.DropDownList("LaboratoryId", ViewBag.Laboratories as SelectList)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Status, "Status", new { @class = "col-md-2 control-label" })
+            <div class="col-md-4">
+                <input type="text" name="Status" readonly value=@ViewBag.Status class="form-control" />
+            </div>
+        </div>
+
+
+        <br />
+        <h3>Organoleptic</h3>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Scent20, "Scent20", new { @class = "col-md-2 control-label" })
+            <div class="col-md-4">
+                @Html.DropDownList("Scent20", ViewBag.ScentFlavors as SelectList)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Scent60, "Scent60", new { @class = "col-md-2 control-label" })
+            <div class="col-md-4">
+                @Html.DropDownList("Scent60", ViewBag.ScentFlavors as SelectList)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Flavor, "Flavor", new { @class = "col-md-2 control-label" })
+            <div class="col-md-4">
+                @Html.DropDownList("Flavor", ViewBag.ScentFlavors as SelectList)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Chromaticity, "Chromaticity", new { @class = "col-md-2 control-label" })
+            <div class="col-md-4">
+                @Html.EditorFor(m => m.Chromaticity, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Turbidity, "Turbidity", new { @class = "col-md-2 control-label" })
+            <div class="col-md-4">
+                @Html.EditorFor(m => m.Turbidity, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Temperature, "Temperature", new { @class = "col-md-2 control-label" })
+            <div class="col-md-4">
+                @*@Html.EditorFor(m => m.Temperature, new { @class = "form-control" })*@
+                @Html.DisplayFor(m => m.Temperature, new { @class = "form-control" })
+                @Html.HiddenFor(m => m.Temperature)
+            </div>
+        </div>
+
+        
+        <br />
+        <h3>Chemical</h3>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Residue, "Residue", new { @class = "col-md-2 control-label" })
+            <div class="col-md-4">
+                @Html.EditorFor(m => m.Residue, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Ph, "Ph", new { @class = "col-md-2 control-label" })
+            <div class="col-md-4">
+                @Html.EditorFor(m => m.Ph, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Rigidity, "Rigidity", new { @class = "col-md-2 control-label" })
+            <div class="col-md-4">
+                @Html.EditorFor(m => m.Rigidity, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Chlorides, "Chlorides", new { @class = "col-md-2 control-label" })
+            <div class="col-md-4">
+                @Html.EditorFor(m => m.Chlorides, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Sulphates, "Sulphates", new { @class = "col-md-2 control-label" })
+            <div class="col-md-4">
+                @Html.EditorFor(m => m.Sulphates, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Iron, "Iron", new { @class = "col-md-2 control-label" })
+            <div class="col-md-4">
+                @Html.EditorFor(m => m.Iron, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Marhan, "Marhan", new { @class = "col-md-2 control-label" })
+            <div class="col-md-4">
+                @Html.EditorFor(m => m.Marhan, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Fluorine, "Fluorine", new { @class = "col-md-2 control-label" })
+            <div class="col-md-4">
+                @Html.EditorFor(m => m.Fluorine, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Nitrates, "Nitrates", new { @class = "col-md-2 control-label" })
+            <div class="col-md-4">
+                @Html.EditorFor(m => m.Nitrates, new { @class = "form-control" })
+            </div>
+        </div>
+
+
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-4">
+                <input type="submit" value="Edit" class="btn btn-success" />
+                <input type="button" name="action" value="Cancel" onclick="location.href='@Url.Action("WaterIntakes", "Home")'" class="btn btn-default" />
+            </div>
+        </div>
+    }
+</div>
+
+
+

@@ -1,0 +1,97 @@
+﻿@using DAL.Entities
+@model IEnumerable<Laboratory>
+
+@{
+    ViewBag.Title = "Laboratories";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    <h3>Laboratory list</h3>
+    <p>Create new laboratory
+    @*<p>@Html.ActionLink("New laboratory", "CreateLaboratory")</p>*@
+    <a href="~/Home/CreateLaboratory" role="button" class="addlink btn " data-toggle="tooltip" data-placement="left" title="Add"><span class="glyphicon glyphicon-plus"></span></a>
+    </p>
+    <table class="table table-striped">
+        <tr class="header">
+            <td width="30%"><p>Name</p></td>
+            <td width="30%"><p>Adress</p></td>
+            <td></td>
+        </tr>
+        @foreach (Laboratory b in Model)
+            {
+            <tr>
+                <td><p>@b.Name</p></td>
+                <td><p>@b.Address</p></td>
+                <td class="model-group actions">
+                    <div >
+                        @*@Html.ActionLink("Edit", "EditLaboratory", new { id = b.Id }) |
+                          @Html.ActionLink("Delete", "DeleteLaboratory", new { id = b.Id }) |
+                          @Html.ActionLink("Details", "LaboratoryDetails", new { id = b.Id }, new { @class = "LaboratoryItem" }) |*@
+                        <a href="~/Home/EditLaboratory/@b.Id" role="button" class="changelink btn " title="Change" data-toggle="tooltip" data-placement="left"><span class="glyphicon glyphicon-pencil"></span></a>|
+                        <a href="~/Home/DeleteLaboratory/@b.Id" role="button" class="deletelink btn " data-toggle="tooltip" data-placement="left" title="Delete"><span class="glyphicon glyphicon-trash"></span></a>|
+                        <a href="~/Home/LaboratoryDetails/@b.Id" role="button" class="LaboratoryItem btn" data-toggle="tooltip" data-placement="left" title="Details"><span class="glyphicon glyphicon-search"></span></a>|
+
+                        </div>
+</td>
+            </tr>
+        }
+    </table>
+    @*<p>@Html.ActionLink("Переход на пейджинговую страницу", "IndexPaged", new { page = 1 })</p>*@
+
+    
+</div>
+
+<link href="@Url.Content("~/Content/bootstrap.css")" rel="stylesheet" type="text/css" />
+<script src="@Url.Content("~/scripts/jquery-3.1.0.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/scripts/bootstrap.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/scripts/jquery.unobtrusive-ajax.min.js")" type="text/javascript"></script>
+
+<!--button Up  -->
+<div id="scrollup"><img alt="Scroll up" src="~/Content/Images/Up.png"></div>
+
+<!--Modal dialog with mvc model-->
+<div id="modDialog" class="modal fade">
+    <div id="dialogContent" class="modal-dialog modal-sm">
+    </div>
+</div>
+
+<!--Modal dialog with mvc model-->
+<script type="text/javascript">
+        $(function () {
+            $.ajaxSetup({ cache: false });
+            $(".LaboratoryItem").click(function (e) {
+
+                e.preventDefault();
+                $.get(this.href, function (data) {
+                    $('#dialogContent').html(data);
+                    $('#modDialog').modal('show');
+                });
+            });
+        })
+</script>
+
+<!--button Up  -->
+<script type="text/javascript">
+	jQuery( document ).ready(function() {
+	jQuery('#scrollup img').mouseover( function(){
+		jQuery( this ).animate({opacity: 0.65},100);
+	}).mouseout( function(){
+		jQuery( this ).animate({opacity: 1},100);
+	}).click( function(){
+		window.scroll(0 ,0);
+		return false;
+	});
+
+	jQuery(window).scroll(function(){
+		if ( jQuery(document).scrollTop() > 0 ) {
+			jQuery('#scrollup').fadeIn('fast');
+		} else {
+			jQuery('#scrollup').fadeOut('fast');
+		}
+	});
+});
+</script>
+
+
+

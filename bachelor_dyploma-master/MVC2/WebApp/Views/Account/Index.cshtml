@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+@model IEnumerable<WebApp.Models.ApplicationUser>
+
+
+<table class="table table-striped">
+    <tr class="header">
+        <td><p><b>Worker name</b></p></td>
+        <td></td>
+    </tr>
+    @foreach (var val in Model)
+            {
+        <tr>
+            <td><p>@val.UserName.ToString()</p></td>
+            <td></td>
+        </tr>
+    }
+</table>
+
+
+

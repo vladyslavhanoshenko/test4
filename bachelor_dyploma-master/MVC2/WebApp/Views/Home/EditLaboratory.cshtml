@@ -1,0 +1,32 @@
+﻿@model DAL.Entities.Laboratory
+
+@{
+    ViewBag.Title = "EditLaboratory";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div>
+    <h3>Laboratory # @Model.Id  </h3>
+    @using (Html.BeginForm("EditLaboratory", "Home", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        @Html.HiddenFor(m => m.Id)
+        <div class="form-group">
+            @Html.LabelFor(m => m.Name, "Name", new { @class = "col-md-2 control-label" })
+            <div class="col-md-4">
+                @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Address, "Address", new { @class = "col-md-2 control-label" })
+            <div class="col-md-4">
+                @Html.TextBoxFor(m => m.Address, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-4">
+                <input type="submit" value="Edit" class="btn btn-success" />
+                <input type="button" name="action" value="Cancel" onclick="location.href='@Url.Action("Laboratories", "Home")'" class="btn btn-default" />
+            </div>
+        </div>
+    }
+</div>
+

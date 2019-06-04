@@ -1,0 +1,32 @@
+﻿@model DAL.Entities.Station
+
+<link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+<link href="@Url.Content("~/Content/bootstrap.css")" rel="stylesheet" type="text/css" />
+<script src="@Url.Content("~/scripts/jquery-3.1.0.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/scripts/bootstrap.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/scripts/jquery.unobtrusive-ajax.min.js")" type="text/javascript"></script>
+
+
+
+<div class="modal-content {width:600px}">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">X</button>
+        <h4>Station</h4>
+    </div>
+    <div class="modal-body">
+        <dl>
+            <dt>X</dt>
+            <dd>@Html.DisplayFor(model => model.X)</dd>
+
+            <dt>Y</dt>
+            <dd>@Html.DisplayFor(model => model.Y)</dd>
+
+            <dt>Class</dt>
+            <dd>@Html.DisplayFor(model => model.Class)</dd>
+
+        </dl>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    </div>
+</div>

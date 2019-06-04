@@ -1,0 +1,50 @@
+﻿@model DAL.Entities.WaterIntake
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete WaterIntake</h2>
+<dl>
+    <dt>IntakeDate</dt>
+    <dd>
+        @Html.DisplayFor(model => model.IntakeDate)
+    </dd>
+    
+    <dt>WorkerName</dt>
+    <dd>
+        @Html.DisplayFor(model => model.WorkerName)
+    </dd>
+    <dt>Station #</dt>
+    <dd>
+        @Html.DisplayFor(model => model.StationId)
+    </dd>
+
+    <dt>Station XY</dt>
+    <dd>
+        @Html.DisplayFor(model => model.Station.X)
+        @Html.DisplayFor(model => model.Station.Y)
+    </dd>
+
+    <dt>LaboratoryDate</dt>
+    <dd>
+        @Html.DisplayFor(model => model.LaboratoryDate)
+    </dd>
+
+    <dt>Laboratory</dt>
+    <dd>
+        @Html.DisplayFor(model => model.Laboratory.Name)
+    </dd>
+
+    <dt>Status</dt>
+    <dd>
+        @Html.DisplayFor(model => model.Status)
+    </dd>
+</dl>
+
+@using (Html.BeginForm())
+{
+    <input type="submit" value="Delete" class="btn btn-success" />
+    <input type="button" name="action" value="Cancel" onclick="location.href='@Url.Action("WaterIntakes", "Home")'" class="btn btn-default" />
+}
+

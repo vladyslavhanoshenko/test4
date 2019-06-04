@@ -1,0 +1,32 @@
+﻿@model DAL.Entities.Station
+
+@{
+    ViewBag.Title = "CreateStation";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div>
+    <h3>New Station </h3>
+    @using (Html.BeginForm("CreateStation", "Home", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        <div class="form-group">
+            @Html.LabelFor(m => m.X, "X", new { @class = "col-md-2 control-label" })
+            <div class="col-md-4">
+                @Html.TextBoxFor(m => m.X, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Y, "Y", new { @class = "col-md-2 control-label" })
+            <div class="col-md-4">
+                @Html.TextBoxFor(m => m.Y, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-4">
+                <input type="submit" value="Create" class="btn btn-success" />
+                <input type="button" name="action" value="Cancel" onclick="location.href='@Url.Action("Stations", "Home")'" class="btn btn-default" />
+            </div>
+        </div>
+    }
+</div>

@@ -1,0 +1,29 @@
+﻿@model DAL.Entities.Station
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete Station</h2>
+<dl>
+    <dt>X</dt>
+    <dd>
+        @Html.DisplayFor(model => model.X)
+    </dd>
+
+    <dt>Y</dt>
+    <dd>
+        @Html.DisplayFor(model => model.Y)
+    </dd>
+
+    <dt>Class</dt>
+    <dd>
+        @Html.DisplayFor(model => model.Class)
+    </dd>
+</dl>
+
+@using (Html.BeginForm())
+{
+    <input type="submit" value="Delete" class="btn btn-success" />
+    <input type="button" name="action" value="Cancel" onclick="location.href='@Url.Action("Stations", "Home")'" class="btn btn-default" />
+}
